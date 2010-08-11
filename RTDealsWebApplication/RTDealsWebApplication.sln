@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTDealsWebApplication", "RTDealsWebApplication\RTDealsWebApplication.csproj", "{8A435430-263F-422C-ACE6-3CABE78C06CA}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RTDealsWebApplication\\RTDealsWebApplication.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = RTDealsWebApplication\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A435430-263F-422C-ACE6-3CABE78C06CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A435430-263F-422C-ACE6-3CABE78C06CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A435430-263F-422C-ACE6-3CABE78C06CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A435430-263F-422C-ACE6-3CABE78C06CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
