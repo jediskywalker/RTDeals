@@ -42,6 +42,19 @@ namespace RTDealsWebApplication.DBAccess
             return DB.GetListFromDataReader<CustomerModel>(cmd);
 
         }
+        public static CustomerModel getCustomerByUsername(string Username)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "Select * from Customer where Username=@username";
+            cmd.Parameters.AddWithValue("@username", Username);
+            List<CustomerModel> customer = DB.GetListFromDataReader<CustomerModel>(cmd);
+            if (customer.Count == 1)
+                return customer[0];
+            else if(customer.Count>1)
+                Logging.Log(LoggingLevel.ERROR, "SelectUserByUsername", "Multiple record returned for username=" + Username, null);
+            return null;
+            
+        }
 
     }
 }

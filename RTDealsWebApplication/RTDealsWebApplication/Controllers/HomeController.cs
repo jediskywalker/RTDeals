@@ -20,5 +20,13 @@ namespace RTDealsWebApplication.Controllers
         {
             return View();
         }
+
+
+        public ActionResult Logout()
+        {
+            Session["Customer"] = null;
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

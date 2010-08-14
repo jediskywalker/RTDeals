@@ -83,6 +83,8 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DealsConfigController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KeyWordsController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="DBAccess\ConfigDB.cs" />
     <Compile Include="DBAccess\CustomerDB.cs" />
     <Compile Include="DBAccess\DB.cs" />
@@ -108,6 +110,8 @@
     <Content Include="Global.asax" />
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\DealsConfig\Edit.aspx" />
+    <Content Include="Views\Login\Index.aspx" />
+    <Content Include="Views\Shared\LoginUserControl.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
