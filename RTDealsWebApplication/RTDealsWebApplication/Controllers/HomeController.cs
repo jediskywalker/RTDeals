@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace RTDealsWebApplication.Controllers
 {
+    //Test Purpose
     [HandleError]
     public class HomeController : Controller
     {
