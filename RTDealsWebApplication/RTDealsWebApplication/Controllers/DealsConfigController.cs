@@ -92,7 +92,7 @@ namespace RTDealsWebApplication.Controllers
             List<DealsSourceModel> ldsm = DealsDB.GetAllDealSource();
             foreach (DealsSourceModel dsm in ldsm)
             {
-                SendDeals.SendRTDeals(dsm.SourceName, "off");
+                SendDeals.SendRTDeals(dsm.SourceName, "free");
                 Thread.Sleep(2000);  // Use this for test purpose, can be removed after using our own email server
             }
 
