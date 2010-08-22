@@ -13,6 +13,8 @@ using RTDealsWebApplication.DBAccess;
 using RTDealsWebApplication.Common;
 using System.Threading;
 
+
+
 namespace RTDealsWebApplication.Controllers
 {
     public class DealsConfigController : Controller
@@ -88,13 +90,58 @@ namespace RTDealsWebApplication.Controllers
 
         public void ProcessDeals()
         {
-            RegexPattern rp=new RegexPattern();
+            // RegexPattern rp=new RegexPattern();
+            //  List<DealsSourceModel> ldsm = DealsDB.GetAllDealSource();
+            // foreach (DealsSourceModel dsm in ldsm)
+            // {
+            //    SendDeals.SendRTDeals(dsm.SourceName, "free");
+            //   Thread.Sleep(2000);  // Use this for test purpose, can be removed after using our own email server
+            //   }
+          
+
+          
+            //string url = "http://feeds.feedburner.com/dealsea-latest";
             List<DealsSourceModel> ldsm = DealsDB.GetAllDealSource();
             foreach (DealsSourceModel dsm in ldsm)
             {
-                SendDeals.SendRTDeals(dsm.SourceName, "free");
-                Thread.Sleep(2000);  // Use this for test purpose, can be removed after using our own email server
+                string strHtml = "";
+                //string Keywords = "laptop";
+                try
+                {
+
+                    SourceRssSeedModel srs = RssSeedDB.GetSourceRssSeedByID(dsm.SourceID);
+                    if (srs != null)
+                    {
+                        string url =srs.RSSAddress;
+                        RTDealsWebApplication.RSS.Feed feed = new RTDealsWebApplication.RSS.Feed(url, DateTime.Parse(System.DateTime.Now.AddDays(0).ToShortDateString()));
+                        feed.Read();
+                        strHtml += "[Count：" + feed.Channel.Items.Count + "]<br><br>";
+                        for (int i = 0; i < feed.Channel.Items.Count; i++)
+                        {
+                           // if (!feed.Channel.Items[i].title.ToLower().Contains(Keywords))
+                             //   continue;
+                            //                        arr = feed.Channel.Items[i].title.Split(cSplit);
+                            strHtml += "  <a href=" + feed.Channel.Items[i].link + " target=_blank><B>" + feed.Channel.Items[i].title + "</B></a><br>";
+                            strHtml += "  <font color=red>" + feed.Channel.Items[i].pubDate + "</font><br>";
+                            strHtml += "  " + feed.Channel.Items[i].description + "<br>";
+                        }
+
+
+
+                        SendEmail.SendDealsEmail("xhdf_x@hotmail.com", "rtdeals@hotmail.com", "Real Time Deals Alert @ " + dsm.SourceName, strHtml);
+                        Thread.Sleep(2000);
+                        // Response.Write(strHtml);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    string s = ex.Message;
+                    continue;
+                }
+
             }
+
+        
 
         }
         //test

@@ -89,6 +89,7 @@
     <Compile Include="DBAccess\CustomerDB.cs" />
     <Compile Include="DBAccess\DB.cs" />
     <Compile Include="DBAccess\DealsDB.cs" />
+    <Compile Include="DBAccess\RssSeedDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -97,7 +98,13 @@
     <Compile Include="Models\DealsConfigModel.cs" />
     <Compile Include="Models\DealsSourceModel.cs" />
     <Compile Include="Models\RegexPatternModel.cs" />
+    <Compile Include="Models\SourceRssSeedModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RSS\Channel.cs" />
+    <Compile Include="RSS\ChannelCollection.cs" />
+    <Compile Include="RSS\Feed.cs" />
+    <Compile Include="RSS\item.cs" />
+    <Compile Include="RSS\ItemCollection.cs" />
     <Compile Include="Utlities\CacheUtil.cs" />
     <Compile Include="Utlities\Constants.cs" />
     <Compile Include="Utlities\FileUtility.cs" />
@@ -112,7 +119,9 @@
     <Content Include="Views\DealsConfig\Edit.aspx" />
     <Content Include="Views\Login\Index.aspx" />
     <Content Include="Views\Shared\LoginUserControl.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
