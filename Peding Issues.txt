@@ -1,3 +1,6 @@
 Add more data into SourceRssSeed table
 Can't alter table value
 Change SourceRssSeed Table, may be add more column indicate hot deals which already defined by Source Website
+click deal source checkbox  show additional RSS checkboxes when send email only choose from additional   
+
+update RssAddress table   add default value to additional RssAddress

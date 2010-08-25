@@ -24,7 +24,17 @@ namespace RTDealsWebApplication.Controllers
 
         public ActionResult Index()
         {
+            ViewData["DealSource"] = DealsDB.GetAllDealSource();
+            //foreach (DealsSourceModel dsm in ldsm)
+            //{
+                //
+            //}
+
+              //SourceRssSeedModel srs = RssSeedDB.GetSourceRssSeedByID(dsm.SourceID);
+              //ViewData["AdditionalRSS"]=
+            
             return View();
+
         }
 
         //
@@ -66,6 +76,7 @@ namespace RTDealsWebApplication.Controllers
  
         public ActionResult Edit()
         {
+            ViewData["DealSource"] = DealsDB.GetAllDealSource();
             return View();
         }
 
@@ -97,9 +108,7 @@ namespace RTDealsWebApplication.Controllers
             //    SendDeals.SendRTDeals(dsm.SourceName, "free");
             //   Thread.Sleep(2000);  // Use this for test purpose, can be removed after using our own email server
             //   }
-          
 
-          
             //string url = "http://feeds.feedburner.com/dealsea-latest";
             List<DealsSourceModel> ldsm = DealsDB.GetAllDealSource();
             foreach (DealsSourceModel dsm in ldsm)
@@ -113,7 +122,7 @@ namespace RTDealsWebApplication.Controllers
                     if (srs != null)
                     {
                         string url =srs.RSSAddress;
-                        RTDealsWebApplication.RSS.Feed feed = new RTDealsWebApplication.RSS.Feed(url, DateTime.Parse(System.DateTime.Now.AddDays(0).ToShortDateString()));
+                        RTDealsWebApplication.RSS.Feed feed = new RTDealsWebApplication.RSS.Feed(url, DateTime.Parse(System.DateTime.Now.AddDays(-3).ToShortDateString()));
                         feed.Read();
                         strHtml += "[Count：" + feed.Channel.Items.Count + "]<br><br>";
                         for (int i = 0; i < feed.Channel.Items.Count; i++)
