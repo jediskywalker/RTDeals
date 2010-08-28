@@ -153,7 +153,28 @@ namespace RTDealsWebApplication.Controllers
         
 
         }
-        //test
+
+        public string GetDealType(int id)
+        {
+            string result = "";
+            if (id < 0)
+                return result;
+
+            SourceRssSeedModel srs = RssSeedDB.GetSourceRssSeedByID(id);
+            string[] DealRSSArray = srs.Additional.Split(',');
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<table><tr>");
+            for (int i = 0; i < DealRSSArray.Length; i++)
+            {
+
+                string[] RSSDetals =DealRSSArray[i].Split('*');
+                sb.Append("<td>" + RSSDetals[0] + "<input type='checkbox' id='ckd' name='ckd' value='" + RSSDetals[1] + "'/></td>");
+            }
+            sb.Append("</tr></table>");
+            result = sb.ToString();
+            return result;
+        }
+
 
         //
         // GET: /DealsConfig/Delete/5
