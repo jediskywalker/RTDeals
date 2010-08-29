@@ -1,6 +1,26 @@
-Add more data into SourceRssSeed table
+Add more data into SourceRssSeed table   //Done
 Can't alter table value
-Change SourceRssSeed Table, may be add more column indicate hot deals which already defined by Source Website
-click deal source checkbox  show additional RSS checkboxes when send email only choose from additional   
+click deal source checkbox  show additional RSS checkboxes   //Done
+when send email only choose from additional   
 
-update RssAddress table   add default value to additional RssAddress
+update RssAddress table   add default value to additional RssAddress   // Done
+
+
+
+
+
+Build a pop up big page to show all keywords with checkbox (update directly but click) which defined under this category when click category checkbox  provide select all
+if no keywords selected under this category, uncheck the category, if unckeck category by customer popup alert, are you sure uncheck all keywords
+
+
+give right to customer input keywords (check duplicate),  customer keywords should add into category(  may need a table call customercategorykeywords, which has category id, customerid , keywords)
+when popup page, need load both system defined and customer category defined which belong to this customer
+
+
+
+
+
+
+
+
+

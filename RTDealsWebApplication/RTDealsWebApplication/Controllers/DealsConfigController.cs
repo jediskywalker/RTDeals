@@ -154,7 +154,7 @@ namespace RTDealsWebApplication.Controllers
 
         }
 
-        public string GetDealType(int id)
+        public string GetDealType(int id)  // Dynamiclly show sub menus
         {
             string result = "";
             if (id < 0)

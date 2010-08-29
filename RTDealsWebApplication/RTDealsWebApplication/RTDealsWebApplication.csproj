@@ -80,11 +80,13 @@
     <Compile Include="Common\SendDeals.cs" />
     <Compile Include="Common\SendEmail.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DealsConfigController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KeyWordsController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="DBAccess\CategoryDB.cs" />
     <Compile Include="DBAccess\ConfigDB.cs" />
     <Compile Include="DBAccess\CustomerDB.cs" />
     <Compile Include="DBAccess\DB.cs" />
@@ -94,6 +96,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CategoryKeywordsModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\DealsConfigModel.cs" />
     <Compile Include="Models\DealsSourceModel.cs" />
@@ -115,6 +119,8 @@
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\MySQL.VisualStudio.dll" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Category\Create.aspx" />
+    <Content Include="Views\Category\Index.aspx" />
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\DealsConfig\Edit.aspx" />
     <Content Include="Views\Login\Index.aspx" />
