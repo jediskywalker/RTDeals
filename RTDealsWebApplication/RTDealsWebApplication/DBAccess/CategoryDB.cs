@@ -20,10 +20,10 @@ namespace RTDealsWebApplication.DBAccess
             return DB.GetListFromDataReader<CategoryModel>(cmd);
         }
 
-        public static List<CategoryKeywordsModel> GetCategoryKeywords()
+        public static List<CategoryKeywordsModel> GetCategoryKeywordsByID(int CategoryID)
         {
             MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "Select * from categorykeywords";
+            cmd.CommandText = "Select * from categorykeywords where categoryid=" + CategoryID;
             cmd.CommandType = CommandType.Text;
             return DB.GetListFromDataReader<CategoryKeywordsModel>(cmd);
         }

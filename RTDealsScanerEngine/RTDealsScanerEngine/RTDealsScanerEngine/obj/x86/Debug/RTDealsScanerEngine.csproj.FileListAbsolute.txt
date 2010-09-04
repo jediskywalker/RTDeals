@@ -1,0 +1,11 @@
+D:\RTDeals_DEV\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\bin\Debug\RTDealsScanerEngine.exe
+D:\RTDeals_DEV\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\bin\Debug\RTDealsScanerEngine.pdb
+D:\RTDeals_DEV\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\RTDeals_DEV\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\obj\x86\Debug\RTDealsScanerEngine.exe
+D:\RTDeals_DEV\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\obj\x86\Debug\RTDealsScanerEngine.pdb
+E:\MyDropBox\My Dropbox\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\obj\x86\Debug\RTDealsScanerEngine.exe
+E:\MyDropBox\My Dropbox\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\obj\x86\Debug\RTDealsScanerEngine.pdb
+E:\MyDropBox\My Dropbox\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\bin\Debug\RTDealsScanerEngine.exe
+E:\MyDropBox\My Dropbox\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\bin\Debug\RTDealsScanerEngine.pdb
+E:\MyDropBox\My Dropbox\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\bin\Debug\MySql.Data.dll
+E:\MyDropBox\My Dropbox\RTDealsScanerEngine\RTDealsScanerEngine\RTDealsScanerEngine\obj\x86\Debug\ResolveAssemblyReference.cache

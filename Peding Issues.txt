@@ -19,6 +19,11 @@ when popup page, need load both system defined and customer category defined whi
 
 
 
+Check RSS Deals cross duplicate.  Write a function to estimate how much similar 
+
+
+
+
 
 
 

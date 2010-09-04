@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using RTDealsWebApplication.DBAccess;
 using RTDealsWebApplication.Models;
+using System.Text;
 
 
 namespace RTDealsWebApplication.Controllers
@@ -16,8 +17,8 @@ namespace RTDealsWebApplication.Controllers
 
         public ActionResult Index(string button)
         {
-
-            ViewData["category"] = CategoryDB.GetCategory();
+           // ViewData["CategoryKeywords"] = CategoryDB.GetCategoryKeywordsByID(1);
+          //  ViewData["category"] = CategoryDB.GetCategory();
 
             if (button == "New")
                 return RedirectToAction("Create");
@@ -67,8 +68,9 @@ namespace RTDealsWebApplication.Controllers
         //
         // GET: /Category/Edit/5
  
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
+
             return View();
         }
 
@@ -97,6 +99,67 @@ namespace RTDealsWebApplication.Controllers
         {
             return View();
         }
+
+
+        public string GetCategoryKeywords(int id)  // Dynamiclly show sub menus
+        {
+            ViewData["CategoryKeywords"] = CategoryDB.GetCategoryKeywordsByID(id);
+
+            return "";
+        }
+
+
+
+        public string BuildCategoryPage(int id)
+        {
+
+            StringBuilder sb = new StringBuilder();
+            List<CategoryModel> lcm = CategoryDB.GetCategory();
+            sb.Append("<table>");
+            sb.Append("<ajaxToolkit:ToolkitScriptManager runat='Server' ID='ScriptManager1' CombineScripts='false' EnablePartialRendering='true' ScriptMode='Release' />");
+            foreach (CategoryModel cm in lcm)
+            {
+                List<CategoryKeywordsModel> lckm = CategoryDB.GetCategoryKeywordsByID(cm.ID);
+               // sb.Append("<tr><td>" + cm.Name);
+                //sb.Append("<input type='checkbox' name='"+cm.Name+ "' id='"+cm.Name+"' value='" +cm.ID+ "'</td></tr>");
+                sb.Append("<tr><td><input type='button' name='" + cm.Name + "' id='" + cm.Name + "' value='" + cm.Name + "'/></td><tr> ");
+                sb.Append("<asp:Panel ID='Panel1"+cm.Name+"' runat='server' Style='display: none; background-color:#F0F0F0'> ");
+                sb.Append("<asp:Panel ID='Panel3"+cm.Name+"' Height='20px' runat='server' Style='cursor:move;background-color:#DDDDDD;border:solid 1px Gray;color:Black'> ");
+                sb.Append("<div>Choose keywords:</div> </asp:Panel> ");
+                sb.Append("<div> ");
+                foreach(CategoryKeywordsModel ckm in lckm)
+                {
+                    sb.Append("<td> ");
+                    sb.Append("<input type='checkbox' name='"+ckm.Keyword +"' id='"+ ckm.Keyword + "' value='"+ckm.Keyword +"'/> ");
+                    sb.Append(ckm.Keyword + "</td> ");
+
+                }
+                sb.Append("</div></asp:Panel> ");        
+                sb.Append("<ajaxToolkit:ModalPopupExtender ID='ModalPopupExtender"+cm.Name +"' runat='server' "); 
+                sb.Append("TargetControlID='"+cm.Name +"' "); 
+                sb.Append("PopupControlID='Panel1" +cm.Name +"' "); 
+                sb.Append("OnOkScript='onOk()' ");
+                sb.Append("DropShadow='true' ");
+                sb.Append("PopupDragHandleControlID='Panel3"+cm.Name +"' ");
+                sb.Append("BackgroundCssClass='modalBackground' /> ");
+                sb.Append("</td></tr> ");
+
+            }
+           
+            sb.Append("</table>");
+
+            string result = sb.ToString();
+
+            return result;
+        }
+
+
+
+
+
+
+
+
 
         //
         // POST: /Category/Delete/5

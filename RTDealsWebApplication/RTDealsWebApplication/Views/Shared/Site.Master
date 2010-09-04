@@ -24,7 +24,7 @@
                 <ul id="menu">              
                     <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
-                     <li><%: Html.ActionLink("Category", "index", "Category")%></li>
+                     <li><%: Html.ActionLink("Category", "edit", "Category")%></li>
              <%--       <li><%: Html.ActionLink("Customer", "Index", "Customer")%></li>
                     <li><%: Html.ActionLink("DealsConfig", "Edit", "DealsConfig")%></li>--%>
                 </ul>

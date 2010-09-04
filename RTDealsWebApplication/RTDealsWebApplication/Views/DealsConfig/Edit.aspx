@@ -40,10 +40,6 @@
             if (!document.getElementById(id.toString()).checked) {
                 temp = -1;
             }
-          //  var cc = document.getElementById(id.toString()).value;
-          //  alert(cc);
-          //  var temp = "divUpdates" + id.toString();
-            //alert(temp.toString());
             if (window.XMLHttpRequest) {
                 xmlhttp = new XMLHttpRequest();
             }
