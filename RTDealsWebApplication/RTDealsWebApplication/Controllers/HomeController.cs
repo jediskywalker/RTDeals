@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace RTDealsWebApplication.Controllers
 {
+    //Test Purpose
     [HandleError]
     public class HomeController : Controller
     {
@@ -20,5 +21,13 @@ namespace RTDealsWebApplication.Controllers
         {
             return View();
         }
+
+
+        public ActionResult Logout()
+        {
+            Session["Customer"] = null;
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

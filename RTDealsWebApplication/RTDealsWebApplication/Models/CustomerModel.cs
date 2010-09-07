@@ -42,6 +42,12 @@ namespace RTDealsWebApplication.Models
 
 
         [Required]
+        [DisplayName("Password")]
+        [StringLength(50)]
+        public string Password { get; set; }
+
+
+        [Required]
         [DisplayName("AccountLevel")]
         public int AccountLevel { get; set; }
 

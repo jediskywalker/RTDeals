@@ -20,6 +20,10 @@ namespace RTDealsWebApplication.Models
         #region table columns
 
         [Required]
+        [DisplayName("SourceID")]
+        public int SourceID { get; set; }
+
+        [Required]
         [DisplayName("SourceName")]
         public string SourceName { get; set; }
 

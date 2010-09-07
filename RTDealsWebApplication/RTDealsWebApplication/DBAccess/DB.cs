@@ -341,7 +341,7 @@ namespace RTDealsWebApplication.DBAccess
                     sqlcmd.Parameters.AddWithValue("@" + col.COLUMN_NAME, p.GetValue(model, null));
                 }
             }
-            sqlcmd.CommandText = "insert [" + tablename + "] (" + colToInsert + ") values (" + colvalues + ")";
+            sqlcmd.CommandText = "insert into " + tablename + " (" + colToInsert + ") values (" + colvalues + ")";
 
             int identity = 0;
             if (identityColumn == "")
@@ -349,7 +349,7 @@ namespace RTDealsWebApplication.DBAccess
             else
             {
                 // get the new identity value back
-                sqlcmd.CommandText += "; select scope_identity()";
+                //sqlcmd.CommandText += "; select scope_identity()";  can not use in MySql?
                 object obj = ExecuteScalar(sqlcmd);
                 identity = Convert.ToInt32(obj);
             }

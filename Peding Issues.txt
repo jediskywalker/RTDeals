@@ -1,0 +1,31 @@
+Add more data into SourceRssSeed table   //Done
+Can't alter table value
+click deal source checkbox  show additional RSS checkboxes   //Done
+when send email only choose from additional   
+
+update RssAddress table   add default value to additional RssAddress   // Done
+
+
+
+
+
+Build a pop up big page to show all keywords with checkbox (update directly but click) which defined under this category when click category checkbox  provide select all
+if no keywords selected under this category, uncheck the category, if unckeck category by customer popup alert, are you sure uncheck all keywords
+
+
+give right to customer input keywords (check duplicate),  customer keywords should add into category(  may need a table call customercategorykeywords, which has category id, customerid , keywords)
+when popup page, need load both system defined and customer category defined which belong to this customer
+
+
+
+
+Check RSS Deals cross duplicate.  Write a function to estimate how much similar 
+
+
+
+
+
+
+
+
+

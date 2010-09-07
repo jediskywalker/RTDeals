@@ -37,6 +37,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -80,22 +84,35 @@
     <Compile Include="Common\SendDeals.cs" />
     <Compile Include="Common\SendEmail.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DealsConfigController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KeyWordsController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="DBAccess\CategoryDB.cs" />
     <Compile Include="DBAccess\ConfigDB.cs" />
     <Compile Include="DBAccess\CustomerDB.cs" />
     <Compile Include="DBAccess\DB.cs" />
     <Compile Include="DBAccess\DealsDB.cs" />
+    <Compile Include="DBAccess\RssSeedDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CategoryKeywordsModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\DealsConfigModel.cs" />
     <Compile Include="Models\DealsSourceModel.cs" />
     <Compile Include="Models\RegexPatternModel.cs" />
+    <Compile Include="Models\SourceRssSeedModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RSS\Channel.cs" />
+    <Compile Include="RSS\ChannelCollection.cs" />
+    <Compile Include="RSS\Feed.cs" />
+    <Compile Include="RSS\item.cs" />
+    <Compile Include="RSS\ItemCollection.cs" />
     <Compile Include="Utlities\CacheUtil.cs" />
     <Compile Include="Utlities\Constants.cs" />
     <Compile Include="Utlities\FileUtility.cs" />
@@ -103,12 +120,20 @@
     <Compile Include="Utlities\StrUtil.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\MySQL.VisualStudio.dll" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Category\Create.aspx" />
+    <Content Include="Views\Category\Edit.aspx" />
+    <Content Include="Views\Category\Index.aspx" />
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\DealsConfig\Edit.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Views\Login\Index.aspx" />
+    <Content Include="Views\Shared\LoginUserControl.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

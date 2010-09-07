@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-
+<%@ Import Namespace="RTDealsWebApplication.Models" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -15,17 +15,18 @@
                 <h1>My MVC Application</h1>
             </div>
               
-            <div id="logindisplay">
-                <% Html.RenderPartial("LogOnUserControl"); %>
-            </div> 
+            <div id="loginDiv">
+            <% Html.RenderPartial("LoginUsercontrol", (CustomerModel)HttpContext.Current.Session["Customer"]); %>
+           </div>
             
             <div id="menucontainer">
             
                 <ul id="menu">              
                     <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
-                    <li><%: Html.ActionLink("Customer", "Index", "Customer")%></li>
-                    <li><%: Html.ActionLink("DealsConfig", "Edit", "DealsConfig")%></li>
+                     <li><%: Html.ActionLink("Category", "edit", "Category")%></li>
+             <%--       <li><%: Html.ActionLink("Customer", "Index", "Customer")%></li>
+                    <li><%: Html.ActionLink("DealsConfig", "Edit", "DealsConfig")%></li>--%>
                 </ul>
             
             </div>

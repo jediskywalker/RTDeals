@@ -13,6 +13,8 @@ using RTDealsWebApplication.DBAccess;
 using RTDealsWebApplication.Common;
 using System.Threading;
 
+
+
 namespace RTDealsWebApplication.Controllers
 {
     public class DealsConfigController : Controller
@@ -22,7 +24,17 @@ namespace RTDealsWebApplication.Controllers
 
         public ActionResult Index()
         {
+            ViewData["DealSource"] = DealsDB.GetAllDealSource();
+            //foreach (DealsSourceModel dsm in ldsm)
+            //{
+                //
+            //}
+
+              //SourceRssSeedModel srs = RssSeedDB.GetSourceRssSeedByID(dsm.SourceID);
+              //ViewData["AdditionalRSS"]=
+            
             return View();
+
         }
 
         //
@@ -64,6 +76,7 @@ namespace RTDealsWebApplication.Controllers
  
         public ActionResult Edit()
         {
+            ViewData["DealSource"] = DealsDB.GetAllDealSource();
             return View();
         }
 
@@ -88,16 +101,80 @@ namespace RTDealsWebApplication.Controllers
 
         public void ProcessDeals()
         {
-            RegexPattern rp=new RegexPattern();
+            // RegexPattern rp=new RegexPattern();
+            //  List<DealsSourceModel> ldsm = DealsDB.GetAllDealSource();
+            // foreach (DealsSourceModel dsm in ldsm)
+            // {
+            //    SendDeals.SendRTDeals(dsm.SourceName, "free");
+            //   Thread.Sleep(2000);  // Use this for test purpose, can be removed after using our own email server
+            //   }
+
+            //string url = "http://feeds.feedburner.com/dealsea-latest";
             List<DealsSourceModel> ldsm = DealsDB.GetAllDealSource();
             foreach (DealsSourceModel dsm in ldsm)
             {
-                SendDeals.SendRTDeals(dsm.SourceName, "off");
-                Thread.Sleep(2000);  // Use this for test purpose, can be removed after using our own email server
+                string strHtml = "";
+                //string Keywords = "laptop";
+                try
+                {
+
+                    SourceRssSeedModel srs = RssSeedDB.GetSourceRssSeedByID(dsm.SourceID);
+                    if (srs != null)
+                    {
+                        string url =srs.RSSAddress;
+                        RTDealsWebApplication.RSS.Feed feed = new RTDealsWebApplication.RSS.Feed(url, DateTime.Parse(System.DateTime.Now.AddDays(-3).ToShortDateString()));
+                        feed.Read();
+                        strHtml += "[Count：" + feed.Channel.Items.Count + "]<br><br>";
+                        for (int i = 0; i < feed.Channel.Items.Count; i++)
+                        {
+                           // if (!feed.Channel.Items[i].title.ToLower().Contains(Keywords))
+                             //   continue;
+                            //                        arr = feed.Channel.Items[i].title.Split(cSplit);
+                            strHtml += "  <a href=" + feed.Channel.Items[i].link + " target=_blank><B>" + feed.Channel.Items[i].title + "</B></a><br>";
+                            strHtml += "  <font color=red>" + feed.Channel.Items[i].pubDate + "</font><br>";
+                            strHtml += "  " + feed.Channel.Items[i].description + "<br>";
+                        }
+
+
+
+                        SendEmail.SendDealsEmail("xhdf_x@hotmail.com", "rtdeals@hotmail.com", "Real Time Deals Alert @ " + dsm.SourceName, strHtml);
+                        Thread.Sleep(2000);
+                        // Response.Write(strHtml);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    string s = ex.Message;
+                    continue;
+                }
+
             }
 
+        
+
         }
-        //test
+
+        public string GetDealType(int id)  // Dynamiclly show sub menus
+        {
+            string result = "";
+            if (id < 0)
+                return result;
+
+            SourceRssSeedModel srs = RssSeedDB.GetSourceRssSeedByID(id);
+            string[] DealRSSArray = srs.Additional.Split(',');
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<table><tr>");
+            for (int i = 0; i < DealRSSArray.Length; i++)
+            {
+
+                string[] RSSDetals =DealRSSArray[i].Split('*');
+                sb.Append("<td>" + RSSDetals[0] + "<input type='checkbox' id='ckd' name='ckd' value='" + RSSDetals[1] + "'/></td>");
+            }
+            sb.Append("</tr></table>");
+            result = sb.ToString();
+            return result;
+        }
+
 
         //
         // GET: /DealsConfig/Delete/5
