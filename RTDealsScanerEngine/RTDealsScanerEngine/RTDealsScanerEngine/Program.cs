@@ -14,27 +14,46 @@ namespace RTDealsScanerEngine
         static void Main(string[] args)
         {
             int count = 0;
-          //  int SimiPecentage = 0 ;
+            //  int SimiPecentage = 0 ;
             int PercentageLimitation = 0;
-            while (DateTime.Now < DateTime.Now.AddDays(1))
+            try
             {
-              if (count == 0)
-               {
-                   Console.Write("Please enter a number between 0-100:");
-                   PercentageLimitation = Convert.ToInt16(Console.ReadLine()); 
-                   //SimiPecentage = Convert.ToInt16(Console.ReadLine());
-               }
-                
-             count++;
-              // DuplicateDealsCheck.DuplicateResult(SimiPecentage);
-                ScanDeals.GetRSSDeals(PercentageLimitation);
-                Thread.Sleep(100000);
+                while (DateTime.Now < DateTime.Now.AddDays(1))
+                {
+                    if (count == 0)
+                    {
+                        Console.Write("Please enter a number between 0-100:");
+                        PercentageLimitation = Convert.ToInt16(Console.ReadLine());
+                        //SimiPecentage = Convert.ToInt16(Console.ReadLine());
+                    }
+
+                    //int ssss = 100 / count;
+                    count++;
+                    // DuplicateDealsCheck.DuplicateResult(SimiPecentage);
+
+                    ScanDeals.GetRSSDeals(PercentageLimitation);
+                    Console.WriteLine(count.ToString() + " round(s)");
+                    Thread.Sleep(120000);
+
+
+                    //for (int i = 60; i >= 0; i--)
+                    //{
+
+                    //     Console.Write(i);
+                    //     System.Threading.Thread.Sleep(1000);
+                    //     Console.Clear();
+                    //     i = 60;
+                    // }
+
+                }
+            }
+            catch(Exception e)
+            {
+                SendEmail.SendDealsEmail("xhdf_x@hotmail.com", "rtdeals@hotmail.com", "Scaner Error @ " + DateTime.Now.ToString(),e.Message);
+
+
             }
         }
-
-
-
-
 
 
     }

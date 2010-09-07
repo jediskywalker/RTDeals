@@ -6,10 +6,12 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<script type="text/javascript">
-    $(function(){  $('#userName').focus(); });
-</script>
-
+<%--<script type="text/javascript">
+    $(function(){  $('#Username').focus(); });
+</script>--%>
+    <p>
+        Please enter your username and password. <%: Html.ActionLink("Register", "Register") %> if you don't have an account.
+    </p>
     <h2>Login</h2>
 <form id="loginForm" action="/Login/Index" method="post">
 
