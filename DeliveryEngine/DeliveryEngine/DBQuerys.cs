@@ -128,7 +128,7 @@ namespace DeliveryEngine
      
         }
 
-        public static List<Deals> GrabLatestDeals()
+        public static List<Deals> GrabLatestDeals(bool newdealsonly)
         {
             // sp_getnewdeals
             
@@ -142,6 +142,7 @@ namespace DeliveryEngine
             try
             {
                 cmd.CommandText = "sp_getnewdeals";
+                cmd.Parameters.AddWithValue("@newdealsonly",newdealsonly);
                 conn.Open();
                 cmd.CommandTimeout = 60; // increase timeout to 60, just in case of busy or locking
                 dr = cmd.ExecuteReader();
@@ -173,7 +174,7 @@ namespace DeliveryEngine
      
         }
 
-        public static List<Customers> GetAllCustomers()
+        public static List<Customers> GetAllCustomers(bool isNew)
         {
             //sp_getactivecustomerstomatchnewdeal
             MySqlConnection conn = new MySqlConnection(connStr);
@@ -186,6 +187,7 @@ namespace DeliveryEngine
             try
             {
                 cmd.CommandText = "sp_getactivecustomerstomatchnewdeal";
+                cmd.Parameters.AddWithValue("@isNewInput", isNew);
                 conn.Open();
                 cmd.CommandTimeout = 60; // increase timeout to 60, just in case of busy or locking
                 dr = cmd.ExecuteReader();
@@ -217,7 +219,7 @@ namespace DeliveryEngine
             return tmpList;
         }
 
-        public static void UpdateScheduleTable(int customerID, string dealID)
+        public static void UpdateScheduleTable(int customerID, string dealID, bool newcust)
         {
             MySqlConnection conn = new MySqlConnection(connStr);
             MySqlCommand cmd = conn.CreateCommand();
@@ -227,6 +229,7 @@ namespace DeliveryEngine
                 cmd.CommandText = "sp_updateScheduled";
                 cmd.Parameters.AddWithValue("@customerIDinput", customerID);
                 cmd.Parameters.AddWithValue("@dealIDinput", dealID);
+                cmd.Parameters.AddWithValue("@newcust",newcust);
                 conn.Open();
                 cmd.CommandTimeout = 60; // increase timeout to 60, just in case of busy or locking
                 int y = cmd.ExecuteNonQuery();
