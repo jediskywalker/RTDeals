@@ -90,7 +90,7 @@ namespace DeliveryEngine
 
             foreach (string word in keywordsarray)
             {
-                if (desc.Contains(word))
+                if (desc.ToLower().Contains(word.ToLower()))
                 {
                     return true;
                 }            
