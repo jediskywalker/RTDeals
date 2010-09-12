@@ -119,7 +119,7 @@ namespace RTDealsWebApplication.Controllers
             sb.Append("<ajaxToolkit:ToolkitScriptManager runat='Server' ID='ScriptManager1' CombineScripts='false' EnablePartialRendering='true' ScriptMode='Release' />");
             foreach (CategoryModel cm in lcm)
             {
-                List<CategoryKeywordsModel> lckm = CategoryDB.GetCategoryKeywordsByID(cm.ID);
+                List<CategoryKeywordsModel> lckm = CategoryDB.GetCategoryKeywordsByID(cm.CategoryID);
                // sb.Append("<tr><td>" + cm.Name);
                 //sb.Append("<input type='checkbox' name='"+cm.Name+ "' id='"+cm.Name+"' value='" +cm.ID+ "'</td></tr>");
                 sb.Append("<tr><td><input type='button' name='" + cm.Name + "' id='" + cm.Name + "' value='" + cm.Name + "'/></td><tr> ");

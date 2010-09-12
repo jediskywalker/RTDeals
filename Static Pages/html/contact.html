@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>contact</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+jQuery(document).ready(function(){
+	$('#contactform').submit(function(){				  
+		var action = $(this).attr('action');
+		$.post(action, { 
+			name: $('#name').val(),
+			email: $('#email').val(),
+			company: $('#company').val(),
+			subject: $('#subject').val(),
+			message: $('#message').val()
+		},
+			function(data){
+				$('#contactform #submit').attr('disabled','');
+				$('.response').remove();
+				$('#contactform').before('<p class="response">'+data+'</p>');
+				$('.response').slideDown();
+				if(data=='Message sent!') $('#contactform').slideUp();
+			}
+		); 
+		return false;
+	});
+});
+// ]]>
+</script>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="header_top_text"><a href="#">Recommend to your frinds!</a></div>
+      <div class="logo"><a href="index.html"><img src="images/logo.gif" width="374" height="143" border="0" alt="logo" /></a></div>
+      <div class="search">
+      	<img src="images/login.gif" border="0" alt="login"  />
+      </div>
+      <div class="clr"></div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html"><span>Home</span></a></li>
+          <li><a href="aboutus.html"><span>About us</span></a></li>
+          <li><a href="packages.html"><span>Packages</span></a></li>
+          <li><a href="faq.html"><span>FAQ</span></a></li>
+          <li><a href="partners.html"><span>Our partners</span></a></li>
+          <li><a href="contact.html" class="active"><span>Contact us</span></a></li>
+        </ul>
+        <div class="clr"></div>
+      </div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="slider_resize2">
+    <div class="slider2">
+      <h2>Contact Us</h2>
+      <p>whatever the query, we&rsquo;ll take care of it:</p>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="FBG">
+    <div class="FBG_resize">
+      <div class="FBG_small"> <img src="images/freetrail.gif" alt="picture" width="62" height="62" />
+        <p><strong>Recommend to frinds </strong><br />
+          Vestibulum blandit Sedeuism 
+          od enimeleifend inter.</p>
+      </div>
+      <div class="FBG_small"> <img src="images/predefinep.gif" alt="picture" width="62" height="62" />
+        <p><strong>Pre-define Packages</strong><br />
+          Vestibulum blandit Sedeuism 
+          od enimeleifend inter.</p>
+      </div>
+      <div class="FBG_small"> <img src="images/customizedp.gif" alt="picture" width="62" height="62" />
+        <p><strong>Customerized Package</strong><br />
+          Vestibulum blandit Sedeuism 
+          od enimeleifend inter.</p>
+      </div>
+      <div class="FBG_small2"> <img src="images/myaccount.gif" alt="picture" width="62" height="62" />
+        <p><strong>My Account</strong><br />
+          Vestibulum blandit Sedeuism 
+          od enimeleifend inter.</p>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="body_resize">
+    <div class="body">
+      <div class="body_big">
+        <h2>Contact to company</h2>
+        <p><strong>Fusce vehicula dignissim ligula. </strong><br />
+          Vestibulum sit amet neque eu neque suscipit consequat quis vel risus. Vestibulum vehicula purus nec dui accumsan fermentum. Suspendisse potenti. Ut dapibus est id odio pretium blandit in eget leo. Aliquam erat volutpat. Curabitur blandit odio eget odio eleifend vel mattis augue convallis. Praesent fringilla, eros et tristique tempus, libero metus porttitor velit, at ultrices eros dolor placerat nunc. Fusce ac egestas ante.</p>
+        <p>&nbsp;</p>
+        <h2>Contact form</h2>
+        <form action="contact.php" method="post" id="contactform">
+          <ol>
+            <li>
+              <label for="name">First Name <span class="red">*</span></label>
+              <input id="name" name="name" class="text" />
+            </li>
+            <li>
+              <label for="email">Your email <span class="red">*</span></label>
+              <input id="email" name="email" class="text" />
+            </li>
+            <li>
+              <label for="company">Company</label>
+              <input id="company" name="company" class="text" />
+            </li>
+            <li>
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" class="text" />
+            </li>
+            <li>
+              <label for="message">Message <span class="red">*</span></label>
+              <textarea id="message" name="message" rows="6" cols="50"></textarea>
+            </li>
+            <li class="buttons">
+              <input type="image" name="imageField" id="imageField" src="images/send.gif" />
+            </li>
+          </ol>
+        </form>
+      </div>
+      <div class="body_small">
+        <h2>Get in touch!</h2>
+        <img src="images/img_2.jpg" alt="picture" width="243" height="182" />
+        <div class="clr"></div>
+        <p>You can also use our <a href="#"><strong>contact page.</strong></a></p>
+        <p>adress:   4 Slim Road, Company, USA<br />
+          email:      company@company.com<br />
+          phone:     0353 123 456 78<br />
+          mobile:    0353 123 456 78</p>
+        <div class="line"></div>
+        <p><span><strong>details contacts &gt;&gt;</strong></span></p>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="clr"></div>
+</div>
+<div class="footer">
+  <div class="footer_resize">
+    <div class="textt">
+      <p>© Copyright 2009. Your Site Name Dot Com. All Rights Reserved <br />
+        <a href="#">Home</a> | <a href="#">Contact</a> | <a href="#">RSS </a></p>
+    </div>
+    <div class="loggo"> <a href="#"><img src="images/footer_logo.gif" alt="picture" width="212" height="100" border="0" /></a> </div>
+    <div class="textt2">
+      <p><a href="#">Promptly &diams; Precisely &diams; Easily</a></p>
+    </div>
+  </div>
+  <div class="clr"></div>
+</div>
+</body>
+</html>

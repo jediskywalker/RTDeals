@@ -4,3 +4,5 @@ D:\RTDealEngine\DeliveryEngine\DeliveryEngine\obj\x86\Debug\ResolveAssemblyRefer
 D:\RTDealEngine\DeliveryEngine\DeliveryEngine\obj\x86\Debug\DeliveryEngine.exe
 D:\RTDealEngine\DeliveryEngine\DeliveryEngine\obj\x86\Debug\DeliveryEngine.pdb
 D:\RTDealEngine\DeliveryEngine\DeliveryEngine\bin\Debug\mysql.data.dll
+D:\RTDeals_DEV\DeliveryEngine\DeliveryEngine\obj\x86\Debug\DeliveryEngine.exe
+D:\RTDeals_DEV\DeliveryEngine\DeliveryEngine\obj\x86\Debug\DeliveryEngine.pdb

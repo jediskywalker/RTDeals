@@ -124,7 +124,10 @@ namespace RTDealsScanerEngine
                                          string tempDuplicate = "";
                                          //string UniqueParameter="";
                                          int Percentage = 0;
-                                        
+
+                                        // if (feed.Channel.Items[j].title.Contains("Direct"))
+                                           //  Percentage = 0;
+
                                           isExist = isRssDealExist(feed.Channel.Items[j].link);
                                           isDuplicateExsit = isRssDealDuplicateExist(feed.Channel.Items[j].link);
 

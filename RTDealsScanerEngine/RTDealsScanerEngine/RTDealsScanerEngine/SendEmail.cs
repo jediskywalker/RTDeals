@@ -31,7 +31,7 @@ namespace RTDealsScanerEngine
             catch (Exception ex)
             {
                 string s = ex.Message;
-                throw (ex);
+                //throw (ex);
             }
         }
     }

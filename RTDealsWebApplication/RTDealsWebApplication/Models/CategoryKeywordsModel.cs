@@ -7,6 +7,7 @@ namespace RTDealsWebApplication.Models
 {
     public class CategoryKeywordsModel
     {
+        public int CategoryKeywordID { get; set; }
         public int CategoryID { get; set; }
         public string Keyword { get; set; }
     }

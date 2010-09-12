@@ -102,6 +102,8 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CategoryKeywordsModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\CustomerCategoryKeywordsModel.cs" />
+    <Compile Include="Models\CustomerKeywords.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\DealsConfigModel.cs" />
     <Compile Include="Models\DealsSourceModel.cs" />
@@ -127,8 +129,12 @@
     <Content Include="Views\Category\Create.aspx" />
     <Content Include="Views\Category\Edit.aspx" />
     <Content Include="Views\Category\Index.aspx" />
+    <Content Include="Views\Customer\Edit.aspx" />
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\DealsConfig\Edit.aspx" />
+    <Content Include="Views\KeyWords\Edit.aspx" />
+    <Content Include="Views\KeyWords\GetCateKeywords.aspx" />
+    <Content Include="Views\KeyWords\Index.aspx" />
     <Content Include="Views\Login\Index.aspx" />
     <Content Include="Views\Shared\LoginUserControl.ascx" />
     <Content Include="Web.config">
@@ -182,7 +188,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>47767</DevelopmentServerPort>
+          <DevelopmentServerPort>64623</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

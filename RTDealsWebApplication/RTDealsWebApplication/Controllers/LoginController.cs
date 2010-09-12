@@ -38,11 +38,7 @@ namespace WebSite.Controllers
             {
                 Session["Customer"] = customer;
 
-
-
-
-
-                return RedirectToAction("Edit", "DealsConfig");
+                return RedirectToAction("Index", "Customer");
             }
 
             ViewData["Message"] = "Failed to log in";

@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<form action="customer" method="post">  
+<%--<form action="customer" method="post">  
     <h2>Index</h2>
     <table>
        <tr>
@@ -21,9 +21,11 @@
                 <td><%=Html.Encode(cm.LastName)%></td>
             </tr>
 
-
+            
          <%} %>
     </table>
     <input  type="submit" name="button" value="Submit"/>
-    </form>
+    </form>--%>
+    <%RTDealsWebApplication.Models.CustomerModel cm = (RTDealsWebApplication.Models.CustomerModel)ViewData["LoginCustomer"];%>
+    <a href="javascript:window.open('/Customer/edit/<%=cm.CustomerID%>','_blank')">Config Keywords</a>
 </asp:Content>
