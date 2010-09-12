@@ -8,7 +8,7 @@ using System.Collections;
 using System.Text;
 using System.Security.Cryptography;
 
-
+// 9.12.2010 Li
 /// <summary>
 /// Summary description for StrUtility
 /// provides various string utility functions
