@@ -3,3 +3,8 @@ D:\RTDeals_DEV\RTDealsWebApplication\RTDealsWebApplication\bin\RTDealsWebApplica
 D:\RTDeals_DEV\RTDealsWebApplication\RTDealsWebApplication\bin\RTDealsWebApplication.pdb
 D:\RTDeals_DEV\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.dll
 D:\RTDeals_DEV\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.pdb
+D:\RTDeal\RTDealsWebApplication\RTDealsWebApplication\bin\RTDealsWebApplication.dll
+D:\RTDeal\RTDealsWebApplication\RTDealsWebApplication\bin\RTDealsWebApplication.pdb
+D:\RTDeal\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\ResolveAssemblyReference.cache
+D:\RTDeal\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.dll
+D:\RTDeal\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.pdb
