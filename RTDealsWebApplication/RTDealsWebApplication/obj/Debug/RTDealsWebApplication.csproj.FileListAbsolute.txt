@@ -8,3 +8,8 @@ D:\RTDeal\RTDealsWebApplication\RTDealsWebApplication\bin\RTDealsWebApplication.
 D:\RTDeal\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\ResolveAssemblyReference.cache
 D:\RTDeal\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.dll
 D:\RTDeal\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.pdb
+C:\RTDeals\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\ResolveAssemblyReference.cache
+C:\RTDeals\RTDealsWebApplication\RTDealsWebApplication\bin\RTDealsWebApplication.dll
+C:\RTDeals\RTDealsWebApplication\RTDealsWebApplication\bin\RTDealsWebApplication.pdb
+C:\RTDeals\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.dll
+C:\RTDeals\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.pdb

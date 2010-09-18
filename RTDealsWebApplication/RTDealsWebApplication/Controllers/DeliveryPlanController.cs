@@ -16,7 +16,7 @@ namespace RTDealsWebApplication.Controllers
             if(submitbutton == "Save" )
             {
                 
-                // DBAccess.DeliverySchedule.InsertUpdateDeliveryPlan();
+               
                             
 
             }
@@ -27,7 +27,8 @@ namespace RTDealsWebApplication.Controllers
         {
 
             Models.DeliveryPlan tmpPlan = new Models.DeliveryPlan();
-            
+
+            tmpPlan.CustomerID = 2;
 
             // day option
             string[] deliverydays = weekdays.Trim(',').Split(',');
@@ -72,25 +73,45 @@ namespace RTDealsWebApplication.Controllers
                 tmpPlan.Interval = tmpfre;
                 tmpPlan.RealTime = true;
             }
-
-
-
-            //B: if times not empty; means fixed times
-            // order them first, then assign value by sequence
+            
+            //B: if times not empty; means fixed times            
             string[] fxtimes = times.Trim(',').Split(',');
+            // order them first, then assign value by sequence
+            Array.Sort(fxtimes);
+
             if (fxtimes.Length > 0)
             {
                 tmpPlan.RealTime = false;
-                foreach (string time in fxtimes)
-                { 
-                                
-                }            
+                for (int i = 0; i < fxtimes.Length; i++ )
+                {
+                    switch (i)
+                    { 
+                        case 0:
+                            tmpPlan.FirstTime = Convert.ToDateTime(fxtimes[0]);
+                            break;
+                        case 1:
+                            tmpPlan.SecondTime = Convert.ToDateTime(fxtimes[1]);
+                            break;
+                        case 2:
+                            tmpPlan.ThirdTime = Convert.ToDateTime(fxtimes[2]);
+                            break;
+                        case 3:
+                            tmpPlan.FourthTime = Convert.ToDateTime(fxtimes[3]);
+                            break;
+                        case 4:
+                            tmpPlan.FifthTime = Convert.ToDateTime(fxtimes[4]);
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
 
             // nightpause
             tmpPlan.NightPause = (np == "true");
 
-            
+            // call SP to update or insert
+           //DBAccess.DeliverySchedule.InsertUpdateDeliveryPlan(tmpPlan);
             return "good"; 
         
         }

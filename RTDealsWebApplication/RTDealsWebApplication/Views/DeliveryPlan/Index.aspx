@@ -80,17 +80,22 @@
     }
 
     function RemoveItem(objListBox, strId) {
+
         var intIndex = GetItemIndex(objListBox, strId);
         if (intIndex != -1)
             objListBox.remove(intIndex);
+
+         
     }
 
+    // need do a sorting here?    
     function AddItem(objListBox, strText, strId) {
         var newOpt;
         newOpt = document.createElement("OPTION");
         newOpt = new Option(strText, strText);
         newOpt.id = strId;
-        objListBox.add(newOpt);
+        objListBox.add(newOpt);      
+
     }
 
     function GetItemIndex(objListBox, strId) {
