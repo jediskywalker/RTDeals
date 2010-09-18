@@ -12,13 +12,8 @@
         <%foreach (RTDealsWebApplication.Models.CategoryModel cm in (List<RTDealsWebApplication.Models.CategoryModel>)ViewData["Category"]){%>
           <td><%=cm.Name%></td>  
                  <td><input type="checkbox" name="<%=cm.Name%>" id="<%=cm.CategoryID%>"  onclick="UpdateValues('<%=cm.Name%>,<%=cm.CategoryID%>')" /></td>
-            
-
-  
-     
-     
+   
        <%} %>
-    
       </div>
          <% using (Html.BeginForm())
        { %>
@@ -28,7 +23,23 @@
             <%} %>
 
                  <% } %>
-           <script language="javascript" type="text/javascript">
+
+
+         <div>
+              <b>Customerize:</b>
+               <br />
+               Use Combination:
+              <input type="checkbox"  name="ckbCombination" id="ckbCombination" value="-1" onclick="ShowCombination(this.value)"  />
+              <br />
+              Input Keywords seperate by ","
+              <input type="text" name="CustomerKeywords" id="CustomerKeywords" />
+              <div id="Combination"></div>
+              <input type="submit" name="button" id="button" value="Save" />
+         </div>
+
+
+
+       <script language="javascript" type="text/javascript">
                function UpdateValues(id) {
                    var Para = id.split(',');
 
@@ -56,12 +67,7 @@
 
                }
 
-    </script>
-
-
-
-    <script language="javascript" type="text/javascript">
-
+  
         function UpdateCustomerCategoryKeywords(idd) {
 
             var Para = idd.split(',');
@@ -86,15 +92,66 @@
             xmlhttp.send();
         }
 
+  
+          function ShowCombination(id) {
+
+              var status;
+              if (document.getElementById('ckbCombination').checked)
+                  status = 1;
+              else
+                  status = 0;
+
+    
+              var result = id + "," + status;
+              if (window.XMLHttpRequest) {
+                  xmlhttp = new XMLHttpRequest();
+              }
+              else {
+                  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+              }
+              xmlhttp.onreadystatechange = function () {
+                  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                      document.getElementById("Combination").innerHTML = xmlhttp.responseText;
+                  }
+
+              }
+              xmlhttp.open("POST", "ShowCombination?id=" + result, true);
+              xmlhttp.send();
+              
+          }
+
+ 
+           function AddLine(id) {
+
+               if (window.XMLHttpRequest) {
+                   xmlhttp = new XMLHttpRequest();
+               }
+               else {
+                   xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+               }
+               xmlhttp.onreadystatechange = function () {
+                   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                       document.getElementById("Combination").innerHTML += xmlhttp.responseText;
+                   }
+
+               }
+               xmlhttp.open("POST", "AddLine?id=" + id, true);
+               xmlhttp.send();
+
+           }
+
+
+           function removeDiv(id) {
+               //alert(id);
+               //var temp = id.toString();
+
+               document.getElementById(id).style.display = 'none';
+                
+            
+           }
 
 
     </script>
-
-
-
-
-
-
 
 
 </asp:Content>
