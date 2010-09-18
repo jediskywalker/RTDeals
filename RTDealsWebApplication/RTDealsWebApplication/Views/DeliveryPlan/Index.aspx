@@ -5,21 +5,24 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+<script language="javascript" type="text/javascript" src="<%=Url.Content("~/Scripts/MicrosoftAjax.js") %>"></script>
+<script language="javascript" type="text/javascript" src="<%=Url.Content("~/Scripts/MicrosoftMvcAjax.js") %>"></script>
 <script language="javascript" type="text/javascript">
 
     function setcolor(id) {
         if (id == 0) {
          for (var i = 1; i < 8; i++) {
              var cellida = "td" + i;
-            document.getElementById(cellida).style.backgroundColor = "red";
+            document.getElementById(cellida).style.backgroundColor = "green";
             }
         }
         
         if (id > 0) {
             var cellid = "td" + id;
             var current = document.getElementById(cellid).style.backgroundColor;
-            if (current != "red")
-                document.getElementById(cellid).style.backgroundColor = "red";
+            if (current != "green")
+                document.getElementById(cellid).style.backgroundColor = "green";
             else
                 document.getElementById(cellid).style.backgroundColor = "#fff";
         }
@@ -52,28 +55,27 @@
             document.getElementById('sDeliveryInterval').disabled = false;
         }
         if (value == 0) {
-            var items = new Array();
-            items = document.getElementsByName("fixed");
-            for (var i = 0; i < items.length; i++) {
-                items[i].disabled = false;
+            var items2 = new Array();
+            items2 = document.getElementsByName("fixed");
+            for (var j = 0; j < items2.length; j++) {
+                items2[j].disabled = false;
             }
             document.getElementById('txtminutes').disabled = true;
             document.getElementById('sDeliveryInterval').disabled = true;
         }
     }
 
-
-
     function movetime() {
-
         var time = document.getElementById("hr").value + ":" + document.getElementById("mi").value + " " + document.getElementById("ma").value;
-
-        AddItem(document.getElementById("personalTime"), time, time);
-
+        if (document.getElementById("personalTime").length < 5) {
+            AddItem(document.getElementById("personalTime"), time, time);
+        } else if (document.getElementById("personalTime").length == 5) {
+        alert("MAX 5 times allowed, double click to remove");
+        }
+        showtxt2();
     }
 
     function removetime(selected) {
-        
         RemoveItem(document.getElementById("personalTime"), selected);
     }
 
@@ -101,17 +103,94 @@
         return -1;
     }
 
+    function validation() {
+
+        // week days.....
+        var weekdays = '';
+        for (var i = 1; i < 8; i++) {
+            var cellid = "td" + i;
+            var current = document.getElementById(cellid).style.backgroundColor;
+            if (current == "green") {
+                document.getElementById(cellid).style.backgroundColor = "green";
+                weekdays += ',' + i;
+            }
+        }
+        if (weekdays == '') {
+            alert("Need select at least one week day");
+            return false;
+        }
+        // week days end
+
+        var radioRT = document.getElementById("realtime").checked;
+        var radioFT = document.getElementById("fixedtime").checked;
+        //alert(radioRT + ' ' + radioFT);
+        if (radioFT == false && radioRT == false) {
+            alert("Need select a time plan");
+            return false;
+        }
+
+        var tmpinterval=0;
+        if (radioRT == true) {  // real time
+            if (document.getElementById("sDeliveryInterval").value == -1) {
+                tmpinterval = document.getElementById("txtminutes").value;
+
+                var re = new RegExp('[0-9]+');
+                if (tmpinterval.match(re)) {
+                    //  alert("Successful match");
+                } else {
+                    alert("ONLY accept numbers for delivery interval");
+                    return false;
+                }
+            } else {
+            tmpinterval = document.getElementById("sDeliveryInterval").value;
+            }
+        }
+
+        var times='';
+        if (radioFT == true) {  // fixed time
+            var tmpcnt = document.getElementById("personalTime").length;
+            if (tmpcnt == 0) {
+                alert("Need select at least one delivery time");
+                return;
+            }
+            for (var i = 0; i < tmpcnt; i++) {
+                times += ',' + document.getElementById("personalTime").children[i].id;
+            }
+        }
+        // nightpause ?
+        var np = document.getElementById("nightpause").checked;
+       // alert(np);
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {               
+                alert(xmlhttp.responseText);
+            }
+        }
+
+        xmlhttp.open("POST", "DeliveryPlan/InsertUpdateSchedule?weekdays=" + weekdays + "&tmpinterval=" + tmpinterval + "&times=" + times + "&np=" + np, true);
+        xmlhttp.send();
+
+    }
+   
 
 </script>
 
 
     <h2>Delivery Time Plan</h2>
 
+    <form id="ddeliveryplan" runat="server">
+
     <div id="weekday">
     <table>
    
    <tr>
-   <td colspan="80"> Please select the day you want receive alert.</td>
+   <td colspan="8"> Please select the day you want receive alert.</td>
    </tr>
 
     <tr height="30px">
@@ -248,7 +327,7 @@
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
               </select> 
-              <input type="button" value="add (upto 5)" onclick="movetime()" name="fixed"> <br/><br/>
+              <input type="button" value="add (upto 5)" onclick="movetime()" name="fixed"/> <br/><br/>
               &nbsp &nbsp  &nbsp &nbsp   &nbsp &nbsp  &nbsp &nbsp   
               <select name="drop1" id="personalTime" size="5" multiple="multiple" style=" height:100px; width:100px" 
               ondblclick="removetime(this.value)" name="fixed" onclick="showtxt2()">
@@ -274,6 +353,8 @@
 
     <input type="checkbox" id="nightpause"  /> By checking this, we won't send alert to you after 11:00PM till next day 7:00AM <br/>
 
-    <input type="submit" value="Save the delivery plan"  />
+    <input type="button" value="Save" onclick="validation()" />
+
+  </form>
 
 </asp:Content>

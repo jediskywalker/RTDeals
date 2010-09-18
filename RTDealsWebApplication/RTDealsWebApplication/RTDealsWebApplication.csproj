@@ -100,6 +100,7 @@
     <Compile Include="DBAccess\CustomerDB.cs" />
     <Compile Include="DBAccess\DB.cs" />
     <Compile Include="DBAccess\DealsDB.cs" />
+    <Compile Include="DBAccess\DeliverySchedule.cs" />
     <Compile Include="DBAccess\RssSeedDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -112,6 +113,7 @@
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\DealsConfigModel.cs" />
     <Compile Include="Models\DealsSourceModel.cs" />
+    <Compile Include="Models\DeliveryPlan.cs" />
     <Compile Include="Models\RegexPatternModel.cs" />
     <Compile Include="Models\SourceRssSeedModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
