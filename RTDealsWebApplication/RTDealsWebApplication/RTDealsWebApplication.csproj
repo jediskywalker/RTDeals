@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,10 +14,14 @@
     <AssemblyName>RTDealsWebApplication</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -87,6 +91,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DealsConfigController.cs" />
+    <Compile Include="Controllers\DeliveryPlanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KeyWordsController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -95,6 +100,7 @@
     <Compile Include="DBAccess\CustomerDB.cs" />
     <Compile Include="DBAccess\DB.cs" />
     <Compile Include="DBAccess\DealsDB.cs" />
+    <Compile Include="DBAccess\DeliverySchedule.cs" />
     <Compile Include="DBAccess\RssSeedDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -107,7 +113,7 @@
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\DealsConfigModel.cs" />
     <Compile Include="Models\DealsSourceModel.cs" />
-    <Compile Include="Models\HomePageSearchModel.cs" />
+    <Compile Include="Models\DeliveryPlan.cs" />
     <Compile Include="Models\RegexPatternModel.cs" />
     <Compile Include="Models\SourceRssSeedModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,103 +132,14 @@
     <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\MySQL.VisualStudio.dll" />
-    <Content Include="Content\jquery.ui.tabs.css" />
-    <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
-    <Content Include="images\about.jpg" />
-    <Content Include="images\Copy of ico4.png" />
-    <Content Include="images\credit-cards.gif" />
-    <Content Include="images\customizedp.gif" />
-    <Content Include="images\electrical.gif" />
-    <Content Include="images\electricity-icon.gif" />
-    <Content Include="images\entertainment.gif" />
-    <Content Include="images\fashion.gif" />
-    <Content Include="images\footer_bg.gif" />
-    <Content Include="images\footer_logo.gif" />
-    <Content Include="images\freetrail.gif" />
-    <Content Include="images\freetrail.png" />
-    <Content Include="images\header_bg.gif" />
-    <Content Include="images\header_bg2.gif" />
-    <Content Include="images\header_text_bg.gif" />
-    <Content Include="images\img_1.jpg" />
-    <Content Include="images\img_2.jpg" />
-    <Content Include="images\img_3.jpg" />
-    <Content Include="images\img_4.jpg" />
-    <Content Include="images\img_5.jpg" />
-    <Content Include="images\img_6.gif" />
-    <Content Include="images\img_7.gif" />
-    <Content Include="images\img_8.gif" />
-    <Content Include="images\laun_port.gif" />
-    <Content Include="images\left_bg.gif" />
-    <Content Include="images\left_bottom_bg.gif" />
-    <Content Include="images\left_top_bg.gif" />
-    <Content Include="images\link_bg.gif" />
-    <Content Include="images\login.gif" />
-    <Content Include="images\login_2.gif" />
-    <Content Include="images\logo.gif" />
-    <Content Include="images\logo_1.gif" />
-    <Content Include="images\l_arrow.gif" />
-    <Content Include="images\l_menu.gif" />
-    <Content Include="images\menu_bg.gif" />
-    <Content Include="images\mobile-icon.gif" />
-    <Content Include="images\more_information.gif" />
-    <Content Include="images\myaccount.gif" />
-    <Content Include="images\packing-icon.png" />
-    <Content Include="images\port_1.jpg" />
-    <Content Include="images\port_2.jpg" />
-    <Content Include="images\port_3.jpg" />
-    <Content Include="images\port_4.jpg" />
-    <Content Include="images\port_5.jpg" />
-    <Content Include="images\port_6.jpg" />
-    <Content Include="images\predefine.gif" />
-    <Content Include="images\predefinep.gif" />
-    <Content Include="images\projec_1.gif" />
-    <Content Include="images\projec_2.gif" />
-    <Content Include="images\projec_3.gif" />
-    <Content Include="images\red-cross.jpg" />
-    <Content Include="images\right_bg.gif" />
-    <Content Include="images\right_bottom_bg.gif" />
-    <Content Include="images\right_top_bg.gif" />
-    <Content Include="images\r_arrow.gif" />
-    <Content Include="images\r_menu.gif" />
-    <Content Include="images\search.gif" />
-    <Content Include="images\searchleft.jpg" />
-    <Content Include="images\searchright.jpg" />
-    <Content Include="images\search_bg.gif" />
-    <Content Include="images\send.gif" />
-    <Content Include="images\serv_1.jpg" />
-    <Content Include="images\serv_2.jpg" />
-    <Content Include="images\serv_3.jpg" />
-    <Content Include="images\signup.gif" />
-    <Content Include="images\signup_2.gif" />
-    <Content Include="images\simple2_bg.gif" />
-    <Content Include="images\simple_img_1.jpg" />
-    <Content Include="images\simple_img_2.jpg" />
-    <Content Include="images\simple_img_3.jpg" />
-    <Content Include="images\Sin_now.gif" />
-    <Content Include="images\slider_bg.jpg" />
-    <Content Include="images\slider_img_1.jpg" />
-    <Content Include="images\slider_img_2.jpg" />
-    <Content Include="images\slider_img_3.jpg" />
-    <Content Include="images\spacer.gif" />
-    <Content Include="images\supermarket-icon.gif" />
-    <Content Include="images\top_img_1.gif" />
-    <Content Include="images\top_img_2.gif" />
-    <Content Include="images\top_img_3.gif" />
-    <Content Include="images\top_img_4.gif" />
-    <Content Include="images\travel.gif" />
-    <Content Include="images\Twitter_img.gif" />
-    <Content Include="includes\jquery-1.4.2.js" />
-    <Content Include="includes\ui\jquery.ui.core.js" />
-    <Content Include="includes\ui\jquery.ui.tabs.js" />
-    <Content Include="includes\ui\jquery.ui.widget.js" />
     <Content Include="Views\Category\Create.aspx" />
     <Content Include="Views\Category\Edit.aspx" />
     <Content Include="Views\Category\Index.aspx" />
     <Content Include="Views\Customer\Edit.aspx" />
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\DealsConfig\Edit.aspx" />
-    <Content Include="Views\Home\Search.aspx" />
+    <Content Include="Views\DeliveryPlan\Index.aspx" />
     <Content Include="Views\KeyWords\Edit.aspx" />
     <Content Include="Views\KeyWords\GetCateKeywords.aspx" />
     <Content Include="Views\KeyWords\Index.aspx" />

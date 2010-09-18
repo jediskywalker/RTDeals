@@ -4,13 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTDealsWebApplication", "RTDealsWebApplication\RTDealsWebApplication.csproj", "{8A435430-263F-422C-ACE6-3CABE78C06CA}"
 EndProject
 Global
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 2
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = RTDealsWebApplication\\RTDealsWebApplication.csproj
-		SccLocalPath1 = .
-		SccProjectFilePathRelativizedFromConnection1 = RTDealsWebApplication\\
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
