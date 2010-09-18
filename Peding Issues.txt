@@ -21,6 +21,18 @@ when popup page, need load both system defined and customer category defined whi
 
 Check RSS Deals cross duplicate.  Write a function to estimate how much similar 
 
+add paypal/someway to accept donation
+
+Building Customer Set Up page
+
+
+
+Add AA.com  RSS Feed As Source
+For processors need check type number  950  620 
+
+
+Check the pubdate problem http://feedproxy.google.com/~r/FatwalletHotDeals/~3/zEjBgTzNe00/1014158
+
 
 
 

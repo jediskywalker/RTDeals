@@ -69,6 +69,7 @@
     <Compile Include="RSS\ItemCollection.cs" />
     <Compile Include="ScanDeals.cs" />
     <Compile Include="RTDealsDataAccess\ScanerDataSet.cs" />
+    <Compile Include="SendEmail.cs" />
     <Compile Include="Similarity.cs" />
   </ItemGroup>
   <ItemGroup>

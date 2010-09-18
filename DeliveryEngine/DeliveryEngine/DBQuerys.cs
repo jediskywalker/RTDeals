@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
 
+// 9.12.2010 Li
 namespace DeliveryEngine
 {
     class DBQuerys
     {
 
-        public static string connStr = "server=24.107.53.155;database=rtdeals;uid=jediskywalker;password=19810408;";
-        //public static string connStr = "server=192.168.1.107;database=rtdeals;uid=jediskywalker;password=19810408;";
-
+        //public static string connStr = "server=24.107.53.155;database=rtdeals;uid=jediskywalker;password=19810408;";
+        public static string connStr = "server=192.168.1.107;database=rtdeals;uid=jediskywalker;password=19810408;";
+        
         public static Deals GetOneDeal(int dealid)
         {
             MySqlConnection conn = new MySqlConnection(connStr);
@@ -29,12 +30,10 @@ namespace DeliveryEngine
 
                 while (dr.Read())
                 {
-                    
+                    tmpModel.PubDate = (string)dr["PubDate"];
                     tmpModel.dealsID = (int)dr["dealsID"];
                     tmpModel.URL = (string)dr["URL"];
                     tmpModel.Title = (string)dr["Title"];
-                                     
-
                 }
             }
             catch (Exception ex)
@@ -55,6 +54,7 @@ namespace DeliveryEngine
                 // 
         public static List<ScheduledDelivery> GetAllScheduled2Deliver()
         {
+             DBisNULLUtility isNull = new DBisNULLUtility();
             MySqlConnection conn = new MySqlConnection(connStr);
             MySqlCommand cmd = conn.CreateCommand();
             MySqlDataReader dr = null;
@@ -79,6 +79,7 @@ namespace DeliveryEngine
                     tmpModel.customerID = (int)dr["customerID"];
                     tmpModel.FirstName= (string)dr["FirstName"];
                     tmpModel.LastName = (string)dr["LastName"];
+                    tmpModel.Keywords = isNull.isDBNull(dr["keywords"], "");
 
                     tmpList.Add(tmpModel);
 
@@ -178,6 +179,9 @@ namespace DeliveryEngine
         public static List<Customers> GetAllCustomers(bool isNew)
         {
             //sp_getactivecustomerstomatchnewdeal
+            
+             DBisNULLUtility isNull = new DBisNULLUtility();
+            
             MySqlConnection conn = new MySqlConnection(connStr);
             MySqlCommand cmd = conn.CreateCommand();
             MySqlDataReader dr = null;
@@ -198,10 +202,13 @@ namespace DeliveryEngine
                     Customers tmpModel = new Customers();
 
                     tmpModel.CustomerID = (int)dr["CustomerID"];
-                    tmpModel.Email = (string)dr["Email"];
-                    tmpModel.FirstName = (string)dr["FirstName"];
-                    tmpModel.LastName = (string)dr["LastName"];
-                    tmpModel.KeyWords = (string)dr["KeyWords"];
+                    tmpModel.Email = isNull.isDBNull(dr["Email"],"");
+                    tmpModel.FirstName = isNull.isDBNull(dr["FirstName"],"");
+                    tmpModel.LastName = isNull.isDBNull(dr["LastName"],"");
+                    tmpModel.Catekeywords = isNull.isDBNull(dr["catekeywords"],"");
+                    tmpModel.Custkeywords = isNull.isDBNull(dr["custkeywords"],"");
+                    
+                    tmpModel.KeyWords = (tmpModel.Catekeywords.Trim(',') + "," + tmpModel.Custkeywords.Trim(',')).Trim(',');
 
                     tmpList.Add(tmpModel);
                 }
@@ -220,7 +227,7 @@ namespace DeliveryEngine
             return tmpList;
         }
 
-        public static void UpdateScheduleTable(int customerID, string dealID, bool newcust)
+        public static void UpdateScheduleTable(int customerID, string dealIDs, bool newcust,string keywords)
         {
             MySqlConnection conn = new MySqlConnection(connStr);
             MySqlCommand cmd = conn.CreateCommand();
@@ -229,8 +236,9 @@ namespace DeliveryEngine
             {
                 cmd.CommandText = "sp_updateScheduled";
                 cmd.Parameters.AddWithValue("@customerIDinput", customerID);
-                cmd.Parameters.AddWithValue("@dealIDinput", dealID);
+                cmd.Parameters.AddWithValue("@dealIDinput", dealIDs);
                 cmd.Parameters.AddWithValue("@newcust",newcust);
+                cmd.Parameters.AddWithValue("@keywordsin",keywords);
                 conn.Open();
                 cmd.CommandTimeout = 60; // increase timeout to 60, just in case of busy or locking
                 int y = cmd.ExecuteNonQuery();

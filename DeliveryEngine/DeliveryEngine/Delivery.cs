@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Collections;
 
-
+// 9.12.2010 Li
 namespace DeliveryEngine
 {
     class Delivery
@@ -16,9 +16,10 @@ namespace DeliveryEngine
             while (true)
             {
                 DoDelivery();
-               
-                Console.WriteLine("***delivery");
-                Thread.Sleep(5000);
+
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine("***delivery     "+ DateTime.Now.ToLongTimeString());
+                Thread.Sleep(30000);
             }
 
         }
@@ -46,32 +47,41 @@ namespace DeliveryEngine
                         deals.Add(intdealid, newdeal);                    
                     }
 
-                    Deals tmpdeal = (Deals)deals[intdealid];                                        
-                    emailcontent += MakeUp(tmpdeal);
+                    Deals tmpdeal = (Deals)deals[intdealid];         
+                               
+                    emailcontent += MakeUp(tmpdeal,current.Keywords);
                 }
 
-                SendEmail(emailcontent, current.Email, current.customerID);
+                SendEmail(emailcontent, current.Email, current.customerID, dealids.Length);
                 Move2Delivered(current.scheduleID);
             }        
         }
 
-        private string MakeUp(Deals tmpdeal)
+        private string MakeUp(Deals tmpdeal,string keywords)   // improve 1. sequence, 2. timestamp after link
         {
             // grab the deal, and format it...
-            string content = "<div ><a href='" + tmpdeal.URL + "'>" + tmpdeal.Title + "</a></div><br/><br/>";
+            string tmptitle = tmpdeal.Title.ToLower();
+            string[] keys = keywords.ToLower().Split(',');
+            foreach(string key in keys)
+            {               
+               tmptitle = tmptitle.Replace(key, "<b><u>" + key + "</u></b>");            
+            }
 
-            Console.WriteLine(content);
+            string content = "<div ><a href='" + tmpdeal.URL + "'>" + tmptitle + "</a></div><i> (" + tmpdeal.PubDate + ")</i><br/><br/>";
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine(tmpdeal.Title.ToLower());
             return content;
         }
 
-        protected void SendEmail(string content, string to, int cid)
+        protected void SendEmail(string content, string to, int cid, int dealcnt)
         {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("*** sending email");
             try
             {
                 System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
                 
-                string subject = cid.ToString()+ ": Your Deals Alert from intime.deals";
+                string subject = cid.ToString()+ ": you got "+dealcnt+" deals alert from sDeals";
                 string[] receiver = { to };
               
                 foreach (string emailadd in receiver)
@@ -99,6 +109,7 @@ namespace DeliveryEngine
             catch (Exception ex)
             {
                 string y = ex.Message;
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine(y);
             }
 
@@ -109,6 +120,7 @@ namespace DeliveryEngine
             //todo
             // copy to history table, so won't delivery multiple times
             DBQuerys.MoveScheduled2Delivered(scheduleID);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("*** move to delivered");
         }
 

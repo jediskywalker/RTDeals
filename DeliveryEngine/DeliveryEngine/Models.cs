@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+// 9.12.2010 Li
 namespace DeliveryEngine
 {
     class Deals
@@ -14,7 +15,8 @@ namespace DeliveryEngine
         public bool IsFinance { get; set; }
         public bool IsFree { get; set; }
         public bool IsTravel { get; set; }
-        public bool IsDrug { get; set; }    
+        public bool IsDrug { get; set; }
+        public string PubDate { get; set; }
 
     }
 
@@ -23,6 +25,8 @@ namespace DeliveryEngine
     {
         public int CustomerID { get; set; }
         public string KeyWords { get; set; }
+        public string Catekeywords { get; set; }
+        public string Custkeywords { get; set; }
         public string Email { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -43,6 +47,7 @@ namespace DeliveryEngine
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
+        public string Keywords { get; set; }
 
     }
 }

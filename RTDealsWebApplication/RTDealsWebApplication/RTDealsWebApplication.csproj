@@ -14,10 +14,14 @@
     <AssemblyName>RTDealsWebApplication</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -87,6 +91,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DealsConfigController.cs" />
+    <Compile Include="Controllers\DeliveryPlanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KeyWordsController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -95,6 +100,7 @@
     <Compile Include="DBAccess\CustomerDB.cs" />
     <Compile Include="DBAccess\DB.cs" />
     <Compile Include="DBAccess\DealsDB.cs" />
+    <Compile Include="DBAccess\DeliverySchedule.cs" />
     <Compile Include="DBAccess\RssSeedDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -102,9 +108,12 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CategoryKeywordsModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\CustomerCategoryKeywordsModel.cs" />
+    <Compile Include="Models\CustomerKeywords.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\DealsConfigModel.cs" />
     <Compile Include="Models\DealsSourceModel.cs" />
+    <Compile Include="Models\DeliveryPlan.cs" />
     <Compile Include="Models\RegexPatternModel.cs" />
     <Compile Include="Models\SourceRssSeedModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,8 +136,13 @@
     <Content Include="Views\Category\Create.aspx" />
     <Content Include="Views\Category\Edit.aspx" />
     <Content Include="Views\Category\Index.aspx" />
+    <Content Include="Views\Customer\Edit.aspx" />
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\DealsConfig\Edit.aspx" />
+    <Content Include="Views\DeliveryPlan\Index.aspx" />
+    <Content Include="Views\KeyWords\Edit.aspx" />
+    <Content Include="Views\KeyWords\GetCateKeywords.aspx" />
+    <Content Include="Views\KeyWords\Index.aspx" />
     <Content Include="Views\Login\Index.aspx" />
     <Content Include="Views\Shared\LoginUserControl.ascx" />
     <Content Include="Web.config">
@@ -182,7 +196,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>47767</DevelopmentServerPort>
+          <DevelopmentServerPort>64623</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

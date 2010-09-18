@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using RTDealsWebApplication.Models;
+using RTDealsWebApplication.DBAccess;
+using System.Text;
 
 namespace RTDealsWebApplication.Controllers
 {
@@ -13,8 +16,22 @@ namespace RTDealsWebApplication.Controllers
 
         public ActionResult Index()
         {
+            ViewData["Category"] = CategoryDB.GetCategory();
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Index(FormCollection collection)
+        {
+
+            CategoryModel cm = new CategoryModel();
+            cm.Name = collection["Category"];
+            CategoryDB.InsertCategory(cm);
+
+            return RedirectToAction("Index");
+
+        }
+
 
         //
         // GET: /KeyWords/Details/5
@@ -53,8 +70,20 @@ namespace RTDealsWebApplication.Controllers
         //
         // GET: /KeyWords/Edit/5
  
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
+            if (id != null)
+            {
+
+                ViewData["CategoryKeywords"] = CategoryDB.GetCategoryKeywordsByID(Convert.ToInt16(id));
+                Session["CategoryID"] = id;
+            }
+            else
+            {
+                ViewData["CategoryKeywords"] = CategoryDB.GetCategoryKeywordsByID(Convert.ToInt32(Session["CategoryID"]));
+
+            }
+
             return View();
         }
 
@@ -62,13 +91,15 @@ namespace RTDealsWebApplication.Controllers
         // POST: /KeyWords/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int? id, FormCollection collection)
         {
             try
             {
                 // TODO: Add update logic here
- 
-                return RedirectToAction("Index");
+               // ViewData["CategoryKeywords"] = CategoryDB.GetCategoryKeywordsByID(Convert.ToInt16(Session["CategoryID"]));
+               // return View("edit");
+                return RedirectToAction("UpdateCategoryKeywords", new { id = collection["N"] });
+
             }
             catch
             {
@@ -101,5 +132,31 @@ namespace RTDealsWebApplication.Controllers
                 return View();
             }
         }
+
+
+
+        public ActionResult UpdateCategoryKeywords(string id)
+        {
+            try
+            {
+                if (id != null)
+                {
+                    CategoryKeywordsModel ckm = new CategoryKeywordsModel();
+                    ckm.CategoryID = Convert.ToInt32(Session["CategoryID"]);
+                    ckm.Keyword = id;
+                    CategoryDB.InsertCategoryKeywords(ckm);
+                }
+
+                return RedirectToAction("Edit");
+            }
+            catch (Exception e)
+            {
+
+                throw (new Exception(e.Message));
+            }
+        
+        }
+
+
     }
 }

@@ -49,54 +49,64 @@ namespace RTDealsScanerEngine.RSS
 
         public void Read()
         {
-            XmlDocument xDoc = new XmlDocument();
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(_url);
-            request.Timeout = 15000;
-            request.UserAgent = @"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.40607; .NET CLR 1.1.4322)";
-            Stream stream;
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            this._lastModified = response.LastModified;
-            stream = response.GetResponseStream();
-            StreamReader sr;
-            //System.Xml.XmlReader = new XmlReader();
-            //stream=Encoding.Convert(Encoding.GetEncoding("GBK"),Encoding.GetEncoding("gb2312"),Convert.ToSByte(stream));
-            if (this.Get_CH(response.Headers["Content-Type"].ToString()) == "GBK")
+            try
             {
-                sr = new StreamReader(stream, System.Text.Encoding.GetEncoding("GB2312"));
-                xDoc.Load(sr);
-            }
-            else
-            {
-                //                sr= new StreamReader(stream,System.Text.Encoding.UTF8);
-                xDoc.Load(stream);
-            }
-
-            if (this._lastRssDate < this._lastModified)
-            {
-                XmlNodeList xnList = xDoc.DocumentElement["channel"].SelectNodes("item");
-                //                XmlNodeList xnList=xDoc.SelectNodes("items");
-                int a = xnList.Count;
-                foreach (XmlNode xNode in xnList)
+                XmlDocument xDoc = new XmlDocument();
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(_url);
+               // if (_url.Contains("rsstigercat221"))
+                  //  url = url;
+                request.Timeout = 15000;
+                request.UserAgent = @"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.40607; .NET CLR 1.1.4322)";
+                Stream stream;
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                this._lastModified = response.LastModified;
+                stream = response.GetResponseStream();
+                StreamReader sr;
+                //System.Xml.XmlReader = new XmlReader();
+                //stream=Encoding.Convert(Encoding.GetEncoding("GBK"),Encoding.GetEncoding("gb2312"),Convert.ToSByte(stream));
+                if (this.Get_CH(response.Headers["Content-Type"].ToString()) == "GBK")
                 {
-                
-                    //int s=xNode.ChildNodes.Count;
-                    Item rt = new Item();
-                    rt.title = xNode.SelectSingleNode("title").InnerText.Replace("'", "''");
-                    rt.link = xNode.SelectSingleNode("link").InnerText.Replace("'", "''");
-                    if (xNode.InnerXml.ToString().Contains("description"))
-                        rt.description = xNode.SelectSingleNode("description").InnerText.Replace("'", "''");
-                    else
-                        rt.description = "";
-                    try
-                    {
-                        rt.pubDate = xNode.SelectSingleNode("pubDate").InnerText;
-                    }
-                    catch
-                    {
-                        rt.pubDate = this._lastModified.ToString();
-                    }
-                    channel.Items.Add(rt);
+                    sr = new StreamReader(stream, System.Text.Encoding.GetEncoding("GB2312"));
+                    xDoc.Load(sr);
                 }
+                else
+                {
+                    //                sr= new StreamReader(stream,System.Text.Encoding.UTF8);
+                    xDoc.Load(stream);
+                }
+
+                if (this._lastRssDate < this._lastModified)
+                {
+                    XmlNodeList xnList = xDoc.DocumentElement["channel"].SelectNodes("item");
+                    //                XmlNodeList xnList=xDoc.SelectNodes("items");
+                    int a = xnList.Count;
+                    foreach (XmlNode xNode in xnList)
+                    {
+
+                        //int s=xNode.ChildNodes.Count;
+                        Item rt = new Item();
+                        rt.title = xNode.SelectSingleNode("title").InnerText.Replace("'", "''");
+                        rt.link = xNode.SelectSingleNode("link").InnerText.Replace("'", "''");
+                        if (xNode.InnerXml.ToString().Contains("description"))
+                            rt.description = xNode.SelectSingleNode("description").InnerText.Replace("'", "''");
+                        else
+                            rt.description = "";
+                        try
+                        {
+                            rt.pubDate = xNode.SelectSingleNode("pubDate").InnerText;
+                        }
+                        catch
+                        {
+                            rt.pubDate = this._lastModified.ToString();
+                        }
+                        channel.Items.Add(rt);
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+
+                SendEmail.SendDealsEmail("xhdf_x@hotmail.com", "rtdeals@hotmail.com", "RSSFeed Read Error @ " + DateTime.Now.ToString(), _url + ":" + e.Message);
             }
         }
 

@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/easySlider1.5.js"></script>
+<script type="text/javascript" charset="utf-8">
+// <![CDATA[
+$(document).ready(function(){	
+	$("#slider").easySlider({
+		controlsBefore:	'<p id="controls">',
+		controlsAfter:	'</p>',
+		auto: true, 
+		continuous: true
+	});	
+});
+// ]]>
+</script>
+<style type="text/css">
+#slider { width:980px; height:336px; margin:0 auto; padding:0; }
+#slider ul,
+#slider li { margin:0; padding:0; list-style:none; }
+/* 
+    define width and height of list item (slide)
+    entire slider area will adjust according to the parameters provided here
+*/
+#slider li { width:980px; height:336px; overflow:hidden; }
+p#controls { margin:0; padding:0; position:relative; }
+#prevBtn,
+#nextBtn { display:block; margin:0; overflow:hidden; width:37px; height:47px; position:absolute; left:-8px !important; left:-490px; top:-200px; }
+#nextBtn { top:-200px; left:951px; }
+#prevBtn a { display:block; width:37px; height:47px; background:url(images/l_arrow.gif) no-repeat 0 0; }
+#nextBtn a { display:block; width:37px; height:47px; background:url(images/r_arrow.gif) no-repeat 0 0; }
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="header_top_text"><a href="#">Recommend to your frinds!</a></div>
+      <div class="logo"><a href="index.html"><img src="images/logo.gif" width="374" height="143" border="0" alt="logo" /></a></div>
+      <div class="search">
+		<img src="images/login.gif" border="0" alt="login"  />
+      </div>
+      <div class="clr"></div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html" class="active"><span>Home</span></a></li>
+          <li><a href="aboutus.html"><span>About us</span></a></li>
+          <li><a href="packages.html"><span>Packages</span></a></li>
+          <li><a href="faq.html"><span>FAQ</span></a></li>
+          <li><a href="partners.html"><span>Our partners</span></a></li>
+          <li><a href="contact.html"><span>Contact us</span></a></li>
+        </ul>
+        <div class="clr"></div>
+      </div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="slider_resize">
+    <div class="slider">
+      <div id="slider">
+        <ul>
+          <li>
+            <div class="img"><img src="images/simple_img_1.jpg" alt="picture" width="980" height="336" /></div>
+          </li>
+          <li>
+            <div class="img"><img src="images/simple_img_2.jpg" alt="picture" width="980" height="336" /></div>
+          </li>
+          <li>
+            <div class="img"><img src="images/simple_img_3.jpg" alt="picture" width="980" height="336" /></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="FBG">
+    <div class="FBG_resize">
+      <div class="FBG_small"> <img src="images/freetrail.gif" alt="picture" width="62" height="62" />
+        <p><strong>Recommend to frinds </strong><br />
+          Vestibulum blandit Sedeuism 
+          od enimeleifend inter.</p>
+      </div>
+      <div class="FBG_small"> <img src="images/predefinep.gif" alt="picture" width="62" height="62" />
+        <p><strong>Pre-define Packages</strong><br />
+          Vestibulum blandit Sedeuism 
+          od enimeleifend inter.</p>
+      </div>
+      <div class="FBG_small"> <img src="images/customizedp.gif" alt="picture" width="62" height="62" />
+        <p><strong>Customerized Package</strong><br />
+          Vestibulum blandit Sedeuism 
+          od enimeleifend inter.</p>
+      </div>
+      <div class="FBG_small2"> <img src="images/myaccount.gif" alt="picture" width="62" height="62" />
+        <p><strong>My Account</strong><br />
+          Vestibulum blandit Sedeuism 
+          od enimeleifend inter.</p>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="body_resize">
+    <div class="body">
+      <div class="body_small2">
+        <h2>How RealTime Deals works:</h2>
+        <img src="images/img_1.jpg" alt="picture" width="353" height="102" />
+        <div class="clr"></div>
+        <p>Fusce vehicula dignissim ligula. </p>
+        <p>Vestibulum sit amet neque eu neque suscipit consequat quis vel risus. Vestibulum vehicula purus nec dui accumsan fermentum. Suspendisse potenti. Ut dapibus est id odio pretium blandit in eget leo. </p>
+        <p>Aliquam erat volutpat. Curabitur blandit odio eget odio eleifend vel mattis augue convallis. Praesent fringilla, eros et tristique tempus, libero metus porttitor velit, at ultrices eros dolor placerat nunc. Fusce ac egestas ante.</p>
+        <div class="line"></div>
+        <p><span><strong>more information &gt;&gt;</strong></span></p>
+      </div>
+      <div class="body_small">
+        <br />
+        <p class="data">Recommend to Friends</p>
+        <div class="clr"></div>
+        <p>Vestibulum quis odio augue. Sed mi turpis, porttitor quis aliquam vel, viverra sit amet purus. In nec libero ac elit. <a href="#">&gt;&gt;</a></p>
+        <p class="data">Customer Services</p>
+        <div class="clr"></div>
+        <p>Vestibulum quis odio augue. Sed mi turpis, porttitor quis aliquam vel, viverra sit amet purus. In nec libero ac elit. <a href="#">&gt;&gt;</a></p>
+        <p class="data">Be our Partner</p>
+        <div class="clr"></div>
+        <p>Vestibulum quis odio augue. Sed mi turpis, porttitor quis aliquam vel, viverra sit amet purus. In nec libero ac elit. <a href="#">&gt;&gt;</a><br />
+        </p>
+        <div class="line"></div>
+        <p><span><strong>more news &gt;&gt;</strong></span></p>
+      </div>
+      
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="clr"></div>
+</div>
+<div class="footer">
+  <div class="footer_resize">
+    <div class="textt">
+      <p>© Copyright 2010. Real Time Deals. All Rights Reserved <br />
+        <a href="#">Home</a> | <a href="#">Contact</a> | <a href="#">RSS </a></p>
+    </div>
+    <div class="loggo"> <a href="#"><img src="images/footer_logo.gif" alt="picture" width="212" height="100" border="0" /></a> </div>
+    <div class="textt2">
+      <p><a href="#">Promptly &diams; Precisely &diams; Easily</a></p>
+    </div>
+  </div>
+  <div class="clr"></div>
+</div>
+</body>
+</html>

@@ -47,6 +47,7 @@ namespace RTDealsScanerEngine
                 int TotalFailed = 0;
                 int TotalDuplicate = 0;
                 int TotalSimilar = 0;
+                int TotalExsitDuplicate = 0;
                 int k = 0;  //For SubCount
                 string[] SubSourceName=new string[ds.Tables["sourcerssseed"].Rows.Count];
                 int[] SubInsert = new int[ds.Tables["sourcerssseed"].Rows.Count];
@@ -63,6 +64,8 @@ namespace RTDealsScanerEngine
                              string Additional = dr["Additional"].ToString();
                              string[] AddiURL = Additional.Split(',');
                              SubSourceName[k]=id.ToString();
+
+              
                              for (int i = 0; i < AddiURL.Length; i++)
                              {
                                  try
@@ -114,15 +117,21 @@ namespace RTDealsScanerEngine
                                          int count = 0;
                                          bool isSimilar = false;
                                          bool isExist = false;
+                                         bool isDuplicateExsit = false;
                                          string Title = "";
                                          string SourceID="";
                                          string DealsID="";
+                                         string tempDuplicate = "";
                                          //string UniqueParameter="";
                                          int Percentage = 0;
-                                        
-                                          isExist = isRssDealExist(feed.Channel.Items[j].link);
 
-                                          if (!isExist) //Skip Compare if already exsit
+                                        // if (feed.Channel.Items[j].title.Contains("Direct"))
+                                           //  Percentage = 0;
+
+                                          isExist = isRssDealExist(feed.Channel.Items[j].link);
+                                          isDuplicateExsit = isRssDealDuplicateExist(feed.Channel.Items[j].link);
+
+                                          if (!isExist && !isDuplicateExsit) //Skip Compare if already exsit
                                           {
                                               ds = GetRtDealsDataSet();
                                               foreach (DataRow drr in ds.Tables["rssdeals"].Rows)
@@ -135,14 +144,16 @@ namespace RTDealsScanerEngine
                                                   if (SubSourceName[k] == SourceID)
                                                       continue; //Skipped Compare with its' Source
 
+                                                  
+
 
                                                   Percentage = Convert.ToInt16(s.sim(feed.Channel.Items[j].title, Title) * 100);    //get_semblance_By_2words(feed.Channel.Items[j].title, Title);
-                                                  if (Percentage >= 65)
+                                                  if (Percentage >= PercentageLimitation)
                                                   {
                                                       isSimilar = true;
                                                       break;  //Stop Comparation
                                                   }
-                                                  else
+                                                  else 
                                                   {
                                                       isSimilar = false;
                                                   }
@@ -150,18 +161,27 @@ namespace RTDealsScanerEngine
                                               }
                                           }
 
-                                         if (isSimilar || isExist)
+                                          if (isSimilar || isExist || isDuplicateExsit)
                                          {
                                              if (isExist)
                                              {
                                                  Console.ForegroundColor = ConsoleColor.DarkCyan;
-                                                 SimilarDuplicateResult = string.Format(feed.Channel.Items[j].title + " Found Duplicate Record At {0}", DateTime.Now.ToString());
+                                                 SimilarDuplicateResult = string.Format(feed.Channel.Items[j].title + "from {1} Found Duplicate Record At {0}", DateTime.Now.ToString(),SubSourceName[k]);
                                              }
-                                             else
+                                             else if(isSimilar)
                                              {
                                                  TotalSimilar++;
                                                  Console.ForegroundColor = ConsoleColor.Cyan;
                                                  SimilarDuplicateResult = string.Format(feed.Channel.Items[j].title + " from {2} Found Duplicate Record {3}% At {0}-{1}: {4}", SourceID, DealsID, SubSourceName[k], Percentage, DateTime.Now.ToString());
+                                                 tempDuplicate = InsertRssDealsDuplicate(id, feed.Channel.Items[j].title, feed.Channel.Items[j].link, 0, ishot, feed.Channel.Items[j].link, strHtml, feed.Channel.Items[j].pubDate, isFinance, isFree, isTravel, isDrug, isElectronic);
+                                             }
+                                             else if (isDuplicateExsit)
+                                             {
+                                                 TotalExsitDuplicate++;
+                                                 Console.ForegroundColor = ConsoleColor.Magenta;
+                                                 SimilarDuplicateResult = string.Format(feed.Channel.Items[j].title + " from {1} Found Duplicate Record  At {0}", DateTime.Now.ToString(),SubSourceName[k]);
+
+
                                              }
                                              TotalDuplicate++;
                                              SubDuplicate[k]++;
@@ -170,8 +190,10 @@ namespace RTDealsScanerEngine
                                              continue;  //Fetch next Node
 
                                          }
-                         
-                                       
+
+                                          if (feed.Channel.Items[j].title.ToLower().Contains("’s"))
+                                              feed.Channel.Items[j].title = feed.Channel.Items[j].title.Replace("’s", "");
+
                                                  string result = InsertRssDeals(id, feed.Channel.Items[j].title, feed.Channel.Items[j].link, 0, ishot, feed.Channel.Items[j].link, strHtml, feed.Channel.Items[j].pubDate, isFinance, isFree, isTravel, isDrug,isElectronic);
                                                  string resultHistory = InsertRssDealsHistory(id, feed.Channel.Items[j].title, feed.Channel.Items[j].link, 0, ishot, feed.Channel.Items[j].link, strHtml, feed.Channel.Items[j].pubDate, isFinance, isFree, isTravel, isDrug,isElectronic);
                       
@@ -190,6 +212,7 @@ namespace RTDealsScanerEngine
                                                      SubFailed[k]++;
                                                      Console.ForegroundColor = ConsoleColor.Red;
                                                      Console.WriteLine(result + " At " + DateTime.Now.ToShortTimeString());
+                                                     SendEmail.SendDealsEmail("xhdf_x@hotmail.com", "rtdeals@hotmail.com", "Scaner Error @ " + DateTime.Now.ToString(), result);
                                                  }
 
                                                  //Thread.Sleep(100);
@@ -205,7 +228,8 @@ namespace RTDealsScanerEngine
                                  {
                                      
                                      string ss = ex.Message;
-                                     SourceFailedResult += string.Format("{0} {1} At {2}***", SubSourceName[k], ss, DateTime.Now.ToString());
+                                     SourceFailedResult += string.Format("{0} {1} At {2}*", SubSourceName[k], ss, DateTime.Now.ToString());
+                                     SendEmail.SendDealsEmail("xhdf_x@hotmail.com", "rtdeals@hotmail.com", "Scaner Error @ " + DateTime.Now.ToString(), ex.Message);
                                      //continue;
                                  }
 
@@ -229,6 +253,7 @@ namespace RTDealsScanerEngine
           //      Console.WriteLine(SourceErrors[p]);
          //   }
             Console.WriteLine("Total similar deals found : " + TotalSimilar.ToString());
+            Console.WriteLine("Total Exsit Duplicate deals found : " + TotalExsitDuplicate.ToString());
             Console.WriteLine("Scan Time is : " + (DateTime.Now - starttime).Minutes + " Minutes " + (DateTime.Now - starttime).Seconds + " Seconds ");
         }
 
@@ -259,6 +284,30 @@ namespace RTDealsScanerEngine
                 return ex.Message;
             }
         }
+
+
+        public static string InsertRssDealsDuplicate(int Sourceid, string title, string url, int? rate, int isHot, string UniqueParameter, string SendContent, string publicDate, int isFinance, int isFree, int isTravel, int isDrug, int isElectronic)
+        {
+
+            //  MySqlConnection conn = clsSQLControl.CreateConnection();
+
+            string mysql = "INSERT INTO rssdealsDuplicate(sourceid, title, url, inTime, rate, UniqueParameter, SendContent,PubDate,ishot,isFinance,isFree,isTravel,isDrug,isElectronic) ";
+            mysql += "VALUES ( '" + Sourceid + "' , '" + title + "' , '" + url + "' , " + "NOW()" + " , '" + rate + "' , '" + UniqueParameter + "' , '" + SendContent + "' , '" + publicDate + "' , '" + isHot + "' , '" + isFinance + "' , '" + isFree + "' , '" + isTravel + "' , '" + isDrug + "','" + isElectronic + "')";
+
+            try
+            {
+                DBUtils db = new DBUtils();
+                db.ExecuteNonQuery(mysql);
+                db.CloseConnection();
+                return Sourceid.ToString();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                return ex.Message;
+            }
+        }
+
 
 
         public static string InsertRssDealsHistory(int Sourceid, string title, string url, int? rate, int isHot, string UniqueParameter, string SendContent, string publicDate, int isFinance, int isFree, int isTravel, int isDrug, int isElectronic)
@@ -305,6 +354,28 @@ namespace RTDealsScanerEngine
             }
          
         }
+
+        public static bool isRssDealDuplicateExist(string UniqueParameter)
+        {
+            MySqlConnection conn = clsSQLControl.CreateConnection();
+            conn.Open();
+            MySqlCommand mysql = conn.CreateCommand();
+            mysql.CommandText = "select * from rssdealsDuplicate where UniqueParameter='" + UniqueParameter + "'";
+            MySqlDataReader reader = mysql.ExecuteReader();
+            if (reader.Read())
+            {
+                conn.Close();
+                return true;
+            }
+            else
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
+
+
 
         public static int get_semblance_By_2words(string word1, string word2)
         {

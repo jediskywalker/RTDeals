@@ -5,26 +5,24 @@ using System.Text;
 using System.Threading;
 namespace DeliveryEngine
 {
+    // 9.12.2010 Li
     class Schedule
     {
         // 
         public void Start()
         {
-            
             while (true)
             {
                 
                 ToHandleRegularCustomers();
-
                 // please handle the new customer after regular customers
                 // may have tiny issue for dealid in scanhistory table
                 ToHandleNewCustomers();
-
-                Console.WriteLine("### schedule");
-                Thread.Sleep(5000);
+                Console.ForegroundColor = ConsoleColor.Blue;
                 
+                Console.WriteLine("### schedule     "+DateTime.Now.ToLongTimeString());
+                Thread.Sleep(30000);
             }
-                    
         }
 
         // find all new came deals from last
@@ -66,20 +64,27 @@ namespace DeliveryEngine
 
         private void Process(List<Deals> deals, List<Customers> users,bool newCust)
         {
-            foreach (Deals deal in deals)
-            {
-                foreach (Customers tmpcust in users)
+                string tmpids = "";
+                foreach (Customers tmpcust in users) 
                 {
-                    // if deal. desc matchs tmpcust.keywords
-                    if (DoMatch(deal.Title, tmpcust.KeyWords))
+                    foreach (Deals deal in deals)
                     {
-                        UpdateSchedule(tmpcust.CustomerID, deal.dealsID,newCust);
+                        // if deal. desc matchs tmpcust.keywords
+                        if (DoMatch(deal.Title, tmpcust.KeyWords))         
+                        {
+                            tmpids += deal.dealsID+",";
+                        }
+                        
+                    }
+                    // need check.
+                    if (tmpids.Length > 0)
+                    {
+                        UpdateSchedule(tmpcust.CustomerID, tmpids.Trim(','), newCust, tmpcust.KeyWords);
+                        tmpids = "";
                     }
                 }
-            }        
         }
         
-
 
         private bool DoMatch(string desc, string keywords)
         {
@@ -95,27 +100,15 @@ namespace DeliveryEngine
                     return true;
                 }            
             }
-
             return false;
         }
 
-        private void UpdateSchedule(int customerID, int dealID, bool newcust)
+        private void UpdateSchedule(int customerID, string dealIDs, bool newcust,string keywords)
         {
-            Console.WriteLine("### update customer: "+ customerID.ToString()+" deal: "+dealID);
-            DBQuerys.UpdateScheduleTable(customerID, dealID.ToString(),newcust);
-            //TODO
-            //if customer in dealsdeliveryschedule already
-            // update dealids field with new dealID
-            // if custoemr not in table yet
-            // insert new one, need figure out next delivey time for this user.
-            // realtime flag is useful
-            // all logic in database
-
-            // if new customer, need reset isnew flag in custoemr table
-            // 
-        
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("### update customer: "+ customerID.ToString()+" deal: "+dealIDs);
+            DBQuerys.UpdateScheduleTable(customerID, dealIDs, newcust, keywords);        
         }
-
 
     }
 }

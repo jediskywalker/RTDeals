@@ -10,6 +10,7 @@
 %>
 <div class="loginout" id="Login">
     <%= Html.ActionLink("Login", "Index", "Login") %>
+   <%-- <%= Html.ActionLink("LogOn", "LogOn", "Account") %>--%>
 </div>
 <%--<form action="/Login/Index" method="post">
     <div class="col2Fieldset">
