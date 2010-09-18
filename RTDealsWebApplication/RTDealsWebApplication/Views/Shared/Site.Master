@@ -12,7 +12,7 @@
 
         <div id="header">
             <div id="title">
-                <h1>My MVC Application</h1>
+                <h1>Find best deal for you</h1>
             </div>
               
             <div id="loginDiv">
@@ -22,9 +22,9 @@
             <div id="menucontainer">
             
                 <ul id="menu">              
-                    <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
+                 <%--   <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
-                    <li><%: Html.ActionLink("Keywords", "Index", "Keywords")%></li>
+                    <li><%: Html.ActionLink("Keywords", "Index", "Keywords")%></li>--%>
 <%--                    <li><%: Html.ActionLink("Customer", "Index", "Customer")%></li>--%>
 
                      <%--  <li><%: Html.ActionLink("Category", "edit", "Category")%></li>

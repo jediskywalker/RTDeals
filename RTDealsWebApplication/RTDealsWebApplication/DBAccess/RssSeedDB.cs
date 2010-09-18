@@ -30,6 +30,15 @@ namespace RTDealsWebApplication.DBAccess
                 return null;
         }
 
+        public static List<HomePageSearchModel> GetHomeSearchResult(string keyword)
+        {
+
+            MySqlCommand mysql = new MySqlCommand();
+            mysql.CommandText = "Select * from rssdeals where title like '%" + keyword + "%' order by dealsid desc";
+            mysql.CommandType = CommandType.Text;
+            return DB.GetListFromDataReader<HomePageSearchModel>(mysql);
+         
+        }
 
     }
 }
