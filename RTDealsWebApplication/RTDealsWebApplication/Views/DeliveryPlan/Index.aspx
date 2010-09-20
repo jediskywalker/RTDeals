@@ -66,7 +66,7 @@
     }
 
     function movetime() {
-        var time = document.getElementById("hr").value + ":" + document.getElementById("mi").value + " " + document.getElementById("ma").value;
+        var time = document.getElementById("hr").value + ":" + document.getElementById("mi").value;
         if (document.getElementById("personalTime").length < 5) {
             AddItem(document.getElementById("personalTime"), time, time);
         } else if (document.getElementById("personalTime").length == 5) {
@@ -174,7 +174,7 @@
         
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {               
-                alert(xmlhttp.responseText);
+               // alert(xmlhttp.responseText);
             }
         }
 
@@ -239,9 +239,10 @@
                     </select>
                     <br/>
                     <br/>
-                 &nbsp &nbsp  &nbsp &nbsp      <input type="text" id="txtminutes" style=" visibility:hidden" value="input your minutes here" />
+                 &nbsp &nbsp  &nbsp &nbsp      <input type="text" id="txtminutes" style=" visibility:hidden" value="Input your minutes here" onfocus="if (this.value==this.defaultValue) {this.value=''; this.style.color='#2b2f30';}" />
                  <br/>
                  <br/>
+                  &nbsp &nbsp  &nbsp &nbsp   <input type="checkbox" id="nightpause"  /> By checking this, we won't send alert to you after 11:00PM till next day 7:00AM <br/>
 
         </td>
         </tr>
@@ -250,7 +251,8 @@
         <td>
         <input type="radio" name="deliveryTime" id="fixedtime" value="0" onclick="timeoptionshowhide(this.value)"  />Fixed Time <br/>
               &nbsp &nbsp  &nbsp &nbsp           
-              <select id="hr" name="fixed" onclick="showtxt2()">                
+              <select id="hr" name="fixed" onclick="showtxt2()">   
+               <option value="00">00</option>             
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -263,6 +265,17 @@
                 <option value="10">10</option>
                 <option value="11">11</option>
                 <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>  
               </select>
 
               <select id="mi" name="fixed" onclick="showtxt2()">
@@ -328,13 +341,10 @@
 <option value="59">59</option>
 </select>
               
-              <select id="ma" name="fixed" onclick="showtxt2()">
-                <option value="AM">AM</option>
-                <option value="PM">PM</option>
-              </select> 
+        
               <input type="button" value="add (upto 5)" onclick="movetime()" name="fixed"/> <br/><br/>
               &nbsp &nbsp  &nbsp &nbsp   &nbsp &nbsp  &nbsp &nbsp   
-              <select name="drop1" id="personalTime" size="5" multiple="multiple" style=" height:100px; width:100px" 
+              <select name="drop1" id="personalTime" size="5" multiple="multiple" style=" height:120px; width:100px; font-size:large;" 
               ondblclick="removetime(this.value)" name="fixed" onclick="showtxt2()">
     
                </select>
@@ -356,9 +366,13 @@
     
     </div>
 
-    <input type="checkbox" id="nightpause"  /> By checking this, we won't send alert to you after 11:00PM till next day 7:00AM <br/>
+  <span style=" " ></span>
 
     <input type="button" value="Save" onclick="validation()" />
+
+    <div id="result">
+    
+    </div>
 
   </form>
 

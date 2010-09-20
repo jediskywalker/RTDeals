@@ -38,6 +38,11 @@ namespace RTDealsWebApplication.DBAccess
                 cmd.Parameters.AddWithValue("@inputLastDeliveryTime", tmpplan.LastDeliveryTime);
                 
                 cmd.CommandType = CommandType.StoredProcedure;
+
+
+                DB.ExecuteNonQuery(cmd);
+
+
                                 
             }
             catch (Exception e)
