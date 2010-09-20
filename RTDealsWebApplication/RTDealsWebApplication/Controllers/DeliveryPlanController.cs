@@ -8,6 +8,12 @@ namespace RTDealsWebApplication.Controllers
 {
     public class DeliveryPlanController : Controller
     {
+
+        public ActionResult Test()
+        {
+            return View();
+        }
+
         //
         // GET: /DeliveryPlan/
 

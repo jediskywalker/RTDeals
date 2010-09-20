@@ -141,6 +141,7 @@
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\DealsConfig\Edit.aspx" />
     <Content Include="Views\DeliveryPlan\Index.aspx" />
+    <Content Include="Views\DeliveryPlan\Test.aspx" />
     <Content Include="Views\KeyWords\Edit.aspx" />
     <Content Include="Views\KeyWords\GetCateKeywords.aspx" />
     <Content Include="Views\KeyWords\Index.aspx" />
