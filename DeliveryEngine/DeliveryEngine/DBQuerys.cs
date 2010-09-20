@@ -34,6 +34,13 @@ namespace DeliveryEngine
                     tmpModel.dealsID = (int)dr["dealsID"];
                     tmpModel.URL = (string)dr["URL"];
                     tmpModel.Title = (string)dr["Title"];
+                    tmpModel.InDate = (DateTime)dr["inTime"];
+                    tmpModel.IsDrug = (bool)dr["IsDrug"];
+                    tmpModel.IsFinance = (bool)dr["IsFinance"];
+                    tmpModel.IsFree = (bool)dr["IsFree"];
+                    tmpModel.Ishot = (bool)dr["Ishot"];
+                    tmpModel.IsTravel = (bool)dr["IsTravel"];
+                    tmpModel.IsElectronic = (bool)dr["IsElectronic"];
                 }
             }
             catch (Exception ex)
