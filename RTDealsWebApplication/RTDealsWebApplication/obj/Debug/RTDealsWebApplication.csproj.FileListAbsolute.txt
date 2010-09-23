@@ -1,0 +1,5 @@
+D:\RTDeals_DEV\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\ResolveAssemblyReference.cache
+D:\RTDeals_DEV\RTDealsWebApplication\RTDealsWebApplication\bin\RTDealsWebApplication.dll
+D:\RTDeals_DEV\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.dll
+D:\RTDeals_DEV\RTDealsWebApplication\RTDealsWebApplication\obj\Debug\RTDealsWebApplication.pdb
+D:\RTDeals_DEV\RTDealsWebApplication\RTDealsWebApplication\bin\RTDealsWebApplication.pdb
