@@ -1,0 +1,6 @@
+D:\RTDeal\DeliveryEngine\DeliveryEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\RTDeal\DeliveryEngine\DeliveryEngine\bin\Debug\DeliveryEngine.exe
+D:\RTDeal\DeliveryEngine\DeliveryEngine\bin\Debug\DeliveryEngine.pdb
+D:\RTDeal\DeliveryEngine\DeliveryEngine\bin\Debug\mysql.data.dll
+D:\RTDeal\DeliveryEngine\DeliveryEngine\obj\x86\Debug\DeliveryEngine.exe
+D:\RTDeal\DeliveryEngine\DeliveryEngine\obj\x86\Debug\DeliveryEngine.pdb

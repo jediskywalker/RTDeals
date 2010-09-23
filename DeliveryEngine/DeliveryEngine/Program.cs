@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 // 9.12.2010 Li
 namespace DeliveryEngine
@@ -11,6 +12,8 @@ namespace DeliveryEngine
     {
         static void Main(string[] args)
         {
+
+
 
             Console.Title = "Great sDeals! schedule&delivery Engine " + DateTime.Now.ToLongDateString();
             Console.WindowWidth = 120;
@@ -31,6 +34,7 @@ namespace DeliveryEngine
             Deliverythred.Start();
             
             Console.WriteLine("Engine is running....");
+          
         }
     }
 }

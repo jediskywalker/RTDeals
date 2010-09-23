@@ -14,10 +14,11 @@
     <AssemblyName>RTDealsWebApplication</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>"%24/RTDealsWebApplication/RTDealsWebApplication/RTDealsWebApplication", WFAAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -131,12 +132,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\AjaxControlToolkit.dll" />
-    <Content Include="bin\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\MyPaper.dll" />
     <Content Include="bin\MyPaper.pdb" />
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\MySQL.VisualStudio.dll" />
     <Content Include="bin\RTDealsWebApplication.dll" />
+    <Content Include="bin\RTDealsWebApplication.pdb" />
+    <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="images\about.jpg" />
     <Content Include="images\Copy of ico4.png" />
@@ -177,10 +179,6 @@
     <Content Include="images\more_information.gif" />
     <Content Include="images\myaccount.gif" />
     <Content Include="images\packing-icon.png" />
-    <Content Include="images\pagelist\First.gif" />
-    <Content Include="images\pagelist\Last.gif" />
-    <Content Include="images\pagelist\Next.gif" />
-    <Content Include="images\pagelist\Previous.gif" />
     <Content Include="images\port_1.jpg" />
     <Content Include="images\port_2.jpg" />
     <Content Include="images\port_3.jpg" />
@@ -225,10 +223,6 @@
     <Content Include="images\top_img_4.gif" />
     <Content Include="images\travel.gif" />
     <Content Include="images\Twitter_img.gif" />
-    <Content Include="includes\jquery-1.4.2.js" />
-    <Content Include="includes\ui\jquery.ui.core.js" />
-    <Content Include="includes\ui\jquery.ui.tabs.js" />
-    <Content Include="includes\ui\jquery.ui.widget.js" />
     <Content Include="Views\Category\Create.aspx" />
     <Content Include="Views\Category\Edit.aspx" />
     <Content Include="Views\Category\Index.aspx" />
@@ -236,7 +230,7 @@
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\DealsConfig\Edit.aspx" />
     <Content Include="Views\DeliveryPlan\Index.aspx" />
-    <Content Include="Views\Home\Search.aspx" />
+    <Content Include="Views\DeliveryPlan\Test.aspx" />
     <Content Include="Views\KeyWords\Edit.aspx" />
     <Content Include="Views\KeyWords\GetCateKeywords.aspx" />
     <Content Include="Views\KeyWords\Index.aspx" />
@@ -277,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\vssver2.scc" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 namespace DeliveryEngine
 {
@@ -88,17 +89,82 @@ namespace DeliveryEngine
 
         private bool DoMatch(string desc, string keywords)
         {
+            string andsplit = "~^~";
+            string[] andsplitarray = { andsplit };
+
+            string exlcudesplit = "!^!";
+            string[] exlcudesplitarray = { exlcudesplit };
+
             string[] keywordsarray = keywords.Split(',');
+            // todo, need do further split ....
 
             // may use match rate control 
             // if user has 4 keywords, will regard it as a match if two keywords matches?
-
+            
             foreach (string word in keywordsarray)
             {
-                if (desc.ToLower().Contains(word.ToLower()))
+                // if combine keywords, need all keywords show up there.
+                //ex: HP && laptop
+                if (word.Contains(andsplit) && !word.Contains(exlcudesplit))
+                {                   
+                    string[] subkeysarray =  word.Split(andsplitarray,StringSplitOptions.RemoveEmptyEntries);
+                    
+                    foreach(string subword in subkeysarray){
+                        if (!desc.ToLower().Contains(subword.ToLower()))
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                } // some must be in, but if another word is in, exclude.
+                    //ex: free !! shipping
+                else if (word.Contains(exlcudesplit) && !word.Contains(andsplit))
+                {
+                    string[] subkeysarray = word.Split(exlcudesplitarray, StringSplitOptions.RemoveEmptyEntries);
+
+                    if (!desc.ToLower().Contains(subkeysarray[0].ToLower())) // the first one is keyword wanted
+                    {
+                        return false;
+                    }
+                    for (int i = 1; i < subkeysarray.Length; i++ ) // others are keywords don't want
+                    {
+                        if (desc.ToLower().Contains(subkeysarray[i].ToLower()))
+                        {
+                            return false;
+                        }                        
+                    }
+                    return true;
+
+                } //ex: free && gift !! shipping !! ship
+                else if (word.Contains(exlcudesplit) && word.Contains(andsplit))
+                {
+                    string[] subkeysarray = word.Split(exlcudesplitarray, StringSplitOptions.RemoveEmptyEntries);
+
+                    string[] subsubkeyarray =  subkeysarray[0].Split(andsplitarray,StringSplitOptions.RemoveEmptyEntries);// only the first one in the array is "&& keywords"
+                    foreach (string subword in subsubkeyarray)   
+                    {
+                        if (!desc.ToLower().Contains(subword.ToLower()))  // if one needed keyword missing, not match
+                        {
+                            return false;
+                        }
+                    }
+
+                    for (int i = 1; i < subkeysarray.Length; i++) // others are keywords don't want
+                    {
+                        if (desc.ToLower().Contains(subkeysarray[i].ToLower()))  // if one don't need exist, not match
+                        {
+                            return false;
+                        }
+                    }
+
+                    return true;
+
+                }
+                    // without these two spliter, just regular single keyword...
+                else if (desc.ToLower().Contains(word.ToLower()))
                 {
                     return true;
-                }            
+                }
             }
             return false;
         }

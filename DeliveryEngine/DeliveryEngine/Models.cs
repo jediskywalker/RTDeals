@@ -16,7 +16,9 @@ namespace DeliveryEngine
         public bool IsFree { get; set; }
         public bool IsTravel { get; set; }
         public bool IsDrug { get; set; }
+        public bool IsElectronic { get; set; }
         public string PubDate { get; set; }
+        public DateTime InDate { get; set; }
 
     }
 
