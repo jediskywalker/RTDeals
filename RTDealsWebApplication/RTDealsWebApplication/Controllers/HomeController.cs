@@ -32,12 +32,14 @@ namespace RTDealsWebApplication.Controllers
 
         public ActionResult Search(string keyword)
         {
+            RssSeedDB.GetList("Camera");
             ViewData["SearchResult"] = RssSeedDB.GetHomeSearchResult(keyword);
-
-
             return View();
 
         }
+
+
+    
 
 
 

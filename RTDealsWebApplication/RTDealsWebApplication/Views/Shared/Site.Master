@@ -26,7 +26,7 @@
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
                     <li><%: Html.ActionLink("Keywords", "Index", "Keywords")%></li>--%>
 <%--                    <li><%: Html.ActionLink("Customer", "Index", "Customer")%></li>--%>
-
+ <li><%: Html.ActionLink("Keywords", "Index", "Keywords")%></li>
                      <%--  <li><%: Html.ActionLink("Category", "edit", "Category")%></li>
                   <li><%: Html.ActionLink("Customer", "Index", "Customer")%></li>
                     <li><%: Html.ActionLink("DealsConfig", "Edit", "DealsConfig")%></li>--%>

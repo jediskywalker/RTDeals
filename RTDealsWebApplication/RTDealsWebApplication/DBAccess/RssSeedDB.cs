@@ -40,5 +40,19 @@ namespace RTDealsWebApplication.DBAccess
          
         }
 
+        public static void GetList(string keyword)
+        {
+            MySqlCommand mysql = new MySqlCommand();
+            mysql.CommandText="select count(*) from rssdeals where title like '%" + keyword + "%' order by dealsid desc";
+            mysql.CommandType=CommandType.Text;
+            MyPaperControls.MyPaper MyPaper1 = new MyPaperControls.MyPaper();
+            MyPaper1.RecordCount = Convert.ToInt32(DB.ExecuteScalar(mysql));
+            //MyPaper1.DataSet_StartIndex = 50;
+            MyPaper1.PageSize = 100;
+            // MyPaper1.RecordCount = (int)mysql.
+
+        }
+
+
     }
 }

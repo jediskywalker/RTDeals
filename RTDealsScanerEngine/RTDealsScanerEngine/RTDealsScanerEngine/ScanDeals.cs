@@ -26,8 +26,8 @@ namespace RTDealsScanerEngine
                 DataSet ds = new DataSet();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 conn.Open();
-                string[] mysqltext = { "select * from sourcerssseed order by SourceID", "select * from rssdeals where DATE_ADD(inTime,INTERVAL 3 DAY)>NOW()", "select * from sourceurlpattern" };
-                string[] tables = { "sourcerssseed", "rssdeals", "sourceurlpattern" };
+                string[] mysqltext = { "select * from sourcerssseed order by SourceID", "select * from rssdeals where DATE_ADD(inTime,INTERVAL 3 DAY)>NOW()", "select * from sourceurlpattern","select * from categorykeywords" };
+                string[] tables = { "sourcerssseed", "rssdeals", "sourceurlpattern","categorykeywords" };
                 for (int i = 0; i < mysqltext.Length; i++)
                 {
                     MySqlCommand mysqlcom = new MySqlCommand(mysqltext[i], conn);
@@ -98,31 +98,77 @@ namespace RTDealsScanerEngine
                                          // if (strHtml.Length >= 8000)
                                          // strHtml = strHtml.Substring(0, 7999);
                                          strHtml = "";
-                                         int ishot = 0;
+        
+                                         int isAppliances=0;
                                          int isFinance = 0;
-                                         int isFree = 0;
                                          int isTravel = 0;
                                          int isDrug = 0;
                                          int isElectronic = 0;
+                                         int isBeauty = 0;
+                                         int isOfficeSupplies = 0;
+                                         int isRestaurant = 0;
+                                         int isJewelry = 0;
+                                         int isOthers = 0;
+                                         int isAppeal = 0;
+                                         int isHot = 0;
 
                                          if (RssType.ToLower().Contains("hot"))
-                                             ishot = 1;
-                                         else if (RssType.ToLower().Contains("finance"))
-                                             isFinance = 1;
-                                         else if (RssType.ToLower().Contains("free"))
-                                             isFree = 1;
-                                         else if (RssType.ToLower().Contains("travel"))
-                                             isTravel = 1;
-                                         else if (RssType.ToLower().Contains("drug"))
-                                             isDrug = 1;
-                                         else if (RssType.ToLower().Contains("electronic"))
-                                             isElectronic = 1;
+                                             isHot = 1;
+                                         //else if (RssType.ToLower().Contains("finance"))
+                                         //    isFinance = 1;
+                                         //else if (RssType.ToLower().Contains("travel"))
+                                         //    isTravel = 1;
+                                         //else if (RssType.ToLower().Contains("drug"))
+                                         //    isDrug = 1;
+                                         //else if (RssType.ToLower().Contains("electronic"))
+                                         //    isElectronic = 1;
+
+
+                                         switch (GetDealsCatetogry(feed.Channel.Items[j].title,ds))
+                                         {
+                                             case "Appeal":
+                                                 isAppeal = 1;
+                                                 break;
+                                             case "Appliances":
+                                                 isAppliances = 1;
+                                                 break;
+                                             case "Beauty":
+                                                 isBeauty = 1;
+                                                 break;
+                                             case "Drug":
+                                                 isBeauty = 1;
+                                                 break;
+                                             case "Electronics":
+                                                 isElectronic = 1;
+                                                 break;
+                                             case "Finance":
+                                                 isFinance = 1;
+                                                 break;
+                                             case "Jewelry & Watches":
+                                                 isJewelry = 1;
+                                                 break;
+                                             case "Office Supplies":
+                                                 isOfficeSupplies = 1;
+                                                 break;
+                                             case "Restaurant & Food":
+                                                 isRestaurant = 1;
+                                                 break;
+                                             case "Travels":
+                                                 isTravel = 1;
+                                                 break;
+                                        
+                                             default:
+                                                 isOthers = 1;
+                                                 break;
+                                         
+                                         }
+
 
                                          string OriginalLink = feed.Channel.Items[j].link; // Keep as Unique Parameter
 
                                          if (ds.Tables["rssdeals"].Rows.Count == 0)
                                          {
-                                             string ss = InsertRssDeals(id, feed.Channel.Items[j].title, feed.Channel.Items[j].link, 0, ishot, OriginalLink, strHtml, feed.Channel.Items[j].pubDate, isFinance, isFree, isTravel, isDrug, isElectronic);
+                                             string ss = InsertRssDeals(id,feed.Channel.Items[j].title, feed.Channel.Items[j].link, 0, OriginalLink, strHtml, feed.Channel.Items[j].pubDate,isAppliances,isFinance,isTravel,isDrug,isElectronic,isBeauty,isOfficeSupplies,isRestaurant,isJewelry,isOthers,isAppeal,isHot);
                                              
                                          }
                                         
@@ -188,7 +234,7 @@ namespace RTDealsScanerEngine
                                                  TotalSimilar++;
                                                  Console.ForegroundColor = ConsoleColor.Cyan;
                                                  SimilarDuplicateResult = string.Format(feed.Channel.Items[j].title + " from {2} Found Duplicate Record {3}% At {0}-{1}: {4}", SourceID, DealsID, SubSourceName[k], Percentage, DateTime.Now.ToString());
-                                                 tempDuplicate = InsertRssDealsDuplicate(id, feed.Channel.Items[j].title, feed.Channel.Items[j].link, 0, ishot, feed.Channel.Items[j].link, strHtml, feed.Channel.Items[j].pubDate, isFinance, isFree, isTravel, isDrug, isElectronic);
+                                                 tempDuplicate = InsertRssDealsDuplicate(id,feed.Channel.Items[j].title,feed.Channel.Items[j].link,0,OriginalLink, strHtml, feed.Channel.Items[j].pubDate,isAppliances,isFinance,isTravel,isDrug,isElectronic,isBeauty,isOfficeSupplies,isRestaurant,isJewelry,isOthers,isAppeal,isHot);
                                              }
                                              else if (isDuplicateExsit)
                                              {
@@ -221,8 +267,8 @@ namespace RTDealsScanerEngine
                                           if (feed.Channel.Items[j].title.ToLower().Contains("’s"))
                                               feed.Channel.Items[j].title = feed.Channel.Items[j].title.Replace("’s", "");
 
-                                          string result = InsertRssDeals(id, feed.Channel.Items[j].title, feed.Channel.Items[j].link, 0, ishot, OriginalLink, strHtml, feed.Channel.Items[j].pubDate, isFinance, isFree, isTravel, isDrug, isElectronic);
-                                          string resultHistory = InsertRssDealsHistory(id, feed.Channel.Items[j].title, feed.Channel.Items[j].link, 0, ishot, OriginalLink, strHtml, feed.Channel.Items[j].pubDate, isFinance, isFree, isTravel, isDrug, isElectronic);
+                                          string result = InsertRssDeals(id,feed.Channel.Items[j].title,feed.Channel.Items[j].link,0,OriginalLink,strHtml,feed.Channel.Items[j].pubDate,isAppliances,isFinance,isTravel,isDrug,isElectronic,isBeauty,isOfficeSupplies,isRestaurant,isJewelry,isOthers,isAppeal,isHot);
+                                          string resultHistory = InsertRssDealsHistory(id,feed.Channel.Items[j].title,feed.Channel.Items[j].link,0,OriginalLink, strHtml,feed.Channel.Items[j].pubDate,isAppliances,isFinance,isTravel,isDrug,isElectronic,isBeauty,isOfficeSupplies,isRestaurant,isJewelry,isOthers,isAppeal,isHot);
                       
                                                
                                                      
@@ -292,13 +338,13 @@ namespace RTDealsScanerEngine
         }
 
 
-        public static string InsertRssDeals(int Sourceid, string title, string url, int? rate, int isHot, string UniqueParameter, string SendContent, string publicDate, int isFinance, int isFree, int isTravel, int isDrug,int isElectronic)
+        public static string InsertRssDeals(int Sourceid, string title, string url, int? rate, string UniqueParameter, string SendContent, string publicDate, int IsAppliances, int IsFinance, int IsTravel, int IsDrug, int IsElectronic, int IsBeauty, int IsOfficeSupplies, int IsRestaurant, int IsJewelry, int IsOthers, int IsAppeal, int IsHot)
         {
             
           //  MySqlConnection conn = clsSQLControl.CreateConnection();
 
-            string mysql = "INSERT INTO rssdeals(sourceid, title, url, inTime, rate, UniqueParameter, SendContent,PubDate,ishot,isFinance,isFree,isTravel,isDrug,isElectronic) ";
-            mysql += "VALUES ( '" + Sourceid + "' , '" + title + "' , '" + url + "' , " + "NOW()" + " , '" + rate + "' , '" + UniqueParameter + "' , '" + SendContent + "' , '" + publicDate + "' , '" + isHot + "' , '" + isFinance + "' , '" + isFree + "' , '" + isTravel + "' , '" + isDrug + "','" + isElectronic + "')";
+            string mysql = "INSERT INTO rssdeals(sourceid,title,url,inTime,rate,UniqueParameter,SendContent,PubDate,IsAppliances,IsFinance,IsTravel,IsDrug,IsElectronic,IsBeauty,IsOfficeSupplies,IsRestaurant,IsJewelry,IsOthers,IsAppeal,IsHot) ";
+            mysql += "VALUES ( '" + Sourceid + "' , '" + title + "' , '" + url + "' , " + "NOW()" + " , '" + rate + "' , '" + UniqueParameter + "' , '" + SendContent + "' , '" + publicDate + "' , '" + IsAppliances + "' , '" + IsFinance + "' , '" + IsTravel + "' , '" + IsDrug + "' , '" + IsElectronic + "','" + IsBeauty + "','" + IsOfficeSupplies + "','" + IsRestaurant + "','" + IsJewelry + "','" + IsOthers + "','" + IsAppeal + "','" + IsHot + "')";
 
             try
             {
@@ -315,13 +361,13 @@ namespace RTDealsScanerEngine
         }
 
 
-        public static string InsertRssDealsDuplicate(int Sourceid, string title, string url, int? rate, int isHot, string UniqueParameter, string SendContent, string publicDate, int isFinance, int isFree, int isTravel, int isDrug, int isElectronic)
+        public static string InsertRssDealsDuplicate(int Sourceid, string title, string url, int? rate, string UniqueParameter, string SendContent, string publicDate, int IsAppliances, int IsFinance, int IsTravel, int IsDrug, int IsElectronic, int IsBeauty, int IsOfficeSupplies, int IsRestaurant, int IsJewelry, int IsOthers, int IsAppeal, int IsHot)
         {
 
             //  MySqlConnection conn = clsSQLControl.CreateConnection();
 
-            string mysql = "INSERT INTO rssdealsDuplicate(sourceid, title, url, inTime, rate, UniqueParameter, SendContent,PubDate,ishot,isFinance,isFree,isTravel,isDrug,isElectronic) ";
-            mysql += "VALUES ( '" + Sourceid + "' , '" + title + "' , '" + url + "' , " + "NOW()" + " , '" + rate + "' , '" + UniqueParameter + "' , '" + SendContent + "' , '" + publicDate + "' , '" + isHot + "' , '" + isFinance + "' , '" + isFree + "' , '" + isTravel + "' , '" + isDrug + "','" + isElectronic + "')";
+            string mysql = "INSERT INTO rssdealsDuplicate(sourceid,title,url,inTime,rate,UniqueParameter,SendContent,PubDate,IsAppliances,IsFinance,IsTravel,IsDrug,IsElectronic,IsBeauty,IsOfficeSupplies,IsRestaurant,IsJewelry,IsOthers,IsAppeal,IsHot) ";
+            mysql += "VALUES ( '" + Sourceid + "' , '" + title + "' , '" + url + "' , " + "NOW()" + " , '" + rate + "' , '" + UniqueParameter + "' , '" + SendContent + "' , '" + publicDate + "' , '" + IsAppliances + "' , '" + IsFinance + "' , '" + IsTravel + "' , '" + IsDrug + "' , '" + IsElectronic + "','" + IsBeauty + "','" + IsOfficeSupplies + "','" + IsRestaurant + "','" + IsJewelry + "','" + IsOthers + "','" + IsAppeal + "','" + IsHot + "')";
 
             try
             {
@@ -339,13 +385,13 @@ namespace RTDealsScanerEngine
 
 
 
-        public static string InsertRssDealsHistory(int Sourceid, string title, string url, int? rate, int isHot, string UniqueParameter, string SendContent, string publicDate, int isFinance, int isFree, int isTravel, int isDrug, int isElectronic)
+        public static string InsertRssDealsHistory(int Sourceid, string title, string url, int? rate, string UniqueParameter, string SendContent, string publicDate, int IsAppliances, int IsFinance, int IsTravel, int IsDrug, int IsElectronic, int IsBeauty, int IsOfficeSupplies, int IsRestaurant, int IsJewelry, int IsOthers, int IsAppeal, int IsHot)
         {
 
             //  MySqlConnection conn = clsSQLControl.CreateConnection();
 
-            string mysql = "INSERT INTO rssdealsHistory(sourceid, title, url, inTime, rate, UniqueParameter, SendContent,PubDate,ishot,isFinance,isFree,isTravel,isDrug,isElectronic) ";
-            mysql += "VALUES ( '" + Sourceid + "' , '" + title + "' , '" + url + "' , " + "NOW()" + " , '" + rate + "' , '" + UniqueParameter + "' , '" + SendContent + "' , '" + publicDate + "' , '" + isHot + "' , '" + isFinance + "' , '" + isFree + "' , '" + isTravel + "' , '" + isDrug + "','" + isElectronic + "')";
+            string mysql = "INSERT INTO rssdealsHistory(sourceid,title,url,inTime,rate,UniqueParameter,SendContent,PubDate,IsAppliances,IsFinance,IsTravel,IsDrug,IsElectronic,IsBeauty,IsOfficeSupplies,IsRestaurant,IsJewelry,IsOthers,IsAppeal,IsHot) ";
+            mysql += "VALUES ( '" + Sourceid + "' , '" + title + "' , '" + url + "' , " + "NOW()" + " , '" + rate + "' , '" + UniqueParameter + "' , '" + SendContent + "' , '" + publicDate + "' , '" + IsAppliances + "' , '" + IsFinance + "' , '" + IsTravel + "' , '" + IsDrug + "' , '" + IsElectronic + "','" + IsBeauty + "','" + IsOfficeSupplies + "','" + IsRestaurant + "','" + IsJewelry + "','" + IsOthers + "','" + IsAppeal + "','" + IsHot + "')";
 
             try
             {
@@ -397,7 +443,9 @@ namespace RTDealsScanerEngine
                 MySqlDataReader reader = mysql.ExecuteReader();
                 if (reader.Read())
                 {
-                    string AlteredURL = Convert.ToString(((DataRow)ds.Tables["sourceurlpattern"].Rows[0])["URLPattern"]);
+
+                   // string s = reader.GetValue(1).ToString();
+                    string AlteredURL = reader.GetValue(1).ToString();// Convert.ToString(((DataRow)ds.Tables["sourceurlpattern"].Rows[0])["URLPattern"]);
                     conn.Close();
                     return AlteredURL;
                 }
@@ -462,6 +510,42 @@ namespace RTDealsScanerEngine
 
         }
 
+        public static string GetDealsCatetogry(string dealTitle, DataSet ds)
+        {
+            if (ds != null)
+            {
+                foreach (DataRow dr in ds.Tables["categorykeywords"].Rows)
+                {
+                    string keyword = dr["keyword"].ToString();
+                    if (dealTitle.Contains(keyword))
+                        return GetCategoryNameByKeyword(keyword);
+
+                }
+
+
+            }
+
+
+            return "Others";
+        }
+
+
+        public static string GetCategoryNameByKeyword(string keyword)
+        {
+            string temp = null;
+            MySqlConnection conn = clsSQLControl.CreateConnection();
+            conn.Open();
+            MySqlCommand mysql = conn.CreateCommand();
+            mysql.CommandText = "sp_getCategoryName";
+            mysql.CommandType = CommandType.StoredProcedure;
+            mysql.Parameters.AddWithValue("KeywordInput", keyword);
+            mysql.Parameters.AddWithValue("Result", temp);
+            mysql.Parameters["Result"].Direction = ParameterDirection.Output;
+            mysql.ExecuteNonQuery();
+            conn.Close();
+            return mysql.Parameters["Result"].Value.ToString();
+
+        }
 
 
         // Force compare

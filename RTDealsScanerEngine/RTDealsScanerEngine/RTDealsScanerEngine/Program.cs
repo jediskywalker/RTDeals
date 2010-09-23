@@ -33,9 +33,9 @@ namespace RTDealsScanerEngine
 
                     ScanDeals.GetRSSDeals(PercentageLimitation);
                     Console.WriteLine(count.ToString() + " round(s)");
-                    Thread.Sleep(120000);
+                    Thread.Sleep(2400);
 
-
+                   // Thread.Sleep(1200);
                     //for (int i = 60; i >= 0; i--)
                     //{
 
