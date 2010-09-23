@@ -52,6 +52,21 @@ a:hover { text-decoration:underline;}
 .sliderlogin ul li a { float:left; margin:0; padding:13px 0; color:#403f3f; font:bold 12px Arial, Helvetica, sans-serif; text-decoration:none;}
 .sliderlogin ul li a:hover { color:#6d8f00; text-decoration:underline;}
 
+/*catalogs*/
+.catalogtable { width:900px; border:none; margin:20px auto; 5px;}
+.catalogtable p { font: bold normal 12px Arial, Helvetica, sans-serif; color:#333333; padding:0; margin:0;}
+.catalogtable table td{ border:1px solid #dadada; font: normal 12px Arial, Helvetica, sans-serif; color:#333333;}
+.catalogtable img {border:none;}
+.catalogtable a {border:none;}
+.calendar { padding:0; margin:3px 0 0 0; width:900px;}
+.calendar ul { float:left; padding:0; margin:10px auto; list-style:none; border:0; width:850px;}
+.calendar ul li { float:left; margin:0 5px; padding:3px 20px; border:0; background:#d9d9d9;}
+.calendar ul li a { margin:0; padding:0; font: bold normal 12px Arial, Helvetica, sans-serif; color:#333333; text-decoration:none;}
+.calendar ul li a:hover { color:#6d8f00; text-decoration:underline;}
+.calendar ul li a.active {color:#6d8f00; text-decoration:none;}
+
+
+
 /********** body **********/
 .body_resize { margin:0 auto; padding:0; border-top:1px solid #bfbfbf; background:#fff;}
 .body { width:982px; margin:0 auto; }
