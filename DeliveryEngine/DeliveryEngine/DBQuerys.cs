@@ -37,10 +37,17 @@ namespace DeliveryEngine
                     tmpModel.InDate = (DateTime)dr["inTime"];
                     tmpModel.IsDrug = (bool)dr["IsDrug"];
                     tmpModel.IsFinance = (bool)dr["IsFinance"];
-                    tmpModel.IsFree = (bool)dr["IsFree"];
+                    //tmpModel.IsFree = (bool)dr["IsFree"];
                     tmpModel.Ishot = (bool)dr["Ishot"];
                     tmpModel.IsTravel = (bool)dr["IsTravel"];
                     tmpModel.IsElectronic = (bool)dr["IsElectronic"];
+                    tmpModel.IsAppeal = (bool)dr["IsAppeal"];
+                    tmpModel.IsAppliances = (bool)dr["IsAppliances"];
+                    tmpModel.IsBeauty = (bool)dr["IsBeauty"];
+                    tmpModel.IsJewelry = (bool)dr["IsJewelry"];
+                    tmpModel.IsOfficeSupplies = (bool)dr["IsOfficeSupplies"];
+                    tmpModel.IsRestaurant = (bool)dr["IsRestaurant"];                    
+                    tmpModel.IsOthers = (bool)dr["IsOthers"];                    
                 }
             }
             catch (Exception ex)
