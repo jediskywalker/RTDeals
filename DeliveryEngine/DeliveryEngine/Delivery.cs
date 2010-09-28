@@ -111,89 +111,97 @@ namespace DeliveryEngine
                     string tmpLine= MakeUp(tmpdeal,current.Keywords);
 
                     #region
-                    if (tmpdeal.IsDrug)
-                    {
-                        int tmpindex = divDrug.Length - 7;
-                        divDrug = divDrug.Insert(tmpindex, tmpLine);
-                        bDrug = true;
-                    }
-                    if (tmpdeal.IsElectronic)
-                    {
-                        int tmpindex = divElec.Length - 7;
-                        divElec = divElec.Insert(tmpindex, tmpLine);
-                        bElec = true;
-                    }
-                    if (tmpdeal.IsFinance)
-                    {
-                        int tmpindex = divFinance.Length - 7;
-                        divFinance = divFinance.Insert(tmpindex, tmpLine);
-                        bFinance = true;
-                    }
-                    /*
-                    if (tmpdeal.IsFree)
-                    {
-                        int tmpindex = divFree.Length - 7;
-                        divFree = divFree.Insert(tmpindex, tmpLine);
-                        bFree = true;
-                    }
-                     */ 
+
                     if (tmpdeal.Ishot)
                     {
                         int tmpindex = divHot.Length - 7;
                         divHot = divHot.Insert(tmpindex, tmpLine);
                         bHot = true;
-                    }
-                    if (tmpdeal.IsTravel)
-                    {
-                        int tmpindex = divTravel.Length - 7;
-                       divTravel =  divTravel.Insert(tmpindex, tmpLine);
-                        bTravel = true;
-                    }
+                        continue;   // hot flag could duplicate with other flags.
 
-                    if (tmpdeal.IsRestaurant)
-                    {
-                        int tmpindex = divRestaurant.Length - 7;
-                        divRestaurant = divRestaurant.Insert(tmpindex, tmpLine);
-                        bRes = true;                        
                     }
-                    if (tmpdeal.IsOfficeSupplies)
+                    else
                     {
-                        int tmpindex = divOS.Length - 7;
-                        divOS = divOS.Insert(tmpindex, tmpLine);
-                        bOS = true;
-                    }
-                    if (tmpdeal.IsJewelry)
-                    {
-                        int tmpindex = divJewelry.Length - 7;
-                        divJewelry = divJewelry.Insert(tmpindex, tmpLine);
-                        bJew = true;
-                    }
-                    if (tmpdeal.IsAppeal)
-                    {
-                        int tmpindex = divAppeal.Length - 7;
-                        divAppeal = divAppeal.Insert(tmpindex, tmpLine);
-                        bAlle = true;
-                    } 
-                    if (tmpdeal.IsAppliances)
-                    {
-                        int tmpindex = divApp.Length - 7;
-                        divApp = divApp.Insert(tmpindex, tmpLine);
-                        bAppl = true;
-                    } 
-                    if (tmpdeal.IsBeauty)
-                    {
-                        int tmpindex = divBeauty.Length - 7;
-                        divBeauty = divBeauty.Insert(tmpindex, tmpLine);
-                        bBea = true;
-                    }
-                    
-                    if ((!tmpdeal.IsTravel && !tmpdeal.Ishot && !tmpdeal.IsFinance && !tmpdeal.IsElectronic && !tmpdeal.IsDrug && !tmpdeal.IsRestaurant
-                        && !tmpdeal.IsBeauty && !tmpdeal.IsAppeal && !tmpdeal.IsAppliances && !tmpdeal.IsJewelry && !tmpdeal.IsOfficeSupplies ) 
-                        || tmpdeal.IsOthers)
-                    {
-                        int tmpindex = divMix.Length - 7;
-                        divMix = divMix.Insert(tmpindex, tmpLine);
-                        bMix = true;
+
+                        if (tmpdeal.IsDrug)
+                        {
+                            int tmpindex = divDrug.Length - 7;
+                            divDrug = divDrug.Insert(tmpindex, tmpLine);
+                            bDrug = true;
+                        }
+                        if (tmpdeal.IsElectronic)
+                        {
+                            int tmpindex = divElec.Length - 7;
+                            divElec = divElec.Insert(tmpindex, tmpLine);
+                            bElec = true;
+                        }
+                        if (tmpdeal.IsFinance)
+                        {
+                            int tmpindex = divFinance.Length - 7;
+                            divFinance = divFinance.Insert(tmpindex, tmpLine);
+                            bFinance = true;
+                        }
+                        /*
+                        if (tmpdeal.IsFree)
+                        {
+                            int tmpindex = divFree.Length - 7;
+                            divFree = divFree.Insert(tmpindex, tmpLine);
+                            bFree = true;
+                        }
+                         */
+
+                        if (tmpdeal.IsTravel)
+                        {
+                            int tmpindex = divTravel.Length - 7;
+                            divTravel = divTravel.Insert(tmpindex, tmpLine);
+                            bTravel = true;
+                        }
+
+                        if (tmpdeal.IsRestaurant)
+                        {
+                            int tmpindex = divRestaurant.Length - 7;
+                            divRestaurant = divRestaurant.Insert(tmpindex, tmpLine);
+                            bRes = true;
+                        }
+                        if (tmpdeal.IsOfficeSupplies)
+                        {
+                            int tmpindex = divOS.Length - 7;
+                            divOS = divOS.Insert(tmpindex, tmpLine);
+                            bOS = true;
+                        }
+                        if (tmpdeal.IsJewelry)
+                        {
+                            int tmpindex = divJewelry.Length - 7;
+                            divJewelry = divJewelry.Insert(tmpindex, tmpLine);
+                            bJew = true;
+                        }
+                        if (tmpdeal.IsAppeal)
+                        {
+                            int tmpindex = divAppeal.Length - 7;
+                            divAppeal = divAppeal.Insert(tmpindex, tmpLine);
+                            bAlle = true;
+                        }
+                        if (tmpdeal.IsAppliances)
+                        {
+                            int tmpindex = divApp.Length - 7;
+                            divApp = divApp.Insert(tmpindex, tmpLine);
+                            bAppl = true;
+                        }
+                        if (tmpdeal.IsBeauty)
+                        {
+                            int tmpindex = divBeauty.Length - 7;
+                            divBeauty = divBeauty.Insert(tmpindex, tmpLine);
+                            bBea = true;
+                        }
+
+                        if ((!tmpdeal.IsTravel && !tmpdeal.IsFinance && !tmpdeal.IsElectronic && !tmpdeal.IsDrug && !tmpdeal.IsRestaurant
+                            && !tmpdeal.IsBeauty && !tmpdeal.IsAppeal && !tmpdeal.IsAppliances && !tmpdeal.IsJewelry && !tmpdeal.IsOfficeSupplies)
+                            || tmpdeal.IsOthers)
+                        {
+                            int tmpindex = divMix.Length - 7;
+                            divMix = divMix.Insert(tmpindex, tmpLine);
+                            bMix = true;
+                        }
                     }
                     #endregion
                 }
@@ -215,6 +223,10 @@ namespace DeliveryEngine
                 Move2Delivered(current.scheduleID);
             }        
         }
+
+        // the hot deal icon for now...
+        // http://freebiesdealsandrewards.com/forum/images/icons/hot-deal.png
+        //
 
         private string MakeUp(Deals tmpdeal,string keywords)   // improve 1. sequence, 2. timestamp after link
         {
@@ -245,7 +257,10 @@ namespace DeliveryEngine
                     //tmptitle = tmptitle.Replace(key, "<span style='background-color:Yellow'><b><u>" + key + "</u></b></span>");            
             }
 
-            string content = "<div ><a href='" + tmpdeal.URL + "'>" + tmptitle + "</a></div><i> (" + tmpdeal.InDate.ToString() + ")</i><br/><br/>";
+            string ishot = tmpdeal.Ishot ? "<img src='http://freebiesdealsandrewards.com/forum/images/icons/hot-deal.png' alt='Hot Deal' border='0' />" : "";
+
+            string content = "<div ><a href='" + tmpdeal.URL + "'>" + tmptitle + "</a>" + ishot + "</div><i> (" + tmpdeal.InDate.ToString() + ")</i><br/><br/>";
+
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine(tmpdeal.Title.ToLower());
             return content;
