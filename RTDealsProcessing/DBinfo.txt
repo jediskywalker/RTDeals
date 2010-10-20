@@ -1,0 +1,58 @@
+rssdeals
+	raw deals, with duplicates removed
+
+	
+deal_type
+	S: store promo;  P: good price
+
+deal_processed
+	deals processed from rssdeals table, for category, store, product, deal type
+
+category
+	include top level product/service categories, and special categories: black friday, hot deals, free, etc
+	IsSpecial: indicate special category
+	Priority: define which one shows first
+	must have at least one catch-all subcategory: Other
+	
+subcategory
+	second level categories below a category
+	must have at least one catch-all entry: Other
+	
+deal_subcategory
+	deal belongs to certain subcategories
+	
+brand
+	as title. e.g. Canon, HP, Dell
+	
+product
+	product line of a brand. e.g. Pavilion(HP), EOS/PowerShot(Canon),  should have an entry: Other
+	
+product_subcategory
+	product belongs to certain subcategory. 1:n relation
+
+storetype
+	O: online   R: retailer
+	
+store
+	retailer store. e.g. amazon, bestbuy
+	
+store_subcategory
+	store belongs to certain subcategory
+	
+
+pattern
+	define search pattern for matching
+	
+pattern_match
+	define a pattern match for category/product/dealtype/store
+
+pattern_to_ignore
+	define patterns to ignore from title
+	
+synonym
+	define similar words for replacement
+	
+	
+	
+	
+	

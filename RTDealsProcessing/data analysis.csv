@@ -1,0 +1,990 @@
+general rules,,
+0: preprocess: remove ignore patterns,,
+
+how to process,title,url
+1. match off&coupon 2. match brand/product,HP Coupon - 25% off a customized HP Pavilion Laptop configured at $999 or greater.,http://www.shopping-bargains.com/coupons/coupon/id/267359?rss=20101018&kid=4758402
+1. match off&coupon 2. match store,Gettington Coupon - 10% off $75+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267356?rss=20101018&kid=4758402
+1. match off&coupon 2. match store,eBay Coupon - 20% off Entire ShoeMall Store.,http://www.shopping-bargains.com/coupons/coupon/id/265823?rss=20101018&kid=4758402
+1. match off&coupon 2. match store,Duncraft Coupon - 20% off Duncraft Edibles.,http://www.shopping-bargains.com/coupons/coupon/id/267373?rss=20101018&kid=4758402
+1. match off&coupon 2. match store,Chadwick's Coupon - $30 off $90+ orders online with orders online of 2+ items.,http://www.shopping-bargains.com/coupons/coupon/id/267348?rss=20101018&kid=4758402
+1. match off&coupon 2. match store 3. match brand 4. freeshipping,Ashford Coupon - Bulova Women's Diamonds Watch (96R56) $129 + FREE Shipping.,http://www.shopping-bargains.com/coupons/coupon/id/267377?rss=20101018&kid=4758402
+1. match off&coupon 2. match store: dell fin. Svc. Vs dell?,30% off refurbished & off-lease monitors at Dell Financial Services,"http://dealcoupon.com/lw/coupon.html?10,133424,iref=rss_dealcoupon_15_new"
+,$50 off Nikon COOLPIX S1000pj 12.1MP 5X zoom digital camera at Dell Small Business,"http://dealcoupon.com/lw/coupon.html?10,133431,iref=rss_dealcoupon_15_new"
+,20% off refurbished & off-lease laptops & desktops at Dell Financial Services,"http://dealcoupon.com/lw/coupon.html?10,133433,iref=rss_dealcoupon_15_new"
+,$30 off Dell 1130 Mono Laser Printer at Dell Small Business,"http://dealcoupon.com/lw/coupon.html?10,133435,iref=rss_dealcoupon_15_new"
+,$100 off Dell M210X Projector w/ 2-year warranty at Dell Small Business,"http://dealcoupon.com/lw/coupon.html?10,133437,iref=rss_dealcoupon_15_new"
+,Free shipping no min coupon at Levi,"http://dealcoupon.com/lw/coupon.html?10,133445,iref=rss_dealcoupon_15_new"
+,Apple iWork '06 for Mac for $25 + $10 s&h,http://dealmac.com/Apple-i-Work-06-for-Mac-for-25-10-s-h/396778.html?iref=rss_dealmac_today
+,"iPhone app price drops: Trainyard, iShred: Guitar + Effects, more",http://dealmac.com/i-Phone-app-price-drops-Trainyard-i-Shred-Guitar-Effects-more/396812.html?iref=rss_dealmac_today
+,Fathead Clearance Sale: Up to 94% off,http://dealnews.com/Fathead-Clearance-Sale-Up-to-94-off/396786.html?iref=rss_dealnews_today
+, Batik Bay Men's Guayabera Button-Front Shirt for $7 + $1 s&h,http://dealnews.com/-Batik-Bay-Mens-Guayabera-Button-Front-Shirt-for-7-1-s-h/396789.html?iref=rss_dealnews_today
+,Refurbished Brother MFC-5890CN All-in-One Color Printer for $69 + $20 s&h,http://dealnews.com/Refurbished-Brother-MFC-5890-CN-All-in-One-Color-Printer-for-69-20-s-h/396750.html?iref=rss_dealnews_today
+,Refurbished Pair of Sony 120W Bookshelf Speakers for $55 + $20 s&h,http://dealnews.com/Refurbished-Pair-of-Sony-120-W-Bookshelf-Speakers-for-55-20-s-h/396760.html?iref=rss_dealnews_today
+,WD TV Live Plus 1080p HD Media Player for $100 + free shipping,http://dealnews.com/WD-TV-Live-Plus-1080-p-HD-Media-Player-for-100-free-shipping/396790.html?iref=rss_dealnews_today
+,HornetTek 802.11n Wireless MIMO USB Adapter for $25 + free shipping,http://dealnews.com/Hornet-Tek-802.11-n-Wireless-MIMO-USB-Adapter-for-25-free-shipping/396791.html?iref=rss_dealnews_today
+," Kustom 10"" Powered PA Speaker for $80 + free shipping",http://dealnews.com/-Kustom-10-Powered-PA-Speaker-for-80-free-shipping/396647.html?iref=rss_dealnews_today
+,Iomega ScreenPlay Director 1TB HD Media Player for $150 + free shipping,http://dealnews.com/Iomega-Screen-Play-Director-1-TB-HD-Media-Player-for-150-free-shipping/396792.html?iref=rss_dealnews_today
+,Plastic Mesh Back Cover for Samsung Cell Phones for $1 + free shipping,http://dealnews.com/Plastic-Mesh-Back-Cover-for-Samsung-Cell-Phones-for-1-free-shipping/396700.html?iref=rss_dealnews_today
+,Swiss+Tech Screwz-All 4-in-1 Tool for $1 + free shipping,http://dealnews.com/Swiss-Tech-Screwz-All-4-in-1-Tool-for-1-free-shipping/396794.html?iref=rss_dealnews_today
+,Teleflora coupon: Free shipping on all orders,http://dealnews.com/Teleflora-coupon-Free-shipping-on-all-orders/396793.html?iref=rss_dealnews_today
+,Genuine Turquoise Necklace Set for $10 + $5 s&h,http://dealnews.com/Genuine-Turquoise-Necklace-Set-for-10-5-s-h/396650.html?iref=rss_dealnews_today
+,"Refurb Vizio XVT 55"" 240Hz 1080p Wifi LED LCD HDTV for $1,400 + free shipping",http://dealnews.com/Refurb-Vizio-XVT-55-240-Hz-1080-p-Wifi-LED-LCD-HDTV-for-1-400-free-shipping/396795.html?iref=rss_dealnews_today
+,Agestar USB 3.0 SATA Hard Drive Docking Station for $25 + free shipping,http://dealnews.com/Agestar-USB-3.0-SATA-Hard-Drive-Docking-Station-for-25-free-shipping/396736.html?iref=rss_dealnews_today
+,Borders printable coupon: 30% off hardcover books for members online,http://dealnews.com/Borders-printable-coupon-30-off-hardcover-books-for-members-online/396798.html?iref=rss_dealnews_today
+,TPU Rubber Skin Case for iPhone 3G or 3GS for 49 cents + free shipping,http://dealnews.com/TPU-Rubber-Skin-Case-for-i-Phone-3-G-or-3-GS-for-49-cents-free-shipping/396801.html?iref=rss_dealnews_today
+,Refurbished Netgear 4-Port Powerline Ethernet Switch for $25 + $5 s&h,http://dealnews.com/Refurbished-Netgear-4-Port-Powerline-Ethernet-Switch-for-25-5-s-h/396728.html?iref=rss_dealnews_today
+,Iomega eGo 1TB USB External Hard Drive for $75 + free shipping,http://dealnews.com/Iomega-e-Go-1-TB-USB-External-Hard-Drive-for-75-free-shipping/396655.html?iref=rss_dealnews_today
+,Kenneth Cole New York Men's 2-Button Suit for $130 + free shipping,http://dealnews.com/Kenneth-Cole-New-York-Mens-2-Button-Suit-for-130-free-shipping/396799.html?iref=rss_dealnews_today
+,HIS Radeon HD 5670 1GB PCIe Video Card for $90 after rebate + free shipping,http://dealnews.com/HIS-Radeon-HD-5670-1-GB-PCIe-Video-Card-for-90-after-rebate-free-shipping/396747.html?iref=rss_dealnews_today
+,Palit GeForce GTX465 1GB PCIe Video Card for $180 after rebate + free shipping,http://dealnews.com/Palit-Ge-Force-GTX465-1-GB-PCIe-Video-Card-for-180-after-rebate-free-shipping/396749.html?iref=rss_dealnews_today
+,OtterBox Impact Case for Apple iPhone 4 for $10 + free shipping,http://dealnews.com/Otter-Box-Impact-Case-for-Apple-i-Phone-4-for-10-free-shipping/396800.html?iref=rss_dealnews_today
+,EyeClops Portable Mini Projector for $30 + $5 s&h,http://dealnews.com/Eye-Clops-Portable-Mini-Projector-for-30-5-s-h/396806.html?iref=rss_dealnews_today
+,Reusable Screen Protector 3-Pack for iPod touch for 49 cents + free shipping,http://dealnews.com/Reusable-Screen-Protector-3-Pack-for-i-Pod-touch-for-49-cents-free-shipping/396803.html?iref=rss_dealnews_today
+,CHEFS Catalog Sale: Up to 80% off select items + free shipping,http://dealnews.com/CHEFS-Catalog-Sale-Up-to-80-off-select-items-free-shipping/396808.html?iref=rss_dealnews_today
+,Mushkin 4GB PC3-10666 Desktop RAM Kit for $54 after rebate + free shipping,http://dealnews.com/Mushkin-4-GB-PC3-10666-Desktop-RAM-Kit-for-54-after-rebate-free-shipping/396691.html?iref=rss_dealnews_today
+,Cat Toy 3-Pack for 69 cents + free shipping,http://dealnews.com/Cat-Toy-3-Pack-for-69-cents-free-shipping/396807.html?iref=rss_dealnews_today
+,"HP p6620f Pavilion Desktop Computer With 2.8Ghz AMD Phenom II 820 Quad-Core Processor, 6GB Memory (8GB Max), 1TB HDD - $ 549.99 at (OfficeMax)",http://www.123bargains.com/deals-info/18826/hp-p6620f-pavilion-desktop-computer-with-28ghz-amd-phenom-ii-820-quadcore-processor-6gb-memory-8gb-max-1tb-hdd.aspx
+,"Barbie Glam Vacation House with 2 Stories, 6 Areas of Glam - O -Rama Play - $ 19.99 at (Target)",http://www.123bargains.com/deals-info/18827/barbie-glam-vacation-house-with-2-stories-6-areas-of-glam--o-rama-play.aspx
+,Antiqued Bookshelf-style 8-hook Pot Rack - $ 59.99 at (Overstock.com),http://www.123bargains.com/deals-info/18828/antiqued-bookshelfstyle-8hook-pot-rack.aspx
+,"Aosom I3233 Office/recliner Massage Chair with Ottoman-black with 9 Pre-programmed Massage Modes, Heat Therapy - $ 159.99 at (Amazon.com)",http://www.123bargains.com/deals-info/18829/aosom-i3233-office-recliner-massage-chair-with-ottomanblack-with-9-preprogrammed-massage-modes-heat-therapy.aspx
+,WESTERN DIGITAL 1.5TB SATA 3Gb/s Hard Drive 64MB IntelliPower 3.5IN Caviar Green » $74.99,http://www.deals2buy.com/deals/99920044-western-digital-1-5tb-sata-3gb-s-hard-drive-64mb-in
+,"Vizio VF552XVT 54.6"" TruLED HDTV With VIA - 1080p, 1920x1080, 240Hz SPS, 5ms, 5x HDMI, (Refurbished) » $1399.99",http://www.deals2buy.com/deals/99920050-vizio-vf552xvt-54-6-truled-hdtv-with-via-1080p-1920
+,"Kodak W1020 10"" Wirelss Digital Picture Frame Refurbished » $59.99",http://www.deals2buy.com/deals/99920039-kodak-w1020-10-wirelss-digital-picture-frame-refurb
+,"JVC RB-GCFM1AUS Picsio HD Pocket Camcorder - 8 Megapixel, 4x Digital Zoom, 2.0"" LCD, HDMI, USB, 34.5MB Internal + SD, Blue, (Refurbished) » $65.86",http://www.deals2buy.com/deals/99920051-jvc-rb-gcfm1aus-picsio-hd-pocket-camcorder-8-megapi
+,Fashion Bug: $50 off coupon ($50 off $100 or $100 off $200) @ Fashion Bug,http://www.fatwallet.com/best-deals/fashion-bug-50-off-coupon/
+,Free Floral Delivery (Free delivery was $14.99) @ Teleflora,http://www.fatwallet.com/best-deals/free-floral-delivery/
+,Free Hello Kitty Tote (Free with $25 purchase) @ Sanrio,http://www.fatwallet.com/best-deals/free-hello-kitty-tote/
+,Fall Favorites Apparel Sale (25% off fall favorites) @ Gap,http://www.fatwallet.com/best-deals/fall-favorites-apparel-sale/
+,KidKraft Pastel Cottage Kitchen ($89.99 was $149.99) @ Meijer,http://www.fatwallet.com/best-deals/kidkraft-pastel-cottage-kitchen/
+,"75,000-200,000 Mile Citibank Aadvantage Card Signup Bonus-No Fee - Expires Oct 31",http://feedproxy.google.com/~r/FatwalletFinance/~3/8DcCBsswb3k/1035260
+,Help with refinance in flood zone,http://feedproxy.google.com/~r/FatwalletFinance/~3/PkweAlYQeqI/1035261
+,Free Flip UltraHD video camera for opening bank account at Trustco Bank,http://feedproxy.google.com/~r/FatwalletFinance/~3/oRr27pnhax4/1035265
+,Ryobi Miter Saw Stand $79 - Home Depot B&M,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/ek-DjmCIx-M/1035259
+,Today's National Groupon Deals + Up to 7.5% Cash Back!,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/Ol5n-YWOGAM/1035262
+,Western Digital WDTV Live Plus HD Media Player (with Netflix) $99 FSSS at Amazon,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/JcFPRNfuR3I/1035263
+,New Footlocker Coupon Code $20 off $100,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/kOghTU1nFIc/1035266
+,Teleflora: Free Delivery ($14.99 Value),http://feedproxy.google.com/~r/FatwalletHotDeals/~3/84K3DJTdKfs/1035267
+,AMAZON: Free 2-DAY Shipping or $10 CREDIT -  When You Purchase $75 of Apparel or Shoes,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/qkgHhblopkE/1035268
+,KEF IQ10 Bookshelf Speaker Pair $199 FS @ Vanns.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/PvvOg6rxvo0/1035269
+,Snuggie - varsity edition - Staples B&M clearance $5.50 or even $0.50 YMMV.,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/SMi85FL61jY/1035271
+,Canon PIXMA iP4820 Inkjet - $69.95 shipped @ B&H,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/2Hn4GKOZZhM/1035272
+,eyeclops LED projector with speakers $29.99 + $5 s/h,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/im_6LtdB34U/1035273
+,Samsung 720p 3d Plasma plus two free 3d glasses PN50C490B3D $973 at Amazon.com or Best Buy,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/PGphlgzEofw/1035274
+,Seagate ST31000528AS 1TB 7200RPM HD $55 AC @ Superbiiz,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/D167Nu0PoP4/1035275
+,GamersGate 50-75% off sale,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/g1oIY0uY-2A/1035277
+," Levi 569 Jeans $19.90 , Free Shipping Offer ends today  at 11:59 pm PT. ",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/nzwWMZfwnGs/1035278
+,"Today only, KidKraft Wooden Pastel Cottage Play Kitchen, $89.99 shipped from Meijer",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/UcJ0ydK4PGQ/1035280
+,InStyle Magazine's PriceGrabber Giveaway - 11/30/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/IzKtQnawLl4/showthread.php
+,InStyle Magazine's Temple St. Clair for Target Baroque Ring Giveaway (email entry) - 11/30/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/vEILa1eVdwk/showthread.php
+,Kum & Go - Dr Pepper® Cup Name Sweepstakes 18+ 11/30/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/KvejF93aIrg/showthread.php
+,HDdeck USB to HDMI adapter from Sewell - All Ages - (11/01/2010),http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/k2SUImZpzv0/showthread.php
+,Edible Arrangements - 10% early-bird discount for December orders,http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/nG2dPWMzEBU/showthread.php
+,$0.99 Spicy Toasted Ravioli at Ledo Pizza,http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/kHQ-V16INgQ/showthread.php
+,TODAY ONLY: 25% off entire order @ calvin klein (online only),http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/oolWvv1T4qQ/showthread.php
+,Save 20% + get a FREE Kids pack on Tickets to Radio City Christmas Spectacular in NYC,http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/RJZZ2bhsBKc/showthread.php
+,15% off Gogobabyz.com through 12/31/10,http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/uyuI6CI3ODI/showthread.php
+,New Quick Chek Coupon - Free 3oz. Entenmann's Crumb Cake EXP 10/25,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/6Z8-oetq6qo/showthread.php
+,Free Sports Wallet - MN and Western WI only,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/1sMnA4DfrAU/showthread.php
+,$6.34 plus .97 shipping 6 pack Scotch Lightweight Shipping Packaging Tape,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/STSj77eeqRc/showthread.php
+,DRESS BARN 30% off Friends & Family + FS 10/21 - 10/24,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/9G4PfuZX76M/showthread.php
+,FCPGROTON - 10%-15% off and FS for Auto Parts,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Vj6vbSwaAw0/showthread.php
+,"Buy 1, Get 1 Entrée Free at Logan's-Oct 30 & 31",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/bJnKymjsR5w/showthread.php
+,JC Penny $10 off $50 in store coupon,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/nP316WL2okU/showthread.php
+,iHome iP11  Spacesaver Alarm Clock For iPhone & iPod $10.99 + tax Office Depot BM YMMV,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/ncLuHBcNY0s/showthread.php
+,Rock Band 3 Wireless Keyboard and Software Bundle for Xbox 360 - Release Date 10/26 for $124.99,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/JVOjrxE46Y8/showthread.php
+,Coldwatercreek has Free Shipping on all orders no Minimum,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/LnKXfMbbbRw/showthread.php
+,Cabela's - Men's - The North Face Windwall 1 Jacket $39.88 + shipping (New Taupe Green Only),http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/nPny8I9rHLg/showthread.php
+,Norton Internet Security 2011 for 1 PC -- $24.99,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/il6V1cAYVcc/showthread.php
+,Free meal for Veterans at McCormick & Schmick on Sun 11/7,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/RLeBDTPk13s/showthread.php
+,Sports Authority FnF 25% off One Item,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/lZbb3WPiUTI/showthread.php
+,"Omron sale, pedometers, Fat Loss Monitors, etc 45% off",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/plqZW7LxTj8/showthread.php
+,Pre-Order: Blackberry Style 9760 FLIP smartphone for SPRINT $99**,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/ZNhWzJxuI7k/showthread.php
+,$5 off RoboCop Trilogy blu-ray set B&M YMMV,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/B-qor4PjSkg/showthread.php
+,Levi's Silvertab Jeans - TALL SIZES - JCP.COM - $16 (or less) + tax/S&H (20 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/8edPypJL-B4/showthread.php
+,$1 Pulled Pork BBQ sandwiches at Dickey's 10/19 (10 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/gj7zeLUQLpw/showthread.php
+,hhgregg is offering $100 gift cards for $75 | 20% off everything until Saturday 10/23 (60 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/aTk201ZPCWg/showthread.php
+,Otterbox Impact Case For iPhone 4 for $9.99 (21 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/JaqT4JPK5qI/showthread.php
+,"Fathead: Select Life-size Wall Graphics for $6: Sports, Nascar, Camp Rock Shane  + S/H",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/idPwXrZ4RRA/40505
+,"Fisher-Price Brilliant Toys: FP Drillin' Action Tool Set $11, Dora the Explorer Birthday Doll $14, TRIO Building Set $14, Basics Baby Basketball $14, & More  ",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/udgpwwxQC6A/40507
+,"Fisher-Price Brilliant Basics Activity Walker $13, Dora Doll $13, more toy sale",http://www.dealalive.com/detail_1287422101268103.html
+,HP Home - 25% off $999 coupon on Laptops,http://www.dealalive.com/detail_1287423181702707.html
+,Barbie Glam Vacation House $20,http://www.dealalive.com/detail_1287427201910361.html
+,Kensington Contour Roller $50,http://www.dealalive.com/detail_1287427502045086.html
+,4 Pcs Stylus for NDSi  $0.35,http://www.dealalive.com/detail_1287428102101549.html
+,Kohls 20% Off + 99 Cent Shipping at Kohls,http://www.techbargains.com/news_displayItem.cfm/227801
+,HP G72t Intel Core i3-370M 2.4GHz 17.3in Laptop (4GB/320GB/Blu-Ray) $649.99 at HP,http://www.techbargains.com/news_displayItem.cfm/227784
+,HP G42t Intel Core i3-370M 2.4GHz 14in Laptop (3GB/320GB/Blu-Ray) $599.99 at HP,http://www.techbargains.com/news_displayItem.cfm/227785
+,"TODAY ONLY Planar PX2710MW 27in Widescreen LCD Monitor (2ms, HDMI) $269.99 Free Shipping at Dell Home",http://www.techbargains.com/news_displayItem.cfm/227790
+,Stainless Steel Mens Bracelet w/ Carbon Fiber Inlay $10.99 at Tanga,http://www.techbargains.com/news_displayItem.cfm/227766
+,"iPhone App Roundup (Trainyard $0.99, iShred: Guitar + Effects $0.99) at Apple iTunes",http://www.techbargains.com/news_displayItem.cfm/227789
+,JR.com - Free Shipping on all Electronics at JR.com,http://www.techbargains.com/news_displayItem.cfm/227793
+,TODAY ONLY Thermaltake V9 BlacX Edition ATX Computer Case w/ Docking Station $59.99AR Free Shipping at Newegg,http://www.techbargains.com/news_displayItem.cfm/227794
+,Iogear GUH285 4-Port USB Hub $4.99 w/ $0.99 Shipping at Newegg,http://www.techbargains.com/news_displayItem.cfm/227796
+,Cannondale Quick CX Ultra Bike $1099.93 Free Shipping to Store at REI,http://www.techbargains.com/news_displayItem.cfm/227788
+,metrostyle Coupon - $20 off $75 or $40 off $120+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267343?rss=20101018&kid=4758402
+,iolo Technologies Coupon - 50% off System Mechanic 10 for only $24.95.,http://www.shopping-bargains.com/coupons/coupon/id/267337?rss=20101018&kid=4758402
+,eForCity Coupon - 10% off orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267334?rss=20101018&kid=4758402
+,Free film developing & prints at Snapfish  for new customers,"http://dealcoupon.com/lw/coupon.html?10,133358,iref=rss_dealcoupon_15_new"
+,Boot Sale: 30% - 50% off select styles at Famous Footwear,"http://dealcoupon.com/lw/coupon.html?10,133362,iref=rss_dealcoupon_15_new"
+,Free shipping on $50 coupon at American Girl,"http://dealcoupon.com/lw/coupon.html?10,133379,iref=rss_dealcoupon_15_new"
+,30% off regularly-priced sweaters at Ann Taylor,"http://dealcoupon.com/lw/coupon.html?10,133378,iref=rss_dealcoupon_15_new"
+,Up to 40% off select outerwear & backpacks at Altrec,"http://dealcoupon.com/lw/coupon.html?10,133365,iref=rss_dealcoupon_15_new"
+,30% off Dell Optiplex or Precision systems $699+ at Dell Small Business,"http://dealcoupon.com/lw/coupon.html?10,133381,iref=rss_dealcoupon_15_new"
+,10% off select flights at Emirates,"http://dealcoupon.com/lw/coupon.html?10,133380,iref=rss_dealcoupon_15_new"
+,$2 off Young Micro silicone HTC EVO 4G case + free screen protector at PC Micro Store,"http://dealcoupon.com/lw/coupon.html?10,133383,iref=rss_dealcoupon_15_new"
+,"Buy 3 used books, CDs, DVDs or games, get 4th for $1 at goHastings","http://dealcoupon.com/lw/coupon.html?10,133385,iref=rss_dealcoupon_15_new"
+,$25 off $100 hhgregg gift card at hhgregg,"http://dealcoupon.com/lw/coupon.html?10,133384,iref=rss_dealcoupon_15_new"
+,"20% off Blu-rays, DVDs, CDs & LPs at DeepDiscount","http://dealcoupon.com/lw/coupon.html?10,133390,iref=rss_dealcoupon_15_new"
+,$10off Photosmart C4780 All-in-One printer at HP Home & Office Store,"http://dealcoupon.com/lw/coupon.html?10,133391,iref=rss_dealcoupon_15_new"
+,"Refurbished Samsung 27"" 1080p LCD Display for $264 + free shipping",http://dealmac.com/Refurbished-Samsung-27-1080-p-LCD-Display-for-264-free-shipping/396764.html?iref=rss_dealmac_today
+,Refurb Dyson DC25 Ball All-Floors Upright Vacuum Cleaner for $280 + $5 s&h,http://dealnews.com/Refurb-Dyson-DC25-Ball-All-Floors-Upright-Vacuum-Cleaner-for-280-5-s-h/396636.html?iref=rss_dealnews_today
+,Crocs Men's ABF Flip Flops for $8 + free shipping,http://dealnews.com/Crocs-Mens-ABF-Flip-Flops-for-8-free-shipping/396748.html?iref=rss_dealnews_today
+,The Little Carp for Apple iPhone / iPod touch downloads for free,http://dealnews.com/The-Little-Carp-for-Apple-i-Phone-i-Pod-touch-downloads-for-free/396752.html?iref=rss_dealnews_today
+,AMD Phenom II X6 2.6GHz 6-Core AM3 CPU for $180 + free shipping,http://dealnews.com/AMD-Phenom-II-X6-2.6-GHz-6-Core-AM3-CPU-for-180-free-shipping/396734.html?iref=rss_dealnews_today
+,"Dell Small Business coupons: 35% off Dell PowerEdge servers, more",http://dealnews.com/Dell-Small-Business-coupons-35-off-Dell-Power-Edge-servers-more/396746.html?iref=rss_dealnews_today
+,"Panasonic VIERA 58"" 1080p Plasma HDTV for $1,197 + free shipping",http://dealnews.com/Panasonic-VIERA-58-1080-p-Plasma-HDTV-for-1-197-free-shipping/396731.html?iref=rss_dealnews_today
+,5-Piece TV Tray Set for $24 + $23 s&h,http://dealnews.com/5-Piece-TV-Tray-Set-for-24-23-s-h/396739.html?iref=rss_dealnews_today
+,Suunto 950 Solar Power Battery Charger for $30 + $5 s&h,http://dealnews.com/Suunto-950-Solar-Power-Battery-Charger-for-30-5-s-h/396707.html?iref=rss_dealnews_today
+,Yamaha 500W 5.1-Channel Home Theater System for $300 + free shipping,http://dealnews.com/Yamaha-500-W-5.1-Channel-Home-Theater-System-for-300-free-shipping/396732.html?iref=rss_dealnews_today
+,40% off Fisher-Price toys at Kohl's + extra 20% off: Deals from $4 + $1 s&h,http://dealnews.com/40-off-Fisher-Price-toys-at-Kohls-extra-20-off-Deals-from-4-1-s-h/396754.html?iref=rss_dealnews_today
+,Optoma 720p Home Theater HD DLP Projector for $409 + free shipping,http://dealnews.com/Optoma-720-p-Home-Theater-HD-DLP-Projector-for-409-free-shipping/396726.html?iref=rss_dealnews_today
+,Acase Aegis Power External Battery Case for Apple iPhone 4 for $43 + $5 s&h,http://dealnews.com/Acase-Aegis-Power-External-Battery-Case-for-Apple-i-Phone-4-for-43-5-s-h/396761.html?iref=rss_dealnews_today
+,LeapFrog Tag Junior Book Pal for $10 + free shipping,http://dealnews.com/Leap-Frog-Tag-Junior-Book-Pal-for-10-free-shipping/396763.html?iref=rss_dealnews_today
+,"Kohl's sale: Women's panties from $1 + $1 s&h, bras from $4",http://dealnews.com/Kohls-sale-Womens-panties-from-1-1-s-h-bras-from-4/396759.html?iref=rss_dealnews_today
+,Targus Compact Camera Case for $3 + free shipping,http://dealnews.com/Targus-Compact-Camera-Case-for-3-free-shipping/396766.html?iref=rss_dealnews_today
+,Young Micro Silicone Case for HTC EVO 4G for $3 + free shipping ,http://dealnews.com/Young-Micro-Silicone-Case-for-HTC-EVO-4-G-for-3-free-shipping-/396762.html?iref=rss_dealnews_today
+,Coleman 6-Piece Family Camping Cookset for $13 + free shipping,http://dealnews.com/Coleman-6-Piece-Family-Camping-Cookset-for-13-free-shipping/396742.html?iref=rss_dealnews_today
+,"Refurb Western Digital WD TV Live HD Media Player for $55 + $3 s&h, more",http://dealnews.com/Refurb-Western-Digital-WD-TV-Live-HD-Media-Player-for-55-3-s-h-more/396769.html?iref=rss_dealnews_today
+,Craftsman C3 19.2V Cordless 2-Piece Combo Kit for $95 + $11 s&h ,http://dealnews.com/Craftsman-C3-19.2-V-Cordless-2-Piece-Combo-Kit-for-95-11-s-h-/396770.html?iref=rss_dealnews_today
+,DeLonghi EC155 Espresso Maker for $76 + free shipping,http://dealnews.com/De-Longhi-EC155-Espresso-Maker-for-76-free-shipping/396755.html?iref=rss_dealnews_today
+,Westinghouse Outlet Valet for $10 + free shipping,http://dealnews.com/Westinghouse-Outlet-Valet-for-10-free-shipping/396757.html?iref=rss_dealnews_today
+,Sprinkler Head Key Hider for $5 + free shipping,http://dealnews.com/Sprinkler-Head-Key-Hider-for-5-free-shipping/396772.html?iref=rss_dealnews_today
+, Remote-Controlled Power Outlet 2-Pack for $10 + $5 s&h,http://dealnews.com/-Remote-Controlled-Power-Outlet-2-Pack-for-10-5-s-h/396744.html?iref=rss_dealnews_today
+,booq iPad & Laptop Case Roundup: Deals from $30 + $5 s&h,http://dealnews.com/booq-i-Pad-Laptop-Case-Roundup-Deals-from-30-5-s-h/396771.html?iref=rss_dealnews_today
+,I-Rocks microSD USB Card Reader for 79 cents + free shipping,http://dealnews.com/I-Rocks-micro-SD-USB-Card-Reader-for-79-cents-free-shipping/396780.html?iref=rss_dealnews_today
+,LCD Alarm Clock for $4 + free shipping,http://dealnews.com/LCD-Alarm-Clock-for-4-free-shipping/396777.html?iref=rss_dealnews_today
+,Lands' End Dog Squall Jacket for $18 + free shipping,http://dealnews.com/Lands-End-Dog-Squall-Jacket-for-18-free-shipping/396783.html?iref=rss_dealnews_today
+,Frontier Airlines: 1-way domestic flights from $29,http://dealnews.com/Frontier-Airlines-1-way-domestic-flights-from-29/396784.html?iref=rss_dealnews_today
+,Barbie Glam Vacation House for $20 + free shipping,http://dealnews.com/Barbie-Glam-Vacation-House-for-20-free-shipping/396729.html?iref=rss_dealnews_today
+,Fathead Clearance Sale: Up to 94% off + free shipping,http://dealnews.com/Fathead-Clearance-Sale-Up-to-94-off-free-shipping/396786.html?iref=rss_dealnews_today
+,Epson Perfection V500 Photo Flatbed Scanner for $133 + free shipping,http://dealnews.com/Epson-Perfection-V500-Photo-Flatbed-Scanner-for-133-free-shipping/396785.html?iref=rss_dealnews_today
+,JetBlue Fall Fare Sale: 1-way fares from $29 ,http://dealnews.com/Jet-Blue-Fall-Fare-Sale-1-way-fares-from-29-/396788.html?iref=rss_dealnews_today
+,EASEUS Partition Master Professional Edition 6.1.1 for PC downloads for free,http://dealnews.com/EASEUS-Partition-Master-Professional-Edition-6.1.1-for-PC-downloads-for-free/396787.html?iref=rss_dealnews_today
+,"Used Apple 23"" Aluminum Cinema Display Widescreen LCD for $380 + $26 s&h",http://dealnews.com/Used-Apple-23-Aluminum-Cinema-Display-Widescreen-LCD-for-380-26-s-h/396775.html?iref=rss_dealnews_today
+,Denon AVR-391 5.1-Channel Home Theater Receiver for $200 + free shipping,http://dealnews.com/Denon-AVR-391-5.1-Channel-Home-Theater-Receiver-for-200-free-shipping/396768.html?iref=rss_dealnews_today
+,"Samsung 24 inch 1080p LCD Monitor with 50,000:1 Dynamic Contrast Ratio, 5ms Response Time, DVI, VGA - Model No. 2494LW - $ 159.99 at (Buy.com)",http://www.123bargains.com/deals-info/18819/samsung-24-inch-1080p-lcd-monitor-with-500001-dynamic-contrast-ratio-5ms-response-time-dvi-vga--model-no-2494lw.aspx
+,KEF IQ10 Black Ash 2-way Black Ash Q series Bookshelf Speaker Pair - $ 199.88 at (Vanns),http://www.123bargains.com/deals-info/18820/kef-iq10-black-ash-2way-black-ash-q-series-bookshelf-speaker-pair.aspx
+,"LG 42 inch 1080p 120Hz Widescreen LED LCD HDTV (Model No. 42SL90) with 3,000,000:1 Mega Contrast Ratio, 4 HDMi, Invisible Speaker System - $ 979.95 at (Adorama)",http://www.123bargains.com/deals-info/15924/lg-42-inch-1080p-120hz-widescreen-led-lcd-hdtv-model-no-42sl90-with-30000001-mega-contrast-ratio-4-hdmi-invisible-speaker-system.aspx
+,"Lenovo IdeaPad 06472AU 10.1 inch 1GB (2GB Max) Netbook Computer with 1.6Ghz Intel Atom N455 processor, 160GB HDD, Webcam - $ 269.99 at (Buy.com)",http://www.123bargains.com/deals-info/18822/lenovo-ideapad-06472au-101-inch-1gb-2gb-max-netbook-computer-with-16ghz-intel-atom-n455-processor-160gb-hdd-webcam.aspx
+,"Refurbished : SanDisk Sansa Fuze 4GB Media Player with 0.3 inch Thin Design, FM Tuner - $ 29.99 at (Buy.com)",http://www.123bargains.com/deals-info/18823/refurbished--sandisk-sansa-fuze-4gb-media-player-with-03-inch-thin-design-fm-tuner.aspx
+,"Lenovo 15.6 inch 3GB (4GB max) NoteBook Computer (Model No. G555(087325U) with 2.1Ghz AMD Athlon II M320, 160GB HDD, Webcam - $ 389.99 at (Buy.com)",http://www.123bargains.com/deals-info/18824/lenovo-156-inch-3gb-4gb-max-notebook-computer-model-no-g555087325u-with-21ghz-amd-athlon-ii-m320-160gb-hdd-webcam.aspx
+,GIGABYTE GA-X58A-UD3R LGA 1366 Intel X58 SATA 6Gb/s USB 3.0 ATX Intel Motherboard + OCZ Gold 6GB (3 x 2GB) 240-Pin DDR3 SDRAM DDR3 1600 (PC3 12800) Low Voltage Desktop Memory Model OCZ3G1600LV6GK » $269.98,http://www.deals2buy.com/deals/99919944-gigabyte-ga-x58a-ud3r-lga-1366-intel-x58-sata-6gb-s
+,PC Motherboard Repair/Troubleshoot Boot-Failure Diagnostic PCI Card » $2.49,http://www.deals2buy.com/deals/99920016-pc-motherboard-repair-troubleshoot-boot-failure-dia
+,"Airlink101 AMPS230 Multi-Functional Print Server, Supports MFP AllInOne Printing, Scanning and Faxing Functions » $17.99",http://www.deals2buy.com/deals/99920024-airlink101-amps230-multi-functional-print-server-su
+,Get a custom rubber stamp » FREE (+ Shipping),http://www.deals2buy.com/deals/99916179-get-a-custom-rubber-stamp
+,Brother HL Series HL-4070CDW Workgroup Up to 21 ppm Color Wireless Laser Printer » $321.98,http://www.deals2buy.com/deals/99919542-brother-hl-series-hl-4070cdw-workgroup-up-to-21-ppm
+,"8Pack - Brother LC61 Compatible Inkjet Cartridges Combo for Brother DCP Series, MFC Series Printer: One Each of LC61 BK/C/M/Y [1/137-109 + 1/137-110 + 1/137-111 + 1/137-112] » $10.95",http://www.deals2buy.com/deals/99920018-8pack-brother-lc61-compatible-inkjet-cartridges-com
+,"HP Q600XA Remanufactured Toner Cartridge Combo : One Each of Black, Cyan, Yellow, Magenta » $117.95",http://www.deals2buy.com/deals/99920019-hp-q600xa-remanufactured-toner-cartridge-combo-one-
+,"Lenovo IdeaPad 06472AU 10.1"" Netbook, Intel Atom N455 (1.66GHz), 1GB DDR3 Memory, 160GB HDD, Intel GMA 3150, 802.11b/g/n, Windows 7 Starter » $279.99",http://www.deals2buy.com/deals/99920007-lenovo-ideapad-06472au-10-1-netbook-intel-atom-n455
+,"Lenovo 087325U 15.6"" Notebook, AMD Athlon II M320 (2.10GHz), 3GB, 160GB HDD, DVD-Writer, 802.11b/g, Webcam, Windows 7 Home Premium (Black) » $399.99",http://www.deals2buy.com/deals/99919709-lenovo-087325u-15-6-notebook-amd-athlon-ii-m320-2-1
+,Tripp Lite Isobar Home/Business Theater Surge Suppressor - HT10DBS » $56.24,http://www.deals2buy.com/deals/99920001-tripp-lite-isobar-home-business-theater-surge-suppr
+,Roxio Easy VHS to DVD - 242500 » $38.99,http://www.deals2buy.com/deals/19910116-roxio-easy-vhs-to-dvd-242500
+,"A Pair of 5 Feet 3.5mm Stereo Audio Cable, 1 Pack 5 Feet 3.5mm Stereo Audio Male to Male Cable + 1 Pack 5 Feet 3.5mm Stereo Audio Male to Female Cable » $2.49",http://www.deals2buy.com/deals/99920025-a-pair-of-5-feet-3-5mm-stereo-audio-cable-1-pack-5-
+,Samsung Re-Chargeable 3D Glasses For Adults » $149.99,http://www.deals2buy.com/deals/99918444-samsung-re-chargeable-3d-glasses-for-adults
+,Sennheiser RS160 Wireless Headphones » $131,http://www.deals2buy.com/deals/99918446-sennheiser-rs160-wireless-headphones
+,"Sony MDR-NC7/BLK Noise Canceling Foldable Stereo Headphone, 3.5mm Jack, Airplane Adapter &amp; Extension Cord Included (Sony Factory Recertified) » $19.99",http://www.deals2buy.com/deals/99918465-sony-mdr-nc7-blk-noise-canceling-foldable-stereo-he
+,LinkYo 200 Disc Capacity Black Aluminum-Like Hard Plastic CD DVD Storage Case » $14.39,http://www.deals2buy.com/deals/99920004-linkyo-200-disc-capacity-black-aluminum-like-hard-p
+,"NEW USB Power Charger Wall Adapter Plug for IPhone, IPod, Ipad » $2.99",http://www.deals2buy.com/deals/99920015-new-usb-power-charger-wall-adapter-plug-for-iphone-
+,Fantom Drives GreenDrive 2TB eSATA/USB 2.0 32MB Cache External Hard Drive - GD2000EU32 » $109.99,http://www.deals2buy.com/deals/99920035-fantom-drives-greendrive-2tb-esata-usb-2-0-32mb-cac
+,Kensington Wireless Presenter with Laser Pointer - 33374 » $19.49,http://www.deals2buy.com/deals/99920029-kensington-wireless-presenter-with-laser-pointer-33
+,McAfee Total Protection 2011 3 User - MTP11EMB3RAA » $32.99,http://www.deals2buy.com/deals/99920027-mcafee-total-protection-2011-3-user-mtp11emb3raa
+,NortonT AntiVirus 2011 1 User 3PC - 21069978 » $23.99,http://www.deals2buy.com/deals/99920026-nortontm-antivirus-2011-1-user-3pc-21069978
+,"Samsung LN46C630 - 46"" Widescreen 1080p LCD HDTV - 120Hz - LN46C630K1F » $889",http://www.deals2buy.com/deals/99920008-samsung-ln46c630-46-widescreen-1080p-lcd-hdtv-120hz
+,RiDATA Lightning Series 16GB Secure Digital High-Capacity (SDHC) Flash Card Model RDSDHC16G-LIG10 » $25.99,http://www.deals2buy.com/deals/99919938-ridata-lightning-series-16gb-secure-digital-high-ca
+,"PQI 16GB 150X Secure Digital High Capacity SDHC Card (Class 10), Model PQI-FSC-SDHC1016GB » $26.95",http://www.deals2buy.com/deals/99920020-pqi-16gb-150x-secure-digital-high-capacity-sdhc-car
+,"HP PW460TA Blue 12MP 3.0"" Touch LCD 4X Optical Zoom Li-ion battery Digital Camera » $99.99",http://www.deals2buy.com/deals/99919937-hp-pw460ta-blue-12mp-3-0-touch-lcd-4x-optical-zoom-
+,"A-DATA C008 8GB USB 2.0 Flash Drive, Model AC008-8G-RKD » $11.95",http://www.deals2buy.com/deals/99920021-a-data-c008-8gb-usb-2-0-flash-drive-model-ac008-8g-
+,Ooma Telo VOIP System - FREE Unlimited US Calls and Low International Rates - 100-0201-100 » $199.99,http://www.deals2buy.com/deals/99920033-ooma-telo-voip-system-free-unlimited-us-calls-and-l
+,"Brother PT-1290 Home &amp; Office ""Simply Stylish"" Labeler » $18.99",http://www.deals2buy.com/deals/99920034-brother-pt-1290-home-office-simply-stylish-labeler
+,"Samsung 2494LW 23.6"" LCD Monitor - 5ms, 50,000:1, DVI, 1080p - 2494LW » $159.99",http://www.deals2buy.com/deals/99920006-samsung-2494lw-23-6-lcd-monitor-5ms-50-000-1-dvi-10
+,Borders Coupon: 40% off One Regular Priced Item (40% off after coupon) @ Borders,http://www.fatwallet.com/best-deals/borders-coupon-40-off-one-regular-priced-item-5/
+,HHGregg $100 Gift Card ($75 was $100) @ HH Gregg,http://www.fatwallet.com/best-deals/hhgregg-100-gift-card/
+,Lord & Taylor Friends and Family Sale (Extra 25% off) @ Lord & Taylor,http://www.fatwallet.com/best-deals/lord-taylor-friends-and-family-sale/
+,Campbell's Chunky Soup $.25 or $.75,http://feedproxy.google.com/~r/FatwalletGroceryCouponsAndDeals/~3/xYqGLkNOQ9k/1035226
+,Anyone else get an email regarding Citi 2G Card Community?,http://feedproxy.google.com/~r/FatwalletFinance/~3/7TqY-9WYHAs/1035221
+,value of non-recourse status vs refi in CA,http://feedproxy.google.com/~r/FatwalletFinance/~3/NUyQIqc0L_s/1035230
+,"Wayne County Michigan Tax Auction, 12,378 properties starting at $500 NR",http://feedproxy.google.com/~r/FatwalletFinance/~3/jSK3dVBfbzU/1035241
+,Refinance advice needed,http://feedproxy.google.com/~r/FatwalletFinance/~3/1qCTqI3SYY8/1035257
+,Free $5.00 to shop at Sanrio/Hello Kitty! Store,http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/rmNl-k8YT0Y/1035258
+,$49.95 Recertified Guitar Hero: World Tour - Band Kit (XBOX 360) at MidnightBox.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/x65Q90Iri5E/1035201
+,Tomtom XXL550M; Lifetime Maps: $129.95 + 2.99 (S&H) at Newegg+free gift,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/4jK_-7E68f0/1035202
+,Up to 50% Off Adorama Weekly Specials + 2% Cash Back!,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/tmxldodRSLE/1035204
+,Borders Coupon: 40% off One Regular Priced Item,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/gt2AQ1d0EUE/1035206
+,200 Prints for $20 at Snapfish + 30% Off Photobooks  7% Cash Back!,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/M4ydeydLdk0/1035210
+,Executive Series Black Pebble TSA Approved Computer Tote with AIRSHELL Laptop Protection System - $39.99,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/tYRhaNhAgiE/1035217
+,Up to 71% Off Dented Box Computer Accessories at Logitech + 2% Cash Back!,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/ccyc1Kit0F0/1035218
+,2 Free Nights w/Flight  Hotel to Top Destinations like Vegas  Florida+ 3% Cash Back at Southwest Airlines Vacations!,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/r2jU-63eYwY/1035219
+,Today Only $1500 Off Bowflex Revolution XP Home Gym - $999 Shipped + 5% Cash Back! (10/18),http://feedproxy.google.com/~r/FatwalletHotDeals/~3/zqKAzGbJqQg/1035220
+,Canon Powershot SD1300 IS $129 & fss,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/ykFQnk1xkhs/1035225
+,Up to $75 Off from Endless.com + Get 10.0% Cash Back!,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/Iap99CoO2ck/1035227
+,Forbes $4.99/yr and Fast Company $2.25/yr magazine subscriptions,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/1WO7tEZGiSQ/1035228
+, GIGABYTE  GA-X58A-UD3R MB & OCZ Gold 6GB (3 x 2GB) 240-Pin DDR3 SDRAM DDR3 1600 (PC3 12800) combo $269.98 AR @NewEgg,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/hn9-a8guEGg/1035229
+,Samsung Epic 4G Now Also $99.99 On Amazon.com w/2 year contract,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/R4-9r5Vvu0E/1035231
+,ebay deal of day: $13 Coleman 6-Piece Family Camping Cookset - free shippped,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/68cGWKSNkig/1035232
+,$30 for Six Movie Tickets from Weekly Cinema ($84 Value) is back again! GROUPON,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/TiBT3DGJwUg/1035233
+,SAMSUNG Spinpoint F3 HD103SJ 1TB Newgg Shell Shocker $54.99,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/dpeo_0LFvvU/1035239
+,"4 Pin IDE to 15 Pin Serial SATA Power Cable Adapter-2 Pack, $0.89, FS@Meritline",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/lcqdojApHN0/1035242
+,"17.3"" Blu-ray Laptop from HP...NOW JUST $599AR ($50) at CC ",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/FA5-tHerjZw/1035243
+,Frontier flight specials - must book by today for travel through 02/16/11,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/f6tEtSJFhR4/1035244
+,Free Blockbuster Express rental- 10/18 Only,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/IZs3N_OarKA/1035247
+,OCZ Gold 4GB (2 x 2GB) DDR3 1333 Desktop Memory 61.99 AF/FS,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/FfyArwHCILU/1035250
+,HHGregg $100 Gift Card for $75 (valid B&M only),http://feedproxy.google.com/~r/FatwalletHotDeals/~3/LWX0ihagzUc/1035252
+,OCZ Gold 4GB (2 x 2GB) DDR3 1333 Desktop Memory 61.99 AR/FS @Newegg,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/osXcDPx4VaM/1035253
+,Fashion Bug $50 off coupon,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/4O8j-Nyz7Qg/1035254
+,Walgreens 11/7-11/13 Deals Preview,http://slickdeals.net/forums/showthread.php?t=2305317&goto=newpost
+,"Register to win Getaway to Pigeon Forge, TN",http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/IBCmN5l-cYs/showthread.php
+,Ryan Seacrest Taylor Swift: Super Fan Sweepstakes 13+10/24/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/pp5wdTEKOkg/showthread.php
+,Shape Magazine's Kacy Duke Sweepstakes - 11/21/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/Q8pjcM4IWKo/showthread.php
+,Womans Day's MyAgenda Day Planner Giveaway - 12/18/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/P9xjrdRxK7U/showthread.php
+,Shape Magazine's Mariska Sweepstakes - 11/21/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/LVTUXigYwoU/showthread.php
+,Shape Magazine's Garnier Sweepstakes - 11/21/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/ezJRVbFR7bA/showthread.php
+,Shape Magazine's Step 360 Pro Sweepstakes  - 11/22/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/UTErQDjB0PQ/showthread.php
+,Shape Magazine's Adidas Sweepstakes - 11/21/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/LqwyL1BZB-c/showthread.php
+,Shape Magazine's Xterra Sweepstakes - 11/21/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/-VfodCoOV1Y/showthread.php
+,Shape Magazine's Na La Seattle Sweepstakes  - 11/21/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/6XLs1FblquA/showthread.php
+,Shape Magazine's Trudie Styler's Sculpt & Tone Sweepstakes - 11/21/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/JJ89WEWf8Mw/showthread.php
+,Shape Magazine's Sweaty Bands Sweepstakes - 11/21/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/Jl70TM1IZBU/showthread.php
+,Shape Magazine's Harbour Village Beach Club Sweepstakes  - 11/21/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/iFdo_IFfhw4/showthread.php
+,"Hollister Secret Sale 12-8PM, 10/18, Online Only 40% off Hoodies",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/IVDD6mJN2sw/showthread.php
+,"Abercrombie & Fitch Secret Sale 10/18, 12-8PM, Online Only 40% off Jeans",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/KoaL9o20_74/showthread.php
+,"abercrombie kids Secret Sale 10/18, 12-8PM, Online Only 40% off Jeans",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/K52JHL60FHo/showthread.php
+,Get $10 for Enrolling in Paperless or Autopay or Both with AT&T,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/n2TevV8kVEA/showthread.php
+,Creative Recreation Shoes 50%,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/MQJyyS7RjY0/showthread.php
+,Scanpan Professional 3-Piece Set $89.99 FS,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/BAGyJRDe-h0/showthread.php
+,$25 off Mardi Gras Rock 'n Roll Marathon - New Orleans,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/IzgmyI_V7zw/showthread.php
+,KidKraft Pastel Cottage Kitchen w/28 pieces $79+FS,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/I_DWLEA2iGE/showthread.php
+,Cosco 5-Piece Dining Set ( 4 Steel Frame Chairs and 1 Steel Frame Frosted Glass Top Table) $59,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/_4VJ4rWTBOg/showthread.php
+,AVEDA: 2 FREE Travel and 4 FREE Samples + FREE Shipping with $50+ purchase,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/2A1Rwz61XtE/showthread.php
+,FREE 5x7 Photo Book from Kodak Gallery. $1.99 to ship,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/pUbdiSFX8gg/showthread.php
+,UCF Undisputed 2010 $23.99 Target online,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/zH7MUq1POIQ/showthread.php
+,Official Best Buy Clearance Thread,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/n-Jd0qL7vf4/showthread.php
+,Sports Authority 25% off printable coupon - Valid 10/21-10/25,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Xb7ESZwfCVc/showthread.php
+,Blazers @ Warriors - FREE TIX!!!,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/a0CK-IiWcSs/showthread.php
+,"Paula Deen Clearance items, buy 1 get 2nd 50% off + 20% off order (47 replies)",http://feedproxy.google.com/~r/SlickdealsnetHT/~3/JQRnAM70aCY/showthread.php
+,"Fisher-Price Brilliant Toys: Drillin' Action Tool Set $10, Dora Explorer B-day Dora $12, Basics Activity Walker $12, Baby Basketball $12, TRIO Building Set $12 - shipping just 99¢ (5 replies)",http://feedproxy.google.com/~r/SlickdealsnetHT/~3/ykauK-QqiuU/showthread.php
+,Final Clearance on select items fathead.com ($5.99 was up to $99.99) (15 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/T7NdhkCCz0w/showthread.php
+,"Kohls Ladies Junior Size Lingerie Clearance: Panties from $2, Bras from $4, Sleepwear Separates from $3  + $1 S/H per item",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/WrRinhl_Lw8/40499
+,"LeapFrog Tag Junior Book Pal $10, Barbie Glam Vacation House $20  ",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/cmHEdsz-pck/40501
+,"Fashion Bug online: $50 off $100 or $100 off $200, may be combined with Sale Prices  ",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/8uDUoVl5jRY/40503
+,Panasonic KX-TG9344T DECT 6.0 Expandable Digital Cordless Phone with Dual Keypad - Black $69.99,http://www.dealalive.com/detail_1287410521835167.html
+,null  Free,http://www.dealalive.com/detail_1287411243219746.html
+,"<span id=""btAsinTitle"">6 Movie Tickets from Weekly Cinema / Fandango</span>  $30",http://www.dealalive.com/detail_1287411242254733.html
+,"<span id=""btAsinTitle"">Macy's 20% off coupon for Sitewide</span>   ",http://www.dealalive.com/detail_1287411781809838.html
+,"5 Pieces Superbright LED Keychain Flashlight, Random Color  $0.99 ",http://www.dealalive.com/detail_1287412921880470.html
+,HHGregg $100 Gift Card $75 HOT!,http://www.dealalive.com/detail_1287419403610639.html
+,Dell SB Outlet Refurbished Computers 25% OFF ,http://www.dealalive.com/detail_1287419402536614.html
+,Planar PX2710MW 27-inch 1080p  LCD Monitor w/HDMI $269,http://www.dealalive.com/detail_1287419522650901.html
+,Kensington Contour Roller $49 ,http://www.dealalive.com/detail_1287420125016368.html
+,"Canon PowerShot SD1300 IS 12 MP Digital Camera w/ 4x Wide Angle Optical Zoom and 2.7"" LCD $129 HOT!",http://www.dealalive.com/detail_1287420121657327.html
+,J Crew - up to 75% off final sale + extra 30% off,http://www.dealalive.com/detail_1287420362093912.html
+,LeapFrog Tag Junior Book Pal $10,http://www.dealalive.com/detail_1287420721973781.html
+,Fashion Bug - $50 off $100 or $100 off $200 coupon,http://www.dealalive.com/detail_1287420961174362.html
+,"Samsung LN46C630 46"" 120Hz 1080p LCD HDTV $890 at Buy.com",http://bensbargains.net/deal/161446/?referrer=rss
+,Motherboard Boot-Failure Diagnostic PCI Card $2.49 at Meritline,http://bensbargains.net/deal/161432/?referrer=rss
+,Bushnell 3MP Digital Camera 8x30 Binocular $49 at Cabelas,http://bensbargains.net/deal/161482/?referrer=rss
+,"MSI S6000-017US Core i5 15.6"" Notebook $580 at Office Depot",http://bensbargains.net/deal/161438/?referrer=rss
+,EnGenius ETR9330 Wireless N Travel Router $45 at Mwave,http://bensbargains.net/deal/161473/?referrer=rss
+,Small Business Unified Communications For Dummies Free at TradePub,http://bensbargains.net/deal/161472/?referrer=rss
+,Denon AVR-391 5.1 Channel AV Receiver $200 at Electronics Expo,http://bensbargains.net/deal/161439/?referrer=rss
+,15 Minute Workout: 3 Moves for 300 Video Free at Men's Health ,http://bensbargains.net/deal/161475/?referrer=rss
+,Artec Digital HDTV Flat Antenna $8 at Meritline,http://bensbargains.net/deal/161427/?referrer=rss
+,UFC 2009: Undisputed for Xbox 360 $24 at Target,http://bensbargains.net/deal/161442/?referrer=rss
+,Ematic eCam HD Flash Camcorder $69 at Walmart,http://bensbargains.net/deal/161435/?referrer=rss
+,20% off Purchases at Macys,http://bensbargains.net/deal/161429/?referrer=rss
+,"HP Pavilion dv7-3162nr  17.3"" Notebook w/ Blu-ray $608 at Circuit City",http://bensbargains.net/deal/161433/?referrer=rss
+,G2 with Google 4G Smartphone for T-Mobile $80 at Wirefly,http://bensbargains.net/deal/161448/?referrer=rss
+,Temperature Controlled LED Faucet Light $5 at Daily Checkout,http://bensbargains.net/deal/161452/?referrer=rss
+,Fantom GreenDrive 2TB USB 2.0 and eSATA $110 at Buy.com,http://bensbargains.net/deal/161436/?referrer=rss
+,"Toshiba 32CV100U 32"" 720p  LCD HDTV DVD Combo  $392 at 6ave.com",http://bensbargains.net/deal/161453/?referrer=rss
+,"Timberland Dogwood 15.6"" Laptop Backpack $36 at Buy.com",http://bensbargains.net/deal/161455/?referrer=rss
+,Car Charger to Wall Charger Adapter $1 at Meritline,http://bensbargains.net/deal/161458/?referrer=rss
+,Iomega eGo 500GB USB 3.0 Portable Hard Drive $70 at Buy.com,http://bensbargains.net/deal/161459/?referrer=rss
+,$25 Restaurant GC + $3 off Entertainment Book at Entertainment.com,http://bensbargains.net/deal/161443/?referrer=rss
+,Philips SHS5200 Stereo Headphones $15 at Buy.com,http://bensbargains.net/deal/161462/?referrer=rss
+,"5dot Curve Top Loading 15.6"" Laptop Carrying Case $12 at Dell",http://bensbargains.net/deal/161420/?referrer=rss
+,"Canon EOS Rebel T2i 18 MP 3.0"" DSLR 2 Lens Kit $841 at Beach Camera",http://bensbargains.net/deal/161466/?referrer=rss
+,RS TO Go Alluna Milk Glass L Desk $81 at Office Depot,http://bensbargains.net/deal/161468/?referrer=rss
+,Invicta Russian Diver Combat Edition Watch $80 at Newegg,http://bensbargains.net/deal/161467/?referrer=rss
+,Brother PT-1290 Home &amp; Office Labeler $18.99 Free Shipping at Buy.com,http://www.techbargains.com/news_displayItem.cfm/227747
+,TODAY ONLY Samsung SpinPoint F3 1TB Internal SATA Hard Drive $54.99 Free Shipping at Newegg,http://www.techbargains.com/news_displayItem.cfm/227745
+,HP Pavilion dv7-3162nr AMD Dual-Core 2.3GHz 17.3in Laptop (4GB/500GB) w/ Blu-Ray $599.99AR at Circuit City,http://www.techbargains.com/news_displayItem.cfm/227748
+,Norton AntiVirus 2011 Software (3 Users) $23.99 Free Shipping at Buy.com,http://www.techbargains.com/news_displayItem.cfm/227752
+,TODAY ONLY UFC Undisputed 2010 Video Game (Xbox 360) $23.99 Free Shipping at Target,http://www.techbargains.com/news_displayItem.cfm/227750
+,TODAY ONLY Ematic eCam HD Flash Memory Camcorder w/ 4GB Memory Card $69 at Walmart,http://www.techbargains.com/news_displayItem.cfm/227749
+,Kingston DataTraveler 100 Generation 2 (G2) 4GB USB Flash Drive $7.95 Free Ship at Buy.com,http://www.techbargains.com/news_displayItem.cfm/227753
+,Kensington K33374US Wireless Presenter w/ Laser Pointer $19.49AR Free Shipping at Buy.com,http://www.techbargains.com/news_displayItem.cfm/227754
+,McAfee Total Protection 2011 Software (3-User) $32.99 Free Shipping at Buy.com,http://www.techbargains.com/news_displayItem.cfm/227756
+,"Meritline Deals (5Pcs LED Keychains $0.99, 4 Pcs Stylus for Nintendo DSi $0.35 Free Shipping) at Meritline",http://www.techbargains.com/news_displayItem.cfm/227757
+,"Entertainment Book 2011 - Free $25 Restaurant Gift Certificate + $3 off, Free Shipping at Entertainment Book",http://www.techbargains.com/news_displayItem.cfm/227758
+,RiDATA Lightning Series 16GB SDHC Flash Card $25.99 Free Shipping at Newegg,http://www.techbargains.com/news_displayItem.cfm/227759
+,"Belkin BE112230-08 8-Ft 12-Outlet 3780 Joules Surge Protector with Telephone, Coaxial Protection $16.99 Free Ship at Newegg",http://www.techbargains.com/news_displayItem.cfm/227760
+,Aluratek Libre 5 inch E-Book Reader Pro w/ E-Paper Display (Supports PDF) $99.99 Free Ship at Newegg,http://www.techbargains.com/news_displayItem.cfm/227762
+,TODAY ONLY KEF IQ10 2-Way Q Series Bookshelf Speakers (Pair) $199.88 Free Shipping at Vanns,http://www.techbargains.com/news_displayItem.cfm/227761
+,Car &amp; Driver Magazine 1-Year Subscription $3.99 (purchase up to 3 years) at Tanga,http://www.techbargains.com/news_displayItem.cfm/227765
+,SoapJet Handheld Car Wash $5 at AlphaShark,http://www.techbargains.com/news_displayItem.cfm/227768
+,"FREE eBook: Free Small Business Unified Communications For Dummies, Avaya Custom Edition at Tradepub",http://www.techbargains.com/news_displayItem.cfm/227769
+,TODAY ONLY Iomega eGo RPHD-UD 250GB Portable External Hard Drive (Refurb) $29.99 at Geeks,http://www.techbargains.com/news_displayItem.cfm/227764
+,"TODAY ONLY Toshiba 40G300U 40in LCD HDTV (1080p, 120Hz) $586 Free Shipping at Buydig.com",http://www.techbargains.com/news_displayItem.cfm/227772
+,HP dv6tse Intel Core i5-460M 2.53GHz 15in Touchscreen Laptop (6GB/640GB/Win7) $749 at HP,http://www.techbargains.com/news_displayItem.cfm/227709
+,Nazario Bonded Leather Executive Chair w/ Lumbar Support $79.99 Free Shipping at OfficeMax,http://www.techbargains.com/news_displayItem.cfm/227770
+,EXPIRING Mushkin Silverline 4GB (2x2GB) DDR3-1333MHz PC3-10666 Desktop Memory $56.99AR Free Shipping at Newegg,http://www.techbargains.com/news_displayItem.cfm/227778
+,Samsung HMX-H200 Digital High Definition Camcorder $289 Free Shipping at Buydig.com,http://www.techbargains.com/news_displayItem.cfm/227779
+,"Samsung P2770H 27in Widescreen LCD Monitor (REFURB, HDMI) $264 Free Shipping at Buy.com",http://www.techbargains.com/news_displayItem.cfm/227781
+,TODAY ONLY Kustom KPC10P 10in Powered PA Speaker $79.99 Free Shipping at Musician's Friend,http://www.techbargains.com/news_displayItem.cfm/227763
+,HP Coupon Code $100 off HP Laptops $799+ (Combines w/ Instant Discounts!) at HP,http://www.techbargains.com/news_displayItem.cfm/227782
+,HP Pavilion dm3t Intel Core i3-330UM ULV 13.3in Laptop (3GB/320GB/External Blu-Ray) $629.98 at HP,http://www.techbargains.com/news_displayItem.cfm/227787
+,HP G62t Intel Core i5-460M 2.53GHz 15.6in Laptop (3GB/320GB/Blu-Ray) $624.99 at HP,http://www.techbargains.com/news_displayItem.cfm/227783
+,WillyGoat Coupon - 15% off Swing Set through this link.,http://www.shopping-bargains.com/coupons/coupon/id/267318?rss=20101018&kid=4758402
+,Vitalicious Coupon - Mystery discount save anywhere from 5% to 15%.,http://www.shopping-bargains.com/coupons/coupon/id/267317?rss=20101018&kid=4758402
+,The Tog Shop Coupon - 10% off New Arrivals plus FREE Shipping for $100+ orders online through this link.,http://www.shopping-bargains.com/coupons/coupon/id/267266?rss=20101018&kid=4758402
+,Sleepyheads Coupon - FREE Shipping (Ground) for orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267262?rss=20101018&kid=4758402
+,Sears Coupon - Up to 20% off Baby Bedding and Decor + Extra $10 off $80 Baby orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267296?rss=20101018&kid=4758402
+,"Ross-Simons Coupon - 20% off clearance items, and 25% off everything else.",http://www.shopping-bargains.com/coupons/coupon/id/267316?rss=20101018&kid=4758402
+,Prescriptives Coupon - Free 5 piece deluxe brush set with $50+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267330?rss=20101018&kid=4758402
+,Performance Bike Coupon - 15% off Bikes. 10am to 10pm ET.,http://www.shopping-bargains.com/coupons/coupon/id/267328?rss=20101018&kid=4758402
+,Performance Bike Coupon - Extra 20% off Everything Else. 10am to 10pm ET.,http://www.shopping-bargains.com/coupons/coupon/id/267329?rss=20101018&kid=4758402
+,NFL Shop Coupon - 10% off orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267279?rss=20101018&kid=4758402
+,Macy's Coupon - 20% off orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267278?rss=20101018&kid=4758402
+,Lillian Vernon Coupon - 10% off $35+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267277?rss=20101018&kid=4758402
+,Kansas City Steaks Coupon - $15 off $125+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267327?rss=20101018&kid=4758402
+,Jelly Belly Coupon - Free BeanBoozled snip-snap tin with $10+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267326?rss=20101018&kid=4758402
+,Golfsmith Coupon - 15% off and FREE Shipping for $99+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267325?rss=20101018&kid=4758402
+,Gap Coupon - 25% off Fall Favorites.,http://www.shopping-bargains.com/coupons/coupon/id/267247?rss=20101018&kid=4758402
+,Diapers.com Coupon - 50% off Oatmeal Bear Halloween Costume for Kids.,http://www.shopping-bargains.com/coupons/coupon/id/267244?rss=20101018&kid=4758402
+,Costume Kingdom Coupon - 15% off orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267324?rss=20101018&kid=4758402
+,Borders Coupon - 30% off ALL Hardcover Books. Borders Rewards members.,http://www.shopping-bargains.com/coupons/coupon/id/267237?rss=20101018&kid=4758402
+,Bass Pro Shops Coupon - $1 Shipping on $100+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267236?rss=20101018&kid=4758402
+,Art.com Coupon - 22% off orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267234?rss=20101018&kid=4758402
+,AllBrands Coupon - 5% off $199+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267232?rss=20101018&kid=4758402
+,AllBrands Coupon - $5 off $99+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267231?rss=20101018&kid=4758402
+,Alibris Coupon - $15 off $100+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267230?rss=20101018&kid=4758402
+,Alibris Coupon - $9 off $60+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267229?rss=20101018&kid=4758402
+,Alibris Coupon - $4 off $25+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267228?rss=20101018&kid=4758402
+,$2 off 2-pack 6' HDMI cable at Meritline,"http://dealcoupon.com/lw/coupon.html?10,133295,iref=rss_dealcoupon_15_new"
+,$2.06 off laptop keyboard protector skin at Meritline,"http://dealcoupon.com/lw/coupon.html?10,133297,iref=rss_dealcoupon_15_new"
+,"Buy 2 items, get 2 more free at Anchor Blue","http://dealcoupon.com/lw/coupon.html?10,133321,iref=rss_dealcoupon_15_new"
+,Free shipping on $99 coupon at Oriental Trading Company,"http://dealcoupon.com/lw/coupon.html?10,133334,iref=rss_dealcoupon_15_new"
+,$10 off unlocked Nokia C6-00 3G smartphone at Newegg,"http://dealcoupon.com/lw/coupon.html?10,133299,iref=rss_dealcoupon_15_new"
+,"Wardrobe Sale: Suit coat, dress pants, shirt & tie for $229.99 at Casual Male XL","http://dealcoupon.com/lw/coupon.html?10,133319,iref=rss_dealcoupon_15_new"
+,Free shipping w/ 2+ Live In Wear Out items at Aerie,"http://dealcoupon.com/lw/coupon.html?10,133337,iref=rss_dealcoupon_15_new"
+,$1.96 off 5-piece LED keychain flashlight at Meritline,"http://dealcoupon.com/lw/coupon.html?10,133335,iref=rss_dealcoupon_15_new"
+,10% off at eForCity,"http://dealcoupon.com/lw/coupon.html?10,133340,iref=rss_dealcoupon_15_new"
+,$4 off $89 / $7 off $159 / $10 off $229 / $15 off $349+ at ChiefValue,"http://dealcoupon.com/lw/coupon.html?10,133338,iref=rss_dealcoupon_15_new"
+,Canon PowerShot SD1300 IS 12MP 4x Digital Camera for $129 + free shipping,http://dealmac.com/Canon-Power-Shot-SD1300-IS-12-MP-4-x-Digital-Camera-for-129-free-shipping/396751.html?iref=rss_dealmac_today
+,Air Canada: U.S. flights to Canada from $114 one way,http://dealnews.com/Air-Canada-U.S.-flights-to-Canada-from-114-one-way/396666.html?iref=rss_dealnews_today
+,Yakima FarOut Cartop Cargo Bag for $95 + $11 s&h,http://dealnews.com/Yakima-Far-Out-Cartop-Cargo-Bag-for-95-11-s-h/396659.html?iref=rss_dealnews_today
+,ASUS 8x USB External DVD Burner for $42 after rebate + free shipping,http://dealnews.com/ASUS-8-x-USB-External-DVD-Burner-for-42-after-rebate-free-shipping/396606.html?iref=rss_dealnews_today
+,JCPenney: Up to 75% off + extra 20% off women's coats,http://dealnews.com/JCPenney-Up-to-75-off-extra-20-off-womens-coats/396657.html?iref=rss_dealnews_today
+,"Royal Caribbean Cruise Lines: 3-night cruise from $169, more",http://dealnews.com/Royal-Caribbean-Cruise-Lines-3-night-cruise-from-169-more/396669.html?iref=rss_dealnews_today
+,Dead Space Extraction for Wii for $15 + free shipping ,http://dealnews.com/Dead-Space-Extraction-for-Wii-for-15-free-shipping-/396667.html?iref=rss_dealnews_today
+,Rotary Men's Classic 2-Tone Watch for $70 + free shipping,http://dealnews.com/Rotary-Mens-Classic-2-Tone-Watch-for-70-free-shipping/396629.html?iref=rss_dealnews_today
+,Refurbished Microsoft Zune HD 16GB MP3 Player for $100 + $5 s&h,http://dealnews.com/Refurbished-Microsoft-Zune-HD-16-GB-MP3-Player-for-100-5-s-h/396664.html?iref=rss_dealnews_today
+,HP LaserJet Pro P1102W Wireless Laser Printer for $100 + free shipping,http://dealnews.com/HP-Laser-Jet-Pro-P1102-W-Wireless-Laser-Printer-for-100-free-shipping/396641.html?iref=rss_dealnews_today
+,5-night U.S. Virgin Islands flight and hotel packages from $503 per person,http://dealnews.com/5-night-U.S.-Virgin-Islands-flight-and-hotel-packages-from-503-per-person/396673.html?iref=rss_dealnews_today
+,Hitachi SimpleDrive III 2TB USB External Hard Drive for $100 + $5 s&h,http://dealnews.com/Hitachi-Simple-Drive-III-2-TB-USB-External-Hard-Drive-for-100-5-s-h/396670.html?iref=rss_dealnews_today
+,Lord & Taylor Friends & Family Sale: 25% off online or in-store,http://dealnews.com/Lord-Taylor-Friends-Family-Sale-25-off-online-or-in-store/396662.html?iref=rss_dealnews_today
+,SoapJet Handheld Car Wash for $5 + $5 s&h,http://dealnews.com/Soap-Jet-Handheld-Car-Wash-for-5-5-s-h/396652.html?iref=rss_dealnews_today
+,HP Officejet 6500 Network All-in-One Inkjet Printer for $75 + free shipping ,http://dealnews.com/HP-Officejet-6500-Network-All-in-One-Inkjet-Printer-for-75-free-shipping-/396674.html?iref=rss_dealnews_today
+,All-in-One Universal Travel Adapter w/ Surge Protector for $2 + free shipping,http://dealnews.com/All-in-One-Universal-Travel-Adapter-w-Surge-Protector-for-2-free-shipping/396672.html?iref=rss_dealnews_today
+,Breville Conical Burr Mill Coffee Grinder for $80 + free shipping,http://dealnews.com/Breville-Conical-Burr-Mill-Coffee-Grinder-for-80-free-shipping/396639.html?iref=rss_dealnews_today
+,"Kingwin 2.5"" SATA USB External Enclosure for $5 + free shipping",http://dealnews.com/Kingwin-2.5-SATA-USB-External-Enclosure-for-5-free-shipping/396651.html?iref=rss_dealnews_today
+,Acro Circle 4x 25GB Blu-ray BD-R Media 25-Pack for $19 + free shipping,http://dealnews.com/Acro-Circle-4-x-25-GB-Blu-ray-BD-R-Media-25-Pack-for-19-free-shipping/396681.html?iref=rss_dealnews_today
+,Bad Books MP3 Album download for $3,http://dealnews.com/Bad-Books-MP3-Album-download-for-3/396631.html?iref=rss_dealnews_today
+,"Lenovo IdeaPad S10-3 Atom 1.66GHz 10"" Netbook for $265 + $7 s&h",http://dealnews.com/Lenovo-Idea-Pad-S10-3-Atom-1.66-GHz-10-Netbook-for-265-7-s-h/396687.html?iref=rss_dealnews_today
+,"DeepDiscount Autumn Sale: 20% off Blu-rays, DVDs, more + free shipping",http://dealnews.com/Deep-Discount-Autumn-Sale-20-off-Blu-rays-DVDs-more-free-shipping/396675.html?iref=rss_dealnews_today
+,"Toshiba 32"" 720p Widescreen LCD HDTV for $392 + free shipping",http://dealnews.com/Toshiba-32-720-p-Widescreen-LCD-HDTV-for-392-free-shipping/396682.html?iref=rss_dealnews_today
+,Guide Gear Deluxe Reclining Padded Cot for $49 + free shipping,http://dealnews.com/Guide-Gear-Deluxe-Reclining-Padded-Cot-for-49-free-shipping/396671.html?iref=rss_dealnews_today
+,"Suzanne Vega ""Tom's Diner"" MP3 downloads for free",http://dealnews.com/Suzanne-Vega-Toms-Diner-MP3-downloads-for-free/396692.html?iref=rss_dealnews_today
+,USB Circus Cannon for $8 + $5 s&h,http://dealnews.com/USB-Circus-Cannon-for-8-5-s-h/396684.html?iref=rss_dealnews_today
+,Omron Pace and Distance Tracker for $25 + free shipping,http://dealnews.com/Omron-Pace-and-Distance-Tracker-for-25-free-shipping/396640.html?iref=rss_dealnews_today
+,Kalorik Aqua Line Espresso Maker for $30 + free shipping,http://dealnews.com/Kalorik-Aqua-Line-Espresso-Maker-for-30-free-shipping/396694.html?iref=rss_dealnews_today
+,Kenneth Cole coupon: 40% off sitewide ,http://dealnews.com/Kenneth-Cole-coupon-40-off-sitewide-/396690.html?iref=rss_dealnews_today
+,Invicta Women's Wildflower Collection Watch for $76 + $5 s&h,http://dealnews.com/Invicta-Womens-Wildflower-Collection-Watch-for-76-5-s-h/396661.html?iref=rss_dealnews_today
+,White Paper CD / DVD Sleeve 100-Pack for $2 + free shipping,http://dealnews.com/White-Paper-CD-DVD-Sleeve-100-Pack-for-2-free-shipping/396678.html?iref=rss_dealnews_today
+,Iomega eGo 500GB USB 3.0 External Hard Drive for $70 + free shipping,http://dealnews.com/Iomega-e-Go-500-GB-USB-3.0-External-Hard-Drive-for-70-free-shipping/396693.html?iref=rss_dealnews_today
+,"Dell SP2309W 23"" Widescreen LCD Display w/ Webcam for $200 + free shipping",http://dealnews.com/Dell-SP2309-W-23-Widescreen-LCD-Display-w-Webcam-for-200-free-shipping/396645.html?iref=rss_dealnews_today
+,Foxconn Intel Atom Dual 1.66GHz Barebones PC for $121 + free shipping,http://dealnews.com/Foxconn-Intel-Atom-Dual-1.66-GHz-Barebones-PC-for-121-free-shipping/396704.html?iref=rss_dealnews_today
+,Premiertek 802.11n Wireless 5dBi USB Adapter for $11 + free shipping,http://dealnews.com/Premiertek-802.11-n-Wireless-5-d-Bi-USB-Adapter-for-11-free-shipping/396701.html?iref=rss_dealnews_today
+,Bi-Directional IDE to SATA Adapter for $1 + free shipping,http://dealnews.com/Bi-Directional-IDE-to-SATA-Adapter-for-1-free-shipping/396689.html?iref=rss_dealnews_today
+,TPU Skin Case for Apple iPad for $6 + free shipping,http://dealnews.com/TPU-Skin-Case-for-Apple-i-Pad-for-6-free-shipping/396699.html?iref=rss_dealnews_today
+,PQI 16GB 150x Class 10 SDHC Secure Digital Card for $27 + free shipping,http://dealnews.com/PQI-16-GB-150-x-Class-10-SDHC-Secure-Digital-Card-for-27-free-shipping/396712.html?iref=rss_dealnews_today
+,"17"" Laptop Carrying Case w/ 8-Disc CD/DVD Wallet for $22 + free shipping",http://dealnews.com/17-Laptop-Carrying-Case-w-8-Disc-CD-DVD-Wallet-for-22-free-shipping/396696.html?iref=rss_dealnews_today
+,Laptop Keyboard Protector Skin for 59 cents + free shipping,http://dealnews.com/Laptop-Keyboard-Protector-Skin-for-59-cents-free-shipping/396711.html?iref=rss_dealnews_today
+,$100 hhgregg Gift Card for $75 + free shipping,http://dealnews.com/-100-hhgregg-Gift-Card-for-75-free-shipping/396720.html?iref=rss_dealnews_today
+,Monday Morning Jolt: 5 Deals From Overnight,http://dealnews.com/features/Monday-Morning-Jolt-5-Deals-From-Overnight/396698.html?iref=rss_dealnews_today
+,"LG 42"" 120Hz 1080p LED-Backlit LCD HDTV for $980 + free shipping",http://dealnews.com/LG-42-120-Hz-1080-p-LED-Backlit-LCD-HDTV-for-980-free-shipping/396703.html?iref=rss_dealnews_today
+,Klipsch XF-48 Icon X 100W Floorstanding Loudspeaker for $400 + free shipping,http://dealnews.com/Klipsch-XF-48-Icon-X-100-W-Floorstanding-Loudspeaker-for-400-free-shipping/396695.html?iref=rss_dealnews_today
+,Giro Transfer Bike Helmet for $16 + $6 s&h,http://dealnews.com/Giro-Transfer-Bike-Helmet-for-16-6-s-h/396716.html?iref=rss_dealnews_today
+,dealnews Loves Animals: North Alabama Edition,http://dealnews.com/dealnews-Loves-Animals-North-Alabama-Edition/396725.html?iref=rss_dealnews_today
+,Orthopedic Seat Cushion for $10 + $4 s&h,http://dealnews.com/Orthopedic-Seat-Cushion-for-10-4-s-h/396686.html?iref=rss_dealnews_today
+,Canon EOS Rebel T2i 18MP Digital SLR Bundle for $841 + free shipping,http://dealnews.com/Canon-EOS-Rebel-T2-i-18-MP-Digital-SLR-Bundle-for-841-free-shipping/396723.html?iref=rss_dealnews_today
+,Smith Micro Digital TV for PC 2 for $10 + free shipping,http://dealnews.com/Smith-Micro-Digital-TV-for-PC-2-for-10-free-shipping/396735.html?iref=rss_dealnews_today
+,"Sony BRAVIA 46"" 1080p LED LCD HDTV w/ mount for $1,154 + free shipping",http://dealnews.com/Sony-BRAVIA-46-1080-p-LED-LCD-HDTV-w-mount-for-1-154-free-shipping/396709.html?iref=rss_dealnews_today
+,Toshiba Upconverting DVD Player / Recorder with HDMI for $50 + free shipping,http://dealnews.com/Toshiba-Upconverting-DVD-Player-Recorder-with-HDMI-for-50-free-shipping/396710.html?iref=rss_dealnews_today
+,The North Face Girl's Denali Jacket (XS or S only) for $40 + $6 s&h,http://dealnews.com/The-North-Face-Girls-Denali-Jacket-XS-or-S-only-for-40-6-s-h/396733.html?iref=rss_dealnews_today
+,FILA SPORT Women's Sunglasses for $4 + $1 s&h,http://dealnews.com/FILA-SPORT-Womens-Sunglasses-for-4-1-s-h/396717.html?iref=rss_dealnews_today
+,OWC Mercury Elite-AL Pro FireWire / USB Hard Drives from $85 + $5 s&h,http://dealnews.com/OWC-Mercury-Elite-AL-Pro-Fire-Wire-USB-Hard-Drives-from-85-5-s-h/396740.html?iref=rss_dealnews_today
+,Denon DJ Professional Headphones for $92 + free shipping,http://dealnews.com/Denon-DJ-Professional-Headphones-for-92-free-shipping/396373.html?iref=rss_dealnews_today
+,Panasonic LUMIX DMC-FX75K 14MP 5x Digital Camera for $260 + free shipping,http://dealnews.com/Panasonic-LUMIX-DMC-FX75-K-14-MP-5-x-Digital-Camera-for-260-free-shipping/396724.html?iref=rss_dealnews_today
+,"Fashion Bug coupon: $50 off orders of $100 or more, $100 off $200 or more",http://dealnews.com/Fashion-Bug-coupon-50-off-orders-of-100-or-more-100-off-200-or-more/396738.html?iref=rss_dealnews_today
+,Caravelle by Bulova Women's Diamond Accented Watch for $40 + $6 s&h,http://dealnews.com/Caravelle-by-Bulova-Womens-Diamond-Accented-Watch-for-40-6-s-h/396620.html?iref=rss_dealnews_today
+,2 KEF iQ3 2-Way Bookshelf Speakers for $200 + free shipping,http://dealnews.com/2-KEF-i-Q3-2-Way-Bookshelf-Speakers-for-200-free-shipping/396730.html?iref=rss_dealnews_today
+,Golden Stag Mechanic's Gloves for $8 + free shipping,http://dealnews.com/Golden-Stag-Mechanics-Gloves-for-8-free-shipping/396745.html?iref=rss_dealnews_today
+,Westinghouse 3-Outlet Ground Stake for $10 + free shipping,http://dealnews.com/Westinghouse-3-Outlet-Ground-Stake-for-10-free-shipping/396634.html?iref=rss_dealnews_today
+,Alfani RED Men's Twill Slim Fit Sport Coat for $40 + $10 s&h,http://dealnews.com/Alfani-RED-Mens-Twill-Slim-Fit-Sport-Coat-for-40-10-s-h/396743.html?iref=rss_dealnews_today
+,$40 Credit at CostumeKingdom for $18,http://dealnews.com/-40-Credit-at-Costume-Kingdom-for-18/396737.html?iref=rss_dealnews_today
+,"TOSHIBA Satellite A665D-S6059 16 inch 4GB (8GB Max) NoteBook Computer with 1.6Ghz AMD Phenom II Quad-Core P920 processor, 500GB HDD, Webcam, HDMI - $ 779.99 at (NewEgg.com)",http://www.123bargains.com/deals-info/18812/toshiba-satellite-a665ds6059-16-inch-4gb-8gb-max-notebook-computer-with-16ghz-amd-phenom-ii-quadcore-p920-processor-500gb-hdd-webcam-hdmi.aspx
+,Kingston DT100G2/4GBZ 4GB DataTraveler 100 Generation 2 (G2) USB Flash Drive - $ 7.95 at (Buy.com),http://www.123bargains.com/deals-info/18813/kingston-dt100g2-4gbz-4gb-datatraveler-100-generation-2-g2-usb-flash-drive.aspx
+,"Livescribe 4 GB Echo Smartpen with MicroUSB connector, Standard 3.5mm Audio Jack - $ 139.99 at (Amazon.com)",http://www.123bargains.com/deals-info/18814/livescribe-4-gb-echo-smartpen-with-microusb-connector-standard-35mm-audio-jack.aspx
+,"Nikon COOLPIX 12.1MP (S1000pj) Digital Camera with 5x Optical Zoom, 2.7 inch LCD Screen, Built-in Projector - $ 187.05 at (Amazon.com)",http://www.123bargains.com/deals-info/18815/nikon-coolpix-121mp-s1000pj-digital-camera-with-5x-optical-zoom-27-inch-lcd-screen-builtin-projector.aspx
+,"Klipsch XF48 Gloss Black Icon X Series Floorstanding Speaker with Tractrix Horn-Loaded Tweeter, XT technology - $ 399.88 at (Vanns)",http://www.123bargains.com/deals-info/18816/klipsch-xf48-gloss-black-icon-x-series-floorstanding-speaker-with-tractrix-hornloaded-tweeter-xt-technology.aspx
+,"Iomega 34650 ScreenPlay Director HD Media Player USB 2.0/Ethernet/AV with WIFI ready, Up to 1TB HDD - $ 149.99 at (Dell Home)",http://www.123bargains.com/deals-info/18817/iomega-34650-screenplay-director-hd-media-player-usb-20-ethernet-av-with-wifi-ready-up-to-1tb-hdd.aspx
+,"Kensington K33374 Device Remote Control with 2.4GHz Wireless Technology, Bright Laser Beam - $ 19.49 at (Buy.com)",http://www.123bargains.com/deals-info/18818/kensington-k33374-device-remote-control-with-24ghz-wireless-technology-bright-laser-beam.aspx
+,Fujitsu FI-6010N Document Scanner - $2399.99,http://www.tigerdirect.com/applications/searchtools/item-details.asp?EdpNo=5742457&SRCCODE=WEBRSS013&cm_mmc=RSS-_-TigerDirect-_-Category-_-TopSellers
+,Intel Xeon E5410 2.33GHz Retail - $284.99,http://www.tigerdirect.com/applications/searchtools/item-details.asp?EdpNo=3877301&SRCCODE=WEBRSS013&cm_mmc=RSS-_-TigerDirect-_-Category-_-TopSellers
+,DiabloTek PHD550 550-Watt Power Supply - $39.99,http://www.tigerdirect.com/applications/searchtools/item-details.asp?EdpNo=4252527&SRCCODE=WEBRSS013&cm_mmc=RSS-_-TigerDirect-_-Category-_-TopSellers
+,Corsair CMPSU-450VX 450-Watt Power Supply - $59.99*,http://www.tigerdirect.com/applications/searchtools/item-details.asp?EdpNo=3287208&SRCCODE=WEBRSS013&cm_mmc=RSS-_-TigerDirect-_-Category-_-TopSellers
+,Biostar TA790GX 128M Socket AM2+ Motherboard - $89.99,http://www.tigerdirect.com/applications/searchtools/item-details.asp?EdpNo=4408236&SRCCODE=WEBRSS013&cm_mmc=RSS-_-TigerDirect-_-Category-_-TopSellers
+,ASUS P6TD Deluxe Intel X58 Socket LGA1366 Motherbo - $219.99*,http://www.tigerdirect.com/applications/searchtools/item-details.asp?EdpNo=5023026&SRCCODE=WEBRSS013&cm_mmc=RSS-_-TigerDirect-_-Category-_-TopSellers
+,Compaq 500B Microtower Business PC - $449.99,http://www.tigerdirect.com/applications/searchtools/item-details.asp?EdpNo=5708931&SRCCODE=WEBRSS013&cm_mmc=RSS-_-TigerDirect-_-Category-_-TopSellers
+,Kensington Microsaver Notebook Lock - $34.99,http://www.tigerdirect.com/applications/searchtools/item-details.asp?EdpNo=2568951&SRCCODE=WEBRSS013&cm_mmc=RSS-_-TigerDirect-_-Category-_-TopSellers
+,Zombie Outbreak Barricade Tape (20 ft) ($3.00) @ TShirtBordello.com,http://www.fatwallet.com/best-deals/zombie-outbreak-barricade-tape/
+,Xbox 360 Final Fantasy XIII Special Edition Bundle ($299.99 was $349.99) @ Target,http://www.fatwallet.com/best-deals/xbox-360-final-fantasy-xiii-special-edition-bundle/
+,"George Foreman 106"" 360-Grill  ($49.00 was $109.00) @ Walmart",http://www.fatwallet.com/best-deals/george-foreman-106-360-grill/
+,Giro Transfer Bike Helmet ($15.99 was $29.99) @ Bike Nashbar,http://www.fatwallet.com/best-deals/giro-transfer-bike-helmet/
+,"Dishwasher Magic - Free After Rebate ""Try me and Save up to $4.00"" Offer YMMV",http://feedproxy.google.com/~r/FatwalletGroceryCouponsAndDeals/~3/FvaP0zONPPo/1035184
+,Anyone own a retail business?,http://feedproxy.google.com/~r/FatwalletFinance/~3/qWZRvV0Yw-o/1035191
+,Free 3oz. Entenmanns Crumb Cake at Quick Chek,http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/YX2TLAzx9eE/1035194
+,Free First Aid Kit from Good Sam Hospital,http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/ImUIrEqkQbU/1035198
+,"Jos A Bank--Buy One--Get TWO FREE REG Price (suits, pants, outerwear, etc) Sale ac to 10/20",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/MKPaWGMDHtM/1035185
+,$19 SanDisk Sansa Clip 1GB MP3/WMA Player,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/YDWXzlpzBwo/1035186
+,"Car Charger to Wall Charger Adapter, Use your in Car Devices at Home .99ac shipped",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/3u6A1gItNcw/1035187
+,Swann SW231-SCK 380 TV Lines MAX Resolution Safety Camera Kit - Wireless Family Monitoring & Observation 29.99 Newegg,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/WwRNR0FZ3o0/1035189
+,$10 Bakugan - BakuSphere @ Walmart.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/SslPL2ZGN9s/1035190
+,25% Off Fall Favorites at Gap.com + 3% Cash Back!,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/x-5lB-0albk/1035192
+,"20% Off $100, 25% Off $125  30% Off $150 at OldNavy.com + 3% Cash Back!",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/asTIXxrroYM/1035193
+,$100 gift card for $75 at HHGregg with promo code,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/giS0VnikeCA/1035197
+,Blu-Ray BD-R media discs blank-label 25-pack $18.99 @ Meritline ($.76 per BD-R!),http://feedproxy.google.com/~r/FatwalletHotDeals/~3/YUMWcLl9kUY/1035199
+,$9.99 cooks 14-pc. Kitchen Measuring Set at JCPenney,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/ueoLJVwCZwQ/1035200
+,DVD Verdict's Expecto Patronum! Contest - 10/24/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/GC6w9azdpMk/showthread.php
+,Rachael Ray Show's Toy Story 3 Combo Pack Giveaway - 10/27/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/gOSmGUXeNRQ/showthread.php
+,"Rachael Ray Show's ""Is It Just Me?"" Giveaway - 10/27/10",http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/Jn1APRrzYs4/showthread.php
+,After MidNite's New Years Eve in Nashville Sweepstakes (21+) - 10/31/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/VDNbTJ_ZrmA/showthread.php
+,Rods.com's Cowgirl Tuff Sweepstakes - 10/24/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/G-Wpd_HOy4s/showthread.php
+,First Aid beauty First B'day Sweepstakes 10/18-10/29,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/awGsQoptu2I/showthread.php
+,Free pumpkin carving patterns at bettycrocker.com,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/NOFBGmK2_Go/showthread.php
+,"Blockbuster Express - Free Rental with Code - Today, 10/18 Only",http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/tq1RA7_lMMk/showthread.php
+,"Free Pomegranates from Pom Wonderful - 1st 5,000",http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/NilOxsBstsg/showthread.php
+,Free First Aid Kit,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/Q0-Jmn7kryA/showthread.php
+,Kenneth Cole Friends and Family Sale - 40% off - 10/18 - 10/20- Offer Valid at Kenneth Cole Factory Stores too.,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/hh-Gbu4xu9k/showthread.php
+,Imation 128GB SSD Upgrade Kit for only $155 after $115 savings,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/NS-HA1EO6XI/showthread.php
+,Dollar Deal of the Day - Kathy Griffin: Allegedly (Comedy DVD) $1.00 each,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/HqPXCoJKur0/showthread.php
+,"12-hour sale at Performance Bike (online) - 15% off all bikes, 20% off most everything else, free ship over $50/$150 (read details)",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Jq4HMIG8gbQ/showthread.php
+,"$10.99 For 2 Pizzas at Papa Johns and 50% Off Total Pizza Order (+Bonus) - Washington, DC Area",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/nicHj5rL1Fo/showthread.php
+,25% off Dell Outlet Latitudes til 10/22,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/CtgEzO63nvc/showthread.php
+,Blockbuster kiosk free rental,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/5-WZSVMrcUc/showthread.php
+,Paula Deen Twin Aluminum Skillets + 1 qt Sauce Pan - $16.38 + tax (Orig $80),http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/fb1fkTVrb0o/showthread.php
+,Lowe's Suncast Large Storage Shed (resin GS8000) Clearance $180+tax  (was $500-549) YMMV?,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/4OBfSEIxT1Y/showthread.php
+,KCO 9 LED Aluminum Flashlight Set - 6 Pk $14.95 with FSSS,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/CH1VZfOD9yA/showthread.php
+,T-fal E938SA74 Professional Total Non-Stick 10-piece Cookware Set  $20 + Shipping,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/waaY3cCFvyE/showthread.php
+,"Laptop Keyboard Protector Skins For 13-15 Inch Notebook, White Universal Silicone $0.59, FS",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/zI_LDv8b8vQ/showthread.php
+,Conns: Toshiba DKR40 DVD Recorder $50 + FS,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/abpVnyrXXP8/showthread.php
+,"PQI 16 GB, Class 10 - 150X, SDHC-SD CARD $26.95 w FS Meritline",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/OGGYGGTtqbA/showthread.php
+,FILA SPORT Sunglasses for Woman $5 Shipped after Code at Kohl's,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/j8WiVdkF538/showthread.php
+,It's back: $3.12 TCP Contractor Pack of 14w CFL (12 bulbs) Home Depot B&M YMMV (17 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/mhAMObopZrM/showthread.php
+,6 Movie Tickets from Weekly Cinema / Fandango (Works on IMAX / 3D) $30 ,http://feedproxy.google.com/~r/SlickdealsnetFP/~3/UyUFVtjmvjA/40495
+,Canon PowerShot SD1300IS 12.1 MP Digital Camera (Blue)  $129,http://www.dealalive.com/detail_1287405061346458.html
+,Canon PowerShot SD1300IS 12.1 MP Digital Camera with 4x Wide Angle Optical Image Stabilized Zoom and 2.7-Inch LCD (Blue) $129,http://www.dealalive.com/detail_1287405601949892.html
+,Dell Daily Deal 5dot Curve Messenger - Fits Laptop with Screen Sizes Up to 16-inch - Black/Red $11.99,http://www.dealalive.com/detail_1287407821702694.html
+,Canon imageCLASS MF4350D Multifunction Laser Printer $131 at Buy.com,http://bensbargains.net/deal/161423/?referrer=rss
+,"Samsung 2494LW 23.6"" 5ms HDMI LCD Monitor $160 at Buy.com",http://bensbargains.net/deal/161421/?referrer=rss
+,Guitar Hero: World Tour Band Kit $54 at MidnightBox.com,http://bensbargains.net/deal/161424/?referrer=rss
+,"HP PW460TA 12.2MP 3"" Touch LCD Digital Camera $100 at Newegg",http://bensbargains.net/deal/161407/?referrer=rss
+,Odessa II Task Chair $65 at Office Max,http://bensbargains.net/deal/161417/?referrer=rss
+,EXPIRING Expedia Coupon Code $50 Off Flight + 3 Night Vacation Package at Expedia,http://www.techbargains.com/news_displayItem.cfm/226978
+,PCMicrostore Coupon Code 40% OFF PCMS CAT 6E Network Cables at PCMicrostore,http://www.techbargains.com/news_displayItem.cfm/227678
+,20% off at macys,"http://dealcoupon.com/lw/coupon.html?10,133227,iref=rss_dealcoupon_15_new"
+,$15 off $75 at Foot Locker,"http://dealcoupon.com/lw/coupon.html?10,133231,iref=rss_dealcoupon_15_new"
+,$5 off $30 at Walgreens,"http://dealcoupon.com/lw/coupon.html?10,133233,iref=rss_dealcoupon_15_new"
+,Refurb Sony Cyber-shot DSC-H55 14MP Digital Camera for $159 + free shipping,http://dealmac.com/Refurb-Sony-Cyber-shot-DSC-H55-14-MP-Digital-Camera-for-159-free-shipping/396625.html?iref=rss_dealmac_today
+,FAO Schwarz Five Little Monkeys Baby Play Mat for $20 + $6 s&h,http://dealnews.com/FAO-Schwarz-Five-Little-Monkeys-Baby-Play-Mat-for-20-6-s-h/396626.html?iref=rss_dealnews_today
+,Refurbished Philips PC Webcam with Headset for $10 + $6 s&h,http://dealnews.com/Refurbished-Philips-PC-Webcam-with-Headset-for-10-6-s-h/396646.html?iref=rss_dealnews_today
+,Radio Flyer Classic Red Tricycle with Push Handle for $41 + $3 s&h,http://dealnews.com/Radio-Flyer-Classic-Red-Tricycle-with-Push-Handle-for-41-3-s-h/396624.html?iref=rss_dealnews_today
+,New Balance Men's 622 Cross Training Shoes for $26 + $7 s&h ,http://dealnews.com/New-Balance-Mens-622-Cross-Training-Shoes-for-26-7-s-h-/396632.html?iref=rss_dealnews_today
+,Ben Sherman Women's Highmore Jacket for $28 + $7 s&h,http://dealnews.com/Ben-Sherman-Womens-Highmore-Jacket-for-28-7-s-h/396649.html?iref=rss_dealnews_today
+,Prince Triple Threat Cloud Oversize Tennis Racquet for $50 + $6 s&h,http://dealnews.com/Prince-Triple-Threat-Cloud-Oversize-Tennis-Racquet-for-50-6-s-h/396635.html?iref=rss_dealnews_today
+,20% to 30% off select Disneyland Resorts: Rooms from $200 per night,http://dealnews.com/20-to-30-off-select-Disneyland-Resorts-Rooms-from-200-per-night/396663.html?iref=rss_dealnews_today
+,"Fujitsu Siemens 17"" Laptop Case for $10 + $6 s&h",http://dealnews.com/Fujitsu-Siemens-17-Laptop-Case-for-10-6-s-h/396615.html?iref=rss_dealnews_today
+,Scotch Brite Coupons - Bathroom scrubbers,http://feedproxy.google.com/~r/FatwalletGroceryCouponsAndDeals/~3/GG6qUW27ObM/1035183
+,Always wash your balls T-shirt 14.99 + shipping ,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/FeqIlXKJJdM/1035178
+,xbox 360 250 HD FF XIII Bundle - $299.99 Shipped @ Target.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/NRad79XPagM/1035179
+,"Samsung 2494LW 23.6"" widescreen 1080P LCD display $160 shipped at Buy.com",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/2PZc6vJB0I0/1035180
+,Kalorik USKEXP4 Aqua Line Espresso Maker Reg $130+ just $30 SHIPPED AC @ Newegg,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/rjgb5XQV_dw/1035182
+,Dock Connector to USB 2.0 Cable for iPod and iPhone 1$ free shipping,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Ct_6ZWEgXpI/showthread.php
+,Mushkin Enhanced Silverline 4GB (2x2) DDR3 1333 Desktop Memory $59 AR or Blackline DDR3 1600 $64AR Shipped Free,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/SIQQzO_bNvM/showthread.php
+,4GB (2 x 2GB) Mushkin Enhanced Silverline DDR3 1333 (PC3 10666) Desktop Memory $57 after $15 MIR Shippd,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/RcKiUga_KSw/showthread.php
+,"5dot 16"" Laptop Messenger Bag $12 Shipped",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/QumiPVBsPNI/showthread.php
+,100-pack CD/DVD Sleeves with Clear Window $1.99 Shipped,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Norou6RgBqE/showthread.php
+,Dead Space: Extraction (Wii) $15 Shipped at Newegg,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/eZYXNxjtfRU/showthread.php
+,Zune16g refurb. 99.00,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/1uu4CqoJb4s/showthread.php
+,"samsung 50"" plasma w/ 19"" lcd  $719 w/ free shipping",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Nr04VvToITQ/showthread.php
+,"Jetblue-Fares starting at $39 from Boston! (WEB only, restricted dates)",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/b6O2w1KgsWk/showthread.php
+,LG Bluetooth HFB-500 Solar Hands-Free Car Kit $8.99 after $20 MIR Shipped *starts 5 AM PST* *it's back!*,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/RD2Kw7JQBDs/showthread.php
+,Universal Phone Holder which mounts to your dashboard 69¢ shipped *Starts 10/19 at 12:00 pm Pacific*,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/AbOFR7lFkcQ/showthread.php
+,Universal USB Travel Charger Adapter (white) for 99¢ shipped *starts 10/19 at 12:00 pm*,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/F4LLUVIcr80/showthread.php
+,"Charades Oatmeal Bear Halloween Costume 9.50 plus tax, free shipping",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/XBAwLfdEans/showthread.php
+,"6-pack of Scotch Packaging Tape (2"" x 22 yards) $7 ",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/9HZSdTnq9U8/40489
+,MaxiScan MS300 CAN OBD-II Auto Code Reader $21.50,http://www.dealalive.com/detail_1287399241216181.html
+,6 Rolls of Scotch 2 Inches x 800 Inches Packaging Tape $7,http://www.dealalive.com/detail_1287400442129330.html
+,Wii Fit Plus with Balance Board $80,http://www.dealalive.com/detail_1287400741736121.html
+,Macy's - 20% off Sitewide,http://www.dealalive.com/detail_1287401041330910.html
+,New Balance 622 Men's Shoes $33 at Joes New Balance Outlet,http://bensbargains.net/deal/161413/?referrer=rss
+,Gigabyte Intel X58 ATX MB w/ OCZ Gold 6GB DDR3 RAM $270 at Newegg,http://bensbargains.net/deal/161406/?referrer=rss
+,Dual Opteron 2GHz 4GB 2U Server $150 at Surplus Computers,http://bensbargains.net/deal/161411/?referrer=rss
+,"Lenovo IdeaPad S10-3 Intel Atom N455 Pinetrail 10.1in Netbook (Energy Eff, 1GB/160GB/6-Cell/Win7) $279.99 at Buy.com",http://www.techbargains.com/news_displayItem.cfm/227743
+,"Samsung LN46C630 46in LCD HDTV (1080p, 120Hz, DLNA Support) $889 Free Shipping at Buy.com",http://www.techbargains.com/news_displayItem.cfm/227742
+,DockView for Mac downloads for $5,http://dealmac.com/Dock-View-for-Mac-downloads-for-5/396628.html?iref=rss_dealmac_today
+,"Realspace Alluna Milk-Glass L-Shape Desk for $80 + free shipping, padding",http://dealnews.com/Realspace-Alluna-Milk-Glass-L-Shape-Desk-for-80-free-shipping-padding/396575.html?iref=rss_dealnews_today
+,Kohl's coupon: Up to 90% off + 20% off sitewide + $1 s&h,http://dealnews.com/Kohls-coupon-Up-to-90-off-20-off-sitewide-1-s-h/396613.html?iref=rss_dealnews_today
+,Columbia Women's Dietrich Soft-Shell Trench Coat for $90 + $13 s&h,http://dealnews.com/Columbia-Womens-Dietrich-Soft-Shell-Trench-Coat-for-90-13-s-h/396618.html?iref=rss_dealnews_today
+,Calvin Klein Women's Cinch Waist Quilted Jacket for $45 + 11 s&h,http://dealnews.com/Calvin-Klein-Womens-Cinch-Waist-Quilted-Jacket-for-45-11-s-h/396611.html?iref=rss_dealnews_today
+,90% off men's shorts at Kohl's + extra 20% off: Deals from $3 + $1 s&h,http://dealnews.com/90-off-mens-shorts-at-Kohls-extra-20-off-Deals-from-3-1-s-h/396622.html?iref=rss_dealnews_today
+,"NEXT Power X 26"" Men's Mountain Bike for $88 + $3 s&h",http://dealnews.com/NEXT-Power-X-26-Mens-Mountain-Bike-for-88-3-s-h/396605.html?iref=rss_dealnews_today
+,J.Crew Final Sale: Up to 75% off + extra 30% off,http://dealnews.com/J.Crew-Final-Sale-Up-to-75-off-extra-30-off/396633.html?iref=rss_dealnews_today
+,6 Movie Tickets via Fandango or MovieTickets.com for $30,http://dealnews.com/6-Movie-Tickets-via-Fandango-or-Movie-Tickets.com-for-30/396630.html?iref=rss_dealnews_today
+,FAO Schwarz Five Little Monkeys Baby Play Mat for $20 + free shipping,http://dealnews.com/FAO-Schwarz-Five-Little-Monkeys-Baby-Play-Mat-for-20-free-shipping/396626.html?iref=rss_dealnews_today
+, KittAmor 3-Quart Whistling Tea Kettle for $17 + free shipping,http://dealnews.com/-Kitt-Amor-3-Quart-Whistling-Tea-Kettle-for-17-free-shipping/396607.html?iref=rss_dealnews_today
+,Teva Men's Hallah Leather Flip-Flops for $30 + $6 s&h,http://dealnews.com/Teva-Mens-Hallah-Leather-Flip-Flops-for-30-6-s-h/396621.html?iref=rss_dealnews_today
+,Columbia Infant Bugababy Bunting System for $30 + $1 s&h,http://dealnews.com/Columbia-Infant-Bugababy-Bunting-System-for-30-1-s-h/396595.html?iref=rss_dealnews_today
+,Samsung Spinpoint 1TB SATA Internal Hard Drive for $55 + free shipping,http://dealnews.com/Samsung-Spinpoint-1-TB-SATA-Internal-Hard-Drive-for-55-free-shipping/396637.html?iref=rss_dealnews_today
+,Farberware® 15 Pc. Pro Stainless Steel Cutlery Block Set » $38.95,http://www.deals2buy.com/deals/99919903-farberware-15-pc-pro-stainless-steel-cutlery-block-
+,Taste Of Home Subscription 1 Yr  6 Issues » $5.40,http://www.deals2buy.com/deals/99919948-taste-of-home-subscription-1-yr-6-issues
+,Five days only - 1 cent shipping on select Rhone bottles » SALE,http://www.deals2buy.com/deals/99919904-five-days-only-1-cent-shipping-on-select-rhone-bott
+,Dyson Allergy Cleaning Kit » $52,http://www.deals2buy.com/deals/99918441-dyson-allergy-cleaning-kit
+,Rhinestone bead Jewelry Set » $4.59,http://www.deals2buy.com/deals/99920014-rhinestone-bead-jewelry-set
+,"18"" 5mm Freshwater White Rice Pearl Necklace + Gift Box » $5.99",http://www.deals2buy.com/deals/99920031-18-5mm-freshwater-white-rice-pearl-necklace-gift-bo
+,Rosewill i-Ccurate 1 Second Digital Infrared Ear Thermometer » $20.99,http://www.deals2buy.com/deals/99920012-rosewill-i-ccurate-1-second-digital-infrared-ear-th
+,Steve Madden Mens styles up to 50%! &amp; Womens up to 70% off! »  SALE,http://www.deals2buy.com/deals/99920003-steve-madden-mens-styles-up-to-50-womens-up-to-70-o
+,Dead Space: Extraction Wii Game EA » $14.99,http://www.deals2buy.com/deals/99920011-dead-space-extraction-wii-game-ea
+,Invicta 0394 Men's Russian Diver Collection Combat Edition Black Watch » $79.99,http://www.deals2buy.com/deals/99920010-invicta-0394-men-s-russian-diver-collection-combat-
+,Cabelas Outdoor Adventure 2010 » $16.99,http://www.deals2buy.com/deals/99920013-cabelas-outdoor-adventure-2010
+,"10 in 1 Multifunctional Outdoor Mini Survival Kit Including Thermometer,Hygrometer,LED Light,Reflector,Spirit Level,Compass,Whistle,Flint,Magnifier and Ruler » $4.99",http://www.deals2buy.com/deals/99920017-10-in-1-multifunctional-outdoor-mini-survival-kit-i
+,YSL 6183/S 0EOD Black Sunglasses » $89.99,http://www.deals2buy.com/deals/99920030-ysl-6183-s-0eod-black-sunglasses
+,A Complete Beginner's Manual for Ubuntu 10.04 (Lucid Lynx) » FREE,http://www.deals2buy.com/deals/66110159-a-complete-beginner-s-manual-for-ubuntu-10-04-lucid
+,"LG Bluetooth HFB-500 Solar Hands-Free Car Kit, Black » $8.99",http://www.deals2buy.com/deals/99920022-lg-bluetooth-hfb-500-solar-hands-free-car-kit-black
+,Free Sample Dr. Mauskops Migralex Pain Relief ,http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/kuqfWTNMsfs/1035174
+,Free Sports Injury Prevention Hot/Cold Pack -MD Only - Union Memorial Orthopedics and Sports Medicine ,http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/ujPnZRw3bkY/1035176
+,Free Picture on Times Sgaure Screen - Facebook Corona Beer ,http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/huoXWFlK8WE/1035177
+,1TB spinpoint F3 - Good Reviews :: $55,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/ITOsJjyuY_s/1035170
+,"Amazon 10/18 MP3 album Daily Deal: ""Bad Books"" by Bad Books, $2.99",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/30FM0cfbUfU/1035172
+,The Maltese Falcon iTunes download contest - 10/19/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/5t1XUdPpQKc/showthread.php
+,Time Out Chicago's Grub & grapes contest - 10/20/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/7l3Sb4z3yyk/showthread.php
+,bygamer 6% bonus on video game,http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/nYyaa1zEGhc/showthread.php
+,"3 Pk Reusable Screen Protector for Apple iPod Touch $0.49, FS **Starts 12pm PST**",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/vl-B2ySsusk/showthread.php
+,"RCA Audio Cable Adaptor for Microsoft Xbox 360 / Xbox 360 Slim $3.49, FS **Starts 12pm PST**",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/YEmimjYj-Eg/showthread.php
+,"3-pack Cat Toys, Green $0.69, FS **Starts 12pm PST**",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/0wY7K1Qk6Zw/showthread.php
+,"Belkin USB Retractable Travel Mouse, Black $6.99, FS **Starts 12pm PST**",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/jITbw5GIxyY/showthread.php
+,"TPU Rubber Skin Case Cover for Apple iPhone 3G / 3GS, Clear Smoke $0.49, FS **Starts 12pm PST**",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/DOsQ3LpnyZU/showthread.php
+,"Compact Battery Charger Set for Canon NB-2L / BP-2L12 / BP-2L14 batteries $3.99, FS **Starts 12pm PST**",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/i2aQZkHXg9A/showthread.php
+,"LED Rose Light , Multi Color $0.99, FS **Starts 12pm PST**",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/oIdUGN9qChc/showthread.php
+,Optimum 100% Whey Gold Standard Vanilla 1lb (Multi-Pack) $13.26,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Zgk8xrPVzaU/showthread.php
+,Oakley Felon Sunglasses $37.50+SH @ OakleyVault,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/nX8oG8088hc/showthread.php
+,25 PackBlu-ray (BD-R) Media Discs 1X - 4X 25GB White Inkjet Hub Printable BDR Media Disc Single Layer Write Once in 25 Pk $19 shipped @ meritline,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/eGP97GBJW0c/showthread.php
+,HTC EVO 4G For Just $99.99 Shipped From Amazon For New Sprint Customers!,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/1Zvv98-DpwI/showthread.php
+,Fashion Bug $50 off $100 and $100 off $200 coupon in email  (Online only / Monday only),http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/5F_yelbHam0/showthread.php
+,Amazon: 6 rolls Scotch packaging tape $7.38 FSSS/Prime eligible,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/BbB-3bksVkU/showthread.php
+,GNC Multivitamins - $9.99 90ct. Bottles - 50% off - Today ONLY 10/18/10,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/2OxZbn-jt9o/showthread.php
+,"24"" Samsung SyncMaster 2494LW 1080p Widescreen LCD Monitor for $160 FS from Buy.com",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/ENw6PFhcwSM/showthread.php
+,Six Movie Tickets to Fandango or MovieTickets.com via Weekly Cinema $30 (6 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/GGxgeQbmZBM/showthread.php
+,"1TB SAMSUNG Spinpoint F3 HD103SJ 7200 RPM SATA 3.0Gb/s 3.5"" Internal Hard Drive $55 FS at Newegg (10 replies)",http://feedproxy.google.com/~r/SlickdealsnetHT/~3/RQXTRixUIg8/showthread.php
+,MySims Agents for NDS $14.99,http://www.dealalive.com/detail_1287388929249230.html
+,MJSI HYR270 HydroRight Drop-in Dual Flush Converte $18.1,http://www.dealalive.com/detail_1287390781980014.html
+,Belkin BE112230-08 12-Outlet Surge Protector $17 at Newegg,http://bensbargains.net/deal/161405/?referrer=rss
+,Up to 70% off Steve Madden Apparel and Footwear at 6pm,http://bensbargains.net/deal/161410/?referrer=rss
+,Ridata Lightning 16GB Class 10 SDHC Memory Card $26 at Newegg,http://bensbargains.net/deal/161403/?referrer=rss
+,Insignia NS-BRDVD3 Blu-ray Disc Player $64 at MidnightBox.com,http://bensbargains.net/deal/161412/?referrer=rss
+,Samsung 2494LW 24in Widescreen LCD Monitor (1920x1080) $159.99 Free Shipping at Buy.com,http://www.techbargains.com/news_displayItem.cfm/227741
+,Nike Brasilia IV XS Duffel Bag for $16 + $1 s&h,http://dealnews.com/Nike-Brasilia-IV-XS-Duffel-Bag-for-16-1-s-h/396598.html?iref=rss_dealnews_today
+,Collins Leather Manager's Office Chair for $70 + free shipping,http://dealnews.com/Collins-Leather-Managers-Office-Chair-for-70-free-shipping/396599.html?iref=rss_dealnews_today
+,Levi Men's Silver Tab Baggy Fit Jeans (tall sizes) for $16 + $6 s&h,http://dealnews.com/Levi-Mens-Silver-Tab-Baggy-Fit-Jeans-tall-sizes-for-16-6-s-h/396597.html?iref=rss_dealnews_today
+,Recycled Nike Golf Ball 100-Pack for $36 + $3 s&h,http://dealnews.com/Recycled-Nike-Golf-Ball-100-Pack-for-36-3-s-h/396604.html?iref=rss_dealnews_today
+,Spectrum Plus Motor Oil 5-Quart Bottle for $6 + pickup,http://dealnews.com/Spectrum-Plus-Motor-Oil-5-Quart-Bottle-for-6-pickup/396609.html?iref=rss_dealnews_today
+,"iHome IH-B936NR Netbook Accessory Kit with Optical Mouse, 4-Port USB 2.0 Hub, Ear Buds with Built-in Microphone - $ 12.99 at (Buy.com)",http://www.123bargains.com/deals-info/16225/ihome-ihb936nr-netbook-accessory-kit-with-optical-mouse-4port-usb-20-hub-ear-buds-with-builtin-microphone.aspx
+,Omron HJA-301 Pace and Distance Tracker wit 7 Day Memory - $ 25.00 at (Amazon.com),http://www.123bargains.com/deals-info/18810/omron-hja301-pace-and-distance-tracker-wit-7-day-memory.aspx
+,Ematic eCam HD 5MP Flash Memory Camcorder with 75 Minutes Recording Time + 4GB Memory Card - $ 69.00 at (Walmart),http://www.123bargains.com/deals-info/18811/ematic-ecam-hd-5mp-flash-memory-camcorder-with-75-minutes-recording-time--4gb-memory-card.aspx
+,Giveaway of the Day - MultiSet 7.8.1 Free Download,http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/Orkmf8AId9k/1035166
+,Beauty Blitz's Free Style Giveaway - 10/18/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/oiyhH7oMJvc/showthread.php
+,TV Guide Fox Hot List Internet Sweepstakes (21+) 10/25/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/erDuRvXcpSQ/showthread.php
+,Giveaway of the Day MultiSet 7.8.1 reinstal window w/ no data loss,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/WcVIvNBIihU/showthread.php
+,Esquire Magazine 1 year Subscription  for $4.53 plus free gist,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/4YiKsuIbkAk/showthread.php
+,JCrew - 30% off Final Sale - Free Shipping on Orders over $150 - expires Oct. 18,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/JqlY2dIEO30/showthread.php
+,faceVsion FV Touchcam Skype N1 USB 2.0 Webcam $84.99,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/i38Q_cvZLRc/showthread.php
+,MySims Agents $24 Wii or $15 DS,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/5Hx7ZmKfoqE/showthread.php
+,GIGABYTE GA-X58A-UD3R + OCZ Gold 6GB $269.98 AR @Newegg,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/8b0rf1-RWEw/showthread.php
+,"Aluratek ""Libre"" E-Book Reader Pro 5"" Display $99.99",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/xOJKrtQIiRQ/showthread.php
+,Belkin 8 feet 12 outlelt surge protector $16.99 FS Newegg,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/dDiYIjviuzQ/showthread.php
+,Recertified - Cuisinart DLC-1BCHFR Black Stainless Mini-Prep Processor 2 Speeds with $8.00 gift card for $25.00 shipped,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/NZ5zEKhzOuE/showthread.php
+,Zeikos Power Grip For Nikon D60/D40X/D40 $30,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/VPVRnVA01BE/showthread.php
+,Kalorik USKEXP4 Aqua Line Espresso Maker Silver - $30.00 A/C  - FS,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/M9oeTR6kITg/showthread.php
+,"Samsung 1TB F3 + Corsair 430W power supply $70 AR, free shipping at Newegg",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/W8YZL3f2KoQ/showthread.php
+,Newegg : SAMSUNG Spinpoint F3 1TB 7200 RPM 32MB Cache Hard Drive $55 shipped plus tax,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/CFlqgosdu1I/showthread.php
+,"Thomas Wooden Trains from $5.99 (Aquarium Cars, Happy Birthday, Lady + more) (7 replies)",http://feedproxy.google.com/~r/SlickdealsnetHT/~3/hXdzN0tQIoA/showthread.php
+,ASUS USB 2.0 8x DVD Writer External Optical Drive SDRW-08D1S-U (Black) $24.99,http://www.dealalive.com/detail_1287381849183561.html
+,HTC EVO 4G Android Phone (Sprint)  $99.99,http://www.dealalive.com/detail_1287381842091515.html
+,Black & Decker TRO480BS Toast-R-Oven 4-Slice Toaster Oven $24,http://www.dealalive.com/detail_1287386222655329.html
+,"Omron HJA-301 Pace and Distance Tracker, Yellow $25",http://www.dealalive.com/detail_1287386702300544.html
+,"SAMSUNG Spinpoint F3 HD103SJ 1TB 7200 RPM 32MB Cache SATA 3.0Gb/s 3.5"" Internal Hard Drive -Bare Drive $25",http://www.dealalive.com/detail_1287387601794817.html
+,"Insignia NS-BRDVD3 Blu-ray Disc Player with 1080p Output, Netflix and Pandora Streaming $59.95",http://www.dealalive.com/detail_1287388741632715.html
+,Unlimited Web Hosting $2.95/month at FatCow,http://bensbargains.net/deal/161408/?referrer=rss
+,Samsung Spinpoint F3 1TB 7200rpm Hard Drive $55 at Newegg,http://bensbargains.net/deal/161400/?referrer=rss
+,Dell Inspiron 580 Intel Core i5-760 Quad-Core Desktop (6GB/1TB/Radeon HD5450) $749.99 at Dell Home,http://www.techbargains.com/news_displayItem.cfm/227697
+,"Fujitsu Computer Systems Coupon - Free 2-Year Warranty Extension, Free Backpack Essentials bundle or 320 GB Backup External USB hard drive + FREE Shipping on LIFEBOOK Notebook or Tablet PC order.",http://www.shopping-bargains.com/coupons/coupon/id/267186?rss=20101017&kid=4758402
+,Endless Coupon - $25 off $100+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267135?rss=20101017&kid=4758402
+,Endless Coupon - $50 off $200+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267136?rss=20101017&kid=4758402
+,Endless Coupon - $75 off $300+ orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267137?rss=20101017&kid=4758402
+,Campus Book Rentals Coupon - $3 off orders online.,http://www.shopping-bargains.com/coupons/coupon/id/245075?rss=20101017&kid=4758402
+,Baghaus Coupon - 20% off orders online.,http://www.shopping-bargains.com/coupons/coupon/id/266992?rss=20101017&kid=4758402
+,"HP Pavilion Elite Core i7 Quad 2.93GHz Blu-ray PC for $1,000 + free shipping ",http://dealnews.com/HP-Pavilion-Elite-Core-i7-Quad-2.93-GHz-Blu-ray-PC-for-1-000-free-shipping-/396578.html?iref=rss_dealnews_today
+,Carhartt Men's Quilt Duck Jacket for $55 + $7 s&h,http://dealnews.com/Carhartt-Mens-Quilt-Duck-Jacket-for-55-7-s-h/396589.html?iref=rss_dealnews_today
+,Men's Health Workout Video Download for free ,http://dealnews.com/Mens-Health-Workout-Video-Download-for-free-/396593.html?iref=rss_dealnews_today
+,Autel MaxiScan CAN OBD-II Scan Tool for $22 + free s&h w/$25,http://dealnews.com/Autel-Maxi-Scan-CAN-OBD-II-Scan-Tool-for-22-free-s-h-w-25/396594.html?iref=rss_dealnews_today
+,Halo: Reach for Xbox 360 w/ $20 credit for $55 + free shipping,http://dealnews.com/Halo-Reach-for-Xbox-360-w-20-credit-for-55-free-shipping/396596.html?iref=rss_dealnews_today
+,Nike Brasilia IV XS Duffel Bag for $17 + $1 s&h,http://dealnews.com/Nike-Brasilia-IV-XS-Duffel-Bag-for-17-1-s-h/396598.html?iref=rss_dealnews_today
+,"Pamari 3-in-1 TV Stand with Mount, for TVs up to 52 inch - $ 199.00 at (Walmart)",http://www.123bargains.com/deals-info/16953/pamari-3in1-tv-stand-with-mount-for-tvs-up-to-52-inch.aspx
+,"Nazario Bonded Leather Executive Chair with Ergo-Contoured Lumbar, Heavy Padded - $ 79.99 at (OfficeMax)",http://www.123bargains.com/deals-info/8177/nazario-bonded-leather-executive-chair-with-ergocontoured-lumbar-heavy-padded.aspx
+,"Genius MousePen i608 Graphics Tablet with 3-Button Cordless Wheel Mouse, Two Buttons, 1024 Level Pressure Sensitivity - $ 44.99 at (Amazon.com)",http://www.123bargains.com/deals-info/18809/genius-mousepen-i608-graphics-tablet-with-3button-cordless-wheel-mouse-two-buttons-1024-level-pressure-sensitivity.aspx
+,Spectrum Plus Oil 5 Quart Jug ($6.29) @ Sears.com,http://www.fatwallet.com/best-deals/spectrum-plus-oil-5-quart-jug/
+,Hitachi SimpleDrive III 2TB Aluminum External Hard Drive ($99.99) @ Sellout.Woot.com,http://www.fatwallet.com/best-deals/hitachi-simpledrive-iii-2tb-aluminum-external-hard-drive/
+,Refurbished Dyson DC25 Upright Ball Vacuum ($279.99) @ Woot.com,http://www.fatwallet.com/best-deals/refurbished-dyson-dc25-upright-ball-vacuum/
+,Linksys Wireless-G Router and 4 Port Switch ($14.99) @ DailySteals.com,http://www.fatwallet.com/best-deals/linksys-wireless-g-router-and-4-port-switch/
+,Help with stocks?,http://feedproxy.google.com/~r/FatwalletFinance/~3/sixG9f-IYy8/1035142
+,Mortgage Broker vs Bank,http://feedproxy.google.com/~r/FatwalletFinance/~3/OnTRbz01bt4/1035143
+,Spending Strategies to Earn Credit Card Reward Bonus/Points,http://feedproxy.google.com/~r/FatwalletFinance/~3/VRRhBKf9Ouk/1035144
+,"Need to borrow $250,000 for 3 months...  How?",http://feedproxy.google.com/~r/FatwalletFinance/~3/NsGF0E1FMX4/1035156
+,Getting a mortgage after 3-years gap in employment (stayed at home with kids),http://feedproxy.google.com/~r/FatwalletFinance/~3/M-z28JchKfg/1035157
+,ASUS SDRW-08D1S-U Dual Interface External Slim DVDR/RW Drive $41.61 ar / shipped @ buy.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/tik8lmPE27Q/1035145
+,Dyson DC25 Upright Ball Vacuum Refurb. $285 Shipped @ WOOT,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/h2l-ZzP5OfI/1035146
+,Hitachi SimpleDrive III 2TB Aluminum External Hard Drive (NEW) $105 Shipped @ Sellout-Woot,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/OgpkJLPaTBw/1035147
+,ASUS SDR-08B1-U External Slim DVD-ROM   - SDR-08B1-U/WHT/G/AS $33.99 ar / shipped @ buy.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/6jHPD5H84OM/1035148
+,"9 Pack Hi-Resolution, 6-Foot Gold Plated 1080P HDMI Cables $14.98 Shipped @ 1Sale",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/uL1ZYAHqt1E/1035150
+,"New Linksys WRTU54G-TM Wireless-G Router , 4-Port Switch, 2 Phone Jacks & Home Phone Connection (NEW)  $20 Shipped @ D/S",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/h-ZDDkyvoaw/1035153
+, (Zombie Outbreak Barricade)  To put around butcher boys house :P $20 bucks shipped,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/o9rIPWI86q4/1035154
+,Gardenglo Lighted Planter $32.80 Shipped Amazon,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/z08vZDNQo1o/1035159
+,Buckle.com's Denim Rocks Sweepstakes (13+; 18+ ME) - 11/9/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/mix6d8Jub_0/showthread.php
+,"Northern Rivers Tourism Going Vertical in Byron Bay Australia"" Sweepstakes 21+ 11/30/10",http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/9WWyx94dA9o/showthread.php
+,Viviano Flower Shop's October 2010 Sweepstakes - 10/31/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/EqUUIBfQ1bI/showthread.php
+,Rachael Ray Show's Brendan James CD Giveaway  - 10/22/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/RvOlq_QKA0U/showthread.php
+,"TAO Giveaway Enter to win a $400 night out at TAO Restaurant in New York ends 11/14/10, 50 States, 21+",http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/uN-RMKApRgA/showthread.php
+,"Anaheim Ducks 2010/2011 Fan Appreciation Sweepstakes (Licensed drivers 18+, CA only) 4/7/11",http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/e5BVbHxUWew/showthread.php
+,Migralex Sample - Migraine treatment,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/ZjW_j1zh2ZA/showthread.php
+,Stuhrling Original 165B2.3345K14 Winchester 44 Collection Automatic Movement Skeletonized Dial 23K Rose Gold Plated Leather Strap 50M Mens Watch $46 + s&h,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/e0bOXqa2Ej4/showthread.php
+,Invicta 0238 Wildflower Collection Swiss Movement Genuine Diamond Bezel Mother-of-Pearl Dial Flame Fusion 50M Ladies Watch $76 + s&h,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/qMtn8JciJh0/showthread.php
+,"New Digital Concepts 2.4"" Digital Desktop Photo Frame - Perfect For Displaying All of Life's Precious Moments - $15.00 shipped",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/lBSmqk8j0Zc/showthread.php
+,New 75 Piece Screwdriver Set + Carrying Case - $12.00 shipped,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/a_880biba5k/showthread.php
+,"Thomas Wooden Trains from $5.99 (Aquarium Cars, Happy Birthday, Lady + more)",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/qLwNsJ3RHKA/showthread.php
+,"Franklin Sports 36"" NFL Team Wood Locker NFL Lockers available for 29 Teams! - $50.00 shipped",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/w-pYPYzayX8/showthread.php
+,"HP Pavilion p6620f Desktop PC Phenom II 820 Quad Core, 6GB DDR3, 1TB HD, Windows 7 64 Bit $529, Possible $429 With Trade In - Staples",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/vCGf8Biu2uA/showthread.php
+,Canon 2400 SLR Gadget Bag for EOS SLR Cameras 28$ free shipping,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/h7nF5Tkuex8/showthread.php
+,Old Navy kids shop for freeB1G1 for card members,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/eVPp0KKAT44/showthread.php
+,Nesco FD-75PR 700-Watt Food Dehydrator - $56.54 Shipped,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/s3GCMXavmVg/showthread.php
+,BESTEK Twin 12 Volt 24 Volt DC Car Cigarette Socket Adapter Splitter Dual USB Ports at $5.24,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/-Yy0W39Lioo/showthread.php
+,Lucha Libre AAA: Heroes of the Ring (XBox360) is $43.89 at amazon 3rd party.,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/4S3U16cZElM/showthread.php
+,Ray Ban Wayfarer 66.40 *HOT*,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Y92VWtr78X8/showthread.php
+,"Celestial Seasonings Herb Tea, Honey Vanilla Chamomile, 20-Count Tea Bags (Pack of 6) $10.81 Gold Box",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/iDFBoyUkeCU/showthread.php
+,"Leapster Games: Dora The Explorer Wildlife, Disney-Pixar Finding Nemo/Ratatouille/Cars, The Backyardigans $5 each + S/H",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/BrJs1vQgcLk/40479
+,Autel MaxiScan MS300 CAN OBD-II Scan Tool for Automobiles $21.50 ,http://feedproxy.google.com/~r/SlickdealsnetFP/~3/M2D7Zj_gats/40481
+,"50% off Selected Gatehouse Solid Brass Door Locks: Entrance $5+, Passage $7+, Dummy $8+, Hall & Closet $8+, & More  ",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/posZjnUmRRQ/40461
+,Target gift card for students from LexisNexis FREE  $20 HOT!,http://www.dealalive.com/detail_1287376441676710.html
+,Wii Fit Plus with Balance Board $79.99 HOT!,http://www.dealalive.com/detail_1287376861588600.html
+,11N 300Mbp Usb Adapter 25Dbm W/ High Gain 5Dbi Dipole Ant $10.99,http://www.dealalive.com/detail_1287380822124024.html
+,"Hanns-G HZ251HPB 25"" X-Celerate 1080p LCD $199 at Newegg",http://bensbargains.net/deal/160578/?referrer=rss
+,"HP 2210m 21.5"" 1080p HDMI Widescreen Monitor $155 at HP",http://bensbargains.net/deal/160859/?referrer=rss
+,"Dell UltraSharp U3011 30"" IPS LCD Monitor $1399 at Dell Business",http://bensbargains.net/deal/161015/?referrer=rss
+,"Acer 20"" Widescreen LED-backlit LCD Monitor $100 at Office Max",http://bensbargains.net/deal/161387/?referrer=rss
+,Sony DVP-SR500H 1080p Upscaling DVD Player $30 at Sony,http://bensbargains.net/deal/161365/?referrer=rss
+,"LG 42SL90 42"" 1080p 120Hz Edge-lit LED HDTV $980 at Adorama",http://bensbargains.net/deal/161368/?referrer=rss
+,HP Pavilion p6620f Quad Core Desktop PC $550 at Office Max,http://bensbargains.net/deal/161347/?referrer=rss
+,Best Deal Magazines Coupon - Additional 70% off Wine Enthusiast Magazine only $8.99.,http://www.shopping-bargains.com/coupons/coupon/id/267043?rss=20101017&kid=4758402
+,Best Deal Magazines Coupon - 15% off orders online.,http://www.shopping-bargains.com/coupons/coupon/id/267044?rss=20101017&kid=4758402
+,Best Deal Magazines Coupon - Additional 70% off Taste of Home Magazine only $5.40.,http://www.shopping-bargains.com/coupons/coupon/id/267041?rss=20101017&kid=4758402
+,10% off at Collections Etc.,"http://dealcoupon.com/lw/coupon.html?10,132601,iref=rss_dealcoupon_15_pop"
+,15% off standard room rates at La Quinta Inns & Suites,"http://dealcoupon.com/lw/coupon.html?10,132999,iref=rss_dealcoupon_15_pop"
+,Sephora Endless Color Blockbuster for $48 + $6 s&h,http://dealnews.com/Sephora-Endless-Color-Blockbuster-for-48-6-s-h/396591.html?iref=rss_dealnews_today
+,Bioworld Men's T-Pain Standing T-Shirt for $5 + $5 s&h,http://dealnews.com/Bioworld-Mens-T-Pain-Standing-T-Shirt-for-5-5-s-h/396592.html?iref=rss_dealnews_today
+,Fidelity Private Client Amex 2% Cash Back ,http://feedproxy.google.com/~r/FatwalletFinance/~3/7Fg5h85eA2s/1035141
+,Bayer Contour or Breeze2 Blood Glucose Monitoring System - Free with Phone Call or Online Ordering ,http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/rfNeF-xvFws/1035137
+,Plantronics Discovery 975 for $45 + $5 sh at cellphoneshop,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/5XyLm07CTQ4/1024276
+,"Bushmaster AR-15 w/Bushnell TR-25, 30-round magazines, soft case and sling $649.99 Cabela's B&M",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/R-UM6L3R6D0/1035138
+,Lowes 'Portfolio' Chandeliers and Light Fixtures 70% off,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/HbGt_uro5p0/1035139
+,Free Graphic Books with Audio for Kids on iPhone/iPad,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/VfFIOT4_OoE/showthread.php
+,"2 tubs of Jack3d for $40.30 (free shipping, but includes tax) from gnc.com YMMV",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/ZJXgc6SI05A/showthread.php
+,Optoma HD700X 720P Home Theater Projector $409 Shipped,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/w578ucz6z_8/showthread.php
+,(Back in Stock) Target.com Leapfrog Tag (Green) w/ Sampler book $10 free s/h,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/COAHyGtU9L8/showthread.php
+,PUR 7-cup Water Pitcher w/ Filter $11.39 (or $9.11),http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/BhYGOeo1Qiw/showthread.php
+,It's back: $3.12 TCP Contractor Pack of 14w CFL (12 bulbs) Home Depot B&M YMMV,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/7a-3xnF1DUI/showthread.php
+,Super Slick - Notebooks at Dell Home outlet with out OS - Starting from 6K - Must Be Joke,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/EhmXs3Hj6uk/showthread.php
+,Levi's Silvertab Jeans - TALL SIZES - JCP.COM - $16 (or less) + tax/S&H,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Hc89qOjChSA/showthread.php
+,Vestalife® ButterflyT Speaker Dock for iPod® $9.99 shipped@radioshack.com,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/mR0NQ7kcZGE/showthread.php
+,"9 Pack Super Hi-Resolution, Gold Plated 1080P HDMI Cables $10 + s&h",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/8abKfZdbXbk/showthread.php
+,"High Powered Solar Back-up Battery Charger For iPhone/iPod, Kindle, Most Cameras, Camcorders and Smartphones $8 + s&h",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/HRV0NCv9bNI/showthread.php
+,Perfect Pullup Heavy Duty Performance Series Ab Straps $5 + s&h,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/D404dIJoi1o/showthread.php
+,"I By Invicta Collection Chronograph Black Textured Dial, Calendar, 50M Water Resistant Black IP Stainless Steel Bracelet Men's Watch $50 + s&h",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/jBgifg0hj1A/showthread.php
+,Amazon All Video Games Gold Box - Wednesday 10/20 (20 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/QqnycFFfXHQ/showthread.php
+,"Kmart $20 game coupon w/ Fallout New Vegas, Vanquish, or EA Sports MMA; $15gc w/ Wii's Car Toon Mater's Tall Tales; $10gc w/ any featured game card; Kirby's Epic Yarn 10/19 - 10/23 (10 replies)",http://feedproxy.google.com/~r/SlickdealsnetHT/~3/_VhBUjS41m4/showthread.php
+,OfficeMax Odessa II Task Chair only $65.00 w/FS! the MOST comfortable chair EVER! (15 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/FrrRQNEyPyQ/showthread.php
+,Womens St. John's Bay® Classic Pea Coat Outlet $39.99 to $44.99 Original $200.00 to $225.00 + Various Coats on Sale + Extra 20% off @JCpenney + SH (14 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/zpRUqiSlD5w/showthread.php
+,"FAVI L1918A-V-BL 19-Inch 720p LCD HDTV with Built in DVD Player/Card Reader/USB, Jet Black $191.99",http://www.dealalive.com/detail_1287370442353972.html
+,ASUS UL30A-X5K Thin and Light 13.3-Inch Laptop with Kindle for PC (Black) $579.99,http://www.dealalive.com/detail_1287372422110335.html
+,HP Mini 210-1095NR 10.1-Inch Red Netbook - 9.75 Hours of Battery Life $279.99,http://www.dealalive.com/detail_1287372722419040.html
+,OfficeMax Odessa II Task Chair $65,http://www.dealalive.com/detail_1287374162134327.html
+,Ironman 1711 Recumbent Exercise Bike $198 at Walmart,http://bensbargains.net/deal/161379/?referrer=rss
+,"Autocraft Innisbrook Interior Makeover Kit for $35 + $9 s&h, padding ",http://dealnews.com/Autocraft-Innisbrook-Interior-Makeover-Kit-for-35-9-s-h-padding-/396581.html?iref=rss_dealnews_today
+,"George Foreman 36"" Champ Grill for $10 + $5 s&h",http://dealnews.com/George-Foreman-36-Champ-Grill-for-10-5-s-h/396583.html?iref=rss_dealnews_today
+,"Sears Midnight Madness Sale: Extra 5% to 15% off clothing, furniture, and more",http://dealnews.com/Sears-Midnight-Madness-Sale-Extra-5-to-15-off-clothing-furniture-and-more/396586.html?iref=rss_dealnews_today
+,Is 3.50% APY 6 month CD Non-IRA @ Best Interest Financial & Insurance Solutions legit?,http://feedproxy.google.com/~r/FatwalletFinance/~3/wUgEGeVbDJM/1035130
+,Students - Free $20 Target Gift Card with Registration & Quiz,http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/rT8fZrVbVNM/1035133
+,Car and Driver Magazine Subscription $4 @ Tanga,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/rhBThmrn7yY/1017443
+,remove,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/cEgQD9xG-cQ/1035117
+," GIRO Transfer Bicycle Helmet, $15.99 + Ship ",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/fme_sdzcxW0/1035120
+,The Internet is Broken So I'm Outside Today T-Shirt  $8.98 Shipped @ Tanga,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/wt3aPvKIrRs/1035121
+,Amazon selling Motorola Flipout for 1 cent with two year agreement,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/rX6Fl4UktN4/1035122
+,Wii Fit Plus w/Balance Board  $79.99 at Amazon.com FSSS,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/Mof77E3od4g/1035126
+,Ice Age Triple Pack (Ice Age / Ice Age: The Meltdown / Ice Age: Dawn of the Dinosaurs) [Blu-ray] $36.99 + $4 VOD credit ,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/CzSSoRFCmfs/1035129
+,30% off your entire order at sonictoner.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/PBgiPZ7QL8c/1035135
+,Milwaukee: Win tickets to Mexico through online treasure hunt with Andrew Zimmern,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/Ub9G7mY4yvQ/showthread.php
+,Smashbox for Burlesque Red Carpet Sweepstakes 21+ 10/25/10 *FB Users,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/IDUQ9WQo3QY/showthread.php
+,H.K. Anderson Trade Up to Healthier Snacking Draft Sweepstakes 18+ 11/4/10 * FB Users,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/XMYo3AqtHRI/showthread.php
+,40% Off! Lenovo ThinkPad X201 Coupon Code,http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/QAKVonV8xu0/showthread.php
+,Victorinox Swiss Army Sportsman II Knife with AAA LED Flashlight $15 at Amazon,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/N-iHzpYzEAg/showthread.php
+,SmartMoney (1-year subscription) $5 @ amazon gb / ld!!!,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/o2LQT2CmM9g/showthread.php
+,$3 - Bad Books New MP3 Album (Available 10/18/2010) +FREE Track,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/nYHbpR0aRt8/showthread.php
+,Fujitsu Siemens Notebook Case $9.99 + $5.99 s&h,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/_x3AAEQBLtE/showthread.php
+,The Cereal Killer T-Shirt $6.99 + $1.99 s/h,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/ty3791gTIhw/showthread.php
+,"Plum Organics Toddler Fingerfuls, ""I Heart Strawberries"" 0.82-Ounce Pouches (Pack of 6) $7.33 shipped",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/_WCxIA8oL0g/showthread.php
+,T Pain shirt for 4.56 Free shipping with Prime,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/OeW1j6Dzl7A/showthread.php
+,Motorola T305 Portable Bluetooth Speaker New 20.95 + ship,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/ABh1zzTjo3A/showthread.php
+,Wii fit Plus $79.99 Free shipping Amazon,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/RuOS4hpkWng/showthread.php
+,Motorola t305 bluetooth carkit speakerphone - $21 + s&h,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/nn7u0K56aCE/showthread.php
+,"9 Assorted Pair of Branded Sunglasses:Men's[Espn, Panama Jack, Eagles Eyes, George,etc] / Women's[Cosmo, Revlon, Panama Jack, Apostrophy, Jaclyn Smith, Beauty Soln,etc] $9.99 + s&h",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/K_Dcl-XvqpI/showthread.php
+,Smart Money Magazine 1yr subscription $5 | Amazon | 92% off list price,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/KkzC-VCvDzo/showthread.php
+,"Canon Photo Paper Pro Platinum, 8.5 x 11 Inches, 20 Sheets (2768B022) $10.99 sss eligible @ Amazon",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/1fD-gVmi_2A/showthread.php
+,Free Download - 15 Minute Workout: 3 Moves for 300 Muscles,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/fHDaIHFpgpY/showthread.php
+,Brita Slim Pitcher with Filter 99¢ after coupon in today's paper B&M Fred Meyer,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/IjOz3kUJNJ8/showthread.php
+,Leapster Games- $4.99 only (15 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/0Y-5mMb_mCs/showthread.php
+,"Acer Aspire AS5742-7120 Notebook: Core i3 370M 2.4GHz, 4GB DDR3, 320GB HDD, 15.6"", DVD Burner, WiFi N, Gigabit LAN, 6-Cell, Win 7 $479.99 Shipped (Or Less) @ OM (9 replies)",http://feedproxy.google.com/~r/SlickdealsnetHT/~3/95R_suUW7-k/showthread.php
+,HP 4GB SDHC 2-Pack $11 (10 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/odGqHl2yK1A/showthread.php
+,Nikon D7000 Kit @ BB for $1320 AC + Tax YMMV (Must be Rewards Zone Member) (10 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/IrsEHD3uvUk/showthread.php
+,"HP 15.6"" Laptop $299.98 @ Staples (with trade in) (42 replies)",http://feedproxy.google.com/~r/SlickdealsnetHT/~3/O7VAxxcWjaM/showthread.php
+,Sears Spectrum motor oil $6.99 5qt jug (10 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/C4r3EjDWbEA/showthread.php
+,TOPSELLER T410 I5-520M 2.4G 3GB 320GB DVDRW 14.1-WXGA BT W7P $762.54,http://www.dealalive.com/detail_1287367502178430.html
+,"Silicone Skin Case for Apple iPhone 3G / 3GS, Black $0.99",http://www.dealalive.com/detail_1287369541799878.html
+,Premiertek 802.11n High-Gain Adapter w/ Antenna $11 at Mwave,http://bensbargains.net/deal/161345/?referrer=rss
+,"Aluratek APMP100F 8.9"" Cinepal Media Player $119 at JR.com",http://bensbargains.net/deal/161376/?referrer=rss
+,HP Wireless Entertainment Keyboard $26 at HP,http://bensbargains.net/deal/161377/?referrer=rss
+,Onkyo HT-S5300 7.1Ch Home Theater in a Box $398 at Amazon,http://bensbargains.net/deal/161370/?referrer=rss
+,Onkyo TX-SR608 7.2-Channel Home Theater Receiver $380 at Newegg,http://bensbargains.net/deal/161396/?referrer=rss
+,Weider PowerSwitch 100 lb. Weight Set $265 at Sears,http://bensbargains.net/deal/161367/?referrer=rss
+,"MSI AE2400-057US 24"" Touch All-in-One Desktop $1065 at Buy.com",http://bensbargains.net/deal/161366/?referrer=rss
+,AMD Phenom II X4 940 Deneb 3.0GHz CPU $92 at Newegg,http://bensbargains.net/deal/161378/?referrer=rss
+,Sony HDR-CX100 HD 1080p Camcorder $300 at Sony,http://bensbargains.net/deal/161363/?referrer=rss
+,Carhartt Quilt Duck Jacket $55 at Sears,http://bensbargains.net/deal/161375/?referrer=rss
+,VMware Fusion 3 $32 at Newegg,http://bensbargains.net/deal/161369/?referrer=rss
+,OCZ Agility 2 OCZSSD2-2AGT40G 40GB MLC SSD $81 at Newegg,http://bensbargains.net/deal/161372/?referrer=rss
+,Craftsman  19.2 Volt C3 Cordless Combo Kit w/ RA Drill $95 at Sears,http://bensbargains.net/deal/161344/?referrer=rss
+,"Samsung UN46C7000 46"" 1080p 3D LED HDTV Bundle $1649 at BuyDig.com",http://bensbargains.net/deal/161359/?referrer=rss
+,Sony CMTLX20I Micro HI-FI Shelf System $60 at Sony,http://bensbargains.net/deal/161361/?referrer=rss
+,Glee II Mid-Back Manager's Chair $51 at Office Max,http://bensbargains.net/deal/161348/?referrer=rss
+,Atlona AT-HDVieW Video Scaler $80 at JR.com,http://bensbargains.net/deal/161371/?referrer=rss
+,"Toshiba Satellite C655D-S5041 15.6"" Notebook $330 at Office Depot",http://bensbargains.net/deal/161337/?referrer=rss
+,NFL Tailgate Table w/ Net $88 at Overstock,http://bensbargains.net/deal/161394/?referrer=rss
+,Netgear Powerline AV Ethernet Adapter Kit $95 at Newegg,http://bensbargains.net/deal/161373/?referrer=rss
+,"Acer Aspire 15.6"" Core i3-370M Laptop $480 at Office Max",http://bensbargains.net/deal/161346/?referrer=rss
+,"Sony KDL-46NX700 46"" 1080p 120Hz LED HDTV $1154 at Abes of Maine",http://bensbargains.net/deal/161364/?referrer=rss
+,RS To-Go Zuretta High-Back Vinyl Chair $85 at Office Depot,http://bensbargains.net/deal/161350/?referrer=rss
+,Sears 20% Off Kenmore Appliances + Extra 5% Off Select Appliances at Sears,http://www.techbargains.com/news_displayItem.cfm/227729
+,Kohls STACKABLE Coupon Codes 15% Off + Free Shiping $75+ at Kohls,http://www.techbargains.com/news_displayItem.cfm/227730
+,New Oldnavy Coupon Code up to 30% Off at Oldnavy,http://www.techbargains.com/news_displayItem.cfm/227731
+,Realspace Magellan Collection Corner Workstation for $85 + free shipping,http://dealmac.com/Realspace-Magellan-Collection-Corner-Workstation-for-85-free-shipping/396582.html?iref=rss_dealmac_today
+,"Lenovo Thinkpad Edge 14 Core i3 2.4GHz 14"" Laptop for $476 + free shipping ",http://dealnews.com/Lenovo-Thinkpad-Edge-14-Core-i3-2.4-GHz-14-Laptop-for-476-free-shipping-/396475.html?iref=rss_dealnews_editorschoice
+,Halo: Reach for Xbox 360 w/ $20 Best Buy gift card for $60 + free shipping,http://dealnews.com/Halo-Reach-for-Xbox-360-w-20-Best-Buy-gift-card-for-60-free-shipping/396557.html?iref=rss_dealnews_today
+,Flingshot Flying Pig for $3 + free shipping,http://dealnews.com/Flingshot-Flying-Pig-for-3-free-shipping/396558.html?iref=rss_dealnews_today
+,Harman Kardon Blu-ray Disc Player w/ BD-Live for $130 + free shipping,http://dealnews.com/Harman-Kardon-Blu-ray-Disc-Player-w-BD-Live-for-130-free-shipping/396562.html?iref=rss_dealnews_today
+,"Toshiba Satellite Core i3 Dual Core 2.26GHz 18"" Laptop for $700 + free shipping ",http://dealnews.com/Toshiba-Satellite-Core-i3-Dual-Core-2.26-GHz-18-Laptop-for-700-free-shipping-/396563.html?iref=rss_dealnews_today
+,"Refurb Magellan Maestro 4370 4.3"" Widescreen GPS Navigator for $80 + $6 s&h",http://dealnews.com/Refurb-Magellan-Maestro-4370-4.3-Widescreen-GPS-Navigator-for-80-6-s-h/396565.html?iref=rss_dealnews_today
+,"Dell Studio 15 Core i3 Dual 2.4GHz 16"" LED Laptop for $705 + free shipping",http://dealnews.com/Dell-Studio-15-Core-i3-Dual-2.4-GHz-16-LED-Laptop-for-705-free-shipping/396567.html?iref=rss_dealnews_today
+,"HP Pavilion dv6 Core i3 2.4GHz 16"" LED Laptop for $600 + free shipping",http://dealnews.com/HP-Pavilion-dv6-Core-i3-2.4-GHz-16-LED-Laptop-for-600-free-shipping/396569.html?iref=rss_dealnews_today
+,Diamondback Response Mountain Bike for $320 + $74 s&h,http://dealnews.com/Diamondback-Response-Mountain-Bike-for-320-74-s-h/396570.html?iref=rss_dealnews_today
+,Sony 5.1-Channel Home Theater Speaker System for $311 + free shipping,http://dealnews.com/Sony-5.1-Channel-Home-Theater-Speaker-System-for-311-free-shipping/396571.html?iref=rss_dealnews_today
+,Veggie Tales Deluxe DVD Collection w/ plush toys for $30 + $1 s&h,http://dealnews.com/Veggie-Tales-Deluxe-DVD-Collection-w-plush-toys-for-30-1-s-h/396572.html?iref=rss_dealnews_today
+,"Acer Aspire Core i3 Dual 2.4GHz 16"" Laptop for $480 + free shipping",http://dealnews.com/Acer-Aspire-Core-i3-Dual-2.4-GHz-16-Laptop-for-480-free-shipping/396573.html?iref=rss_dealnews_today
+,Odessa II Task Chair for $65 + free shipping,http://dealnews.com/Odessa-II-Task-Chair-for-65-free-shipping/396574.html?iref=rss_dealnews_today
+,Realspace Alluna Collection Milk-Glass L-Shape Desk for $80 + free shipping,http://dealnews.com/Realspace-Alluna-Collection-Milk-Glass-L-Shape-Desk-for-80-free-shipping/396575.html?iref=rss_dealnews_today
+,"HP Pavilion Elite Core i7 Quad 2.93GHz Desktop PC for $1,000 + free shipping ",http://dealnews.com/HP-Pavilion-Elite-Core-i7-Quad-2.93-GHz-Desktop-PC-for-1-000-free-shipping-/396578.html?iref=rss_dealnews_today
+,"Buffy the Vampire Slayer: Complete Series on DVD, more for $71 + free shipping",http://dealnews.com/Buffy-the-Vampire-Slayer-Complete-Series-on-DVD-more-for-71-free-shipping/396579.html?iref=rss_dealnews_today
+,Macy's coupon: 20% off no minimum sitewide,http://dealnews.com/Macys-coupon-20-off-no-minimum-sitewide/396580.html?iref=rss_dealnews_today
+,"Sigma DP1s 14MP FOVEON CMOS Sensor Digital Camera with 2.5 inch LCD Screen, TRUE image processing engine - $ 299.00 at (Amazon.com)",http://www.123bargains.com/deals-info/16925/sigma-dp1s-14mp-foveon-cmos-sensor-digital-camera-with-25-inch-lcd-screen-true-image-processing-engine.aspx
+,"ACER (ET.DG5HP.002) 20 inch Widescreen LCD Monitor with  8,000,000:1 Contrast Ratio, 5ms Response Time - $ 99.99 at (OfficeMax)",http://www.123bargains.com/deals-info/18808/acer-etdg5hp002-20-inch-widescreen-lcd-monitor-with--80000001-contrast-ratio-5ms-response-time.aspx
+,Refurbished Nintendo Wii and Wii Sports with Controller ($119.99) @ Best Buy,http://www.fatwallet.com/best-deals/refurbished-nintendo-wii-and-wii-sports-with-controller/
+,Craftsman 255 Peice Tool Set With Storage Chest ($166.49 was $189.99) @ Sears.com,http://www.fatwallet.com/best-deals/craftsman-255-peice-tool-set-with-storage-chest/
+,"Old Navy Online Coupon Code: 15% off $100, 20% off $125, 30% off $150 (Up to 30% off) @ Old Navy",http://www.fatwallet.com/best-deals/old-navy-online-coupon-code-15-off-100-20-off-125-30-off-150/
+,"Dell 23"" LCD Full HD Widescreen Monitor with Webcam ($199.99) @ Dell Home Systems",http://www.fatwallet.com/best-deals/dell-23-lcd-full-hd-widescreen-monitor-with-webcam/
+,Halo Reach and $20.00 Amazon Video Game Store Credit ($54.99) @ Amazon,http://www.fatwallet.com/best-deals/halo-reach-and-20-00-amazon-video-game-store-credit/
+,Samsung F3 1TB Internal Hard Drive ($55.24 was $64.99) @ SuperBiz.com,http://www.fatwallet.com/best-deals/samsung-f3-1tb-internal-hard-drive/
+,gifting to a UTMA type account,http://feedproxy.google.com/~r/FatwalletFinance/~3/1MWTG2BUk8o/1035112
+,"Suzanne Vega - Tom's Diner [mp3], Free @ Amazon",http://feedproxy.google.com/~r/FatwalletFreeStuff/~3/BeKlmBcS-HQ/1035094
+, Nip/Tuck-Complete 4th Season DVD Set LIST $59.98 NOW $20.89 Shipped @ Buy.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/F2NmOZg5eNo/1035096
+,Powermat 2x $40 Staples B&M clearance YMMV,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/IOPeb3UmVH4/1035097
+,Mickey Train Yard Light - Was $49.99 now $19.99 @ JC PENNY,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/ZLYhdzKf79g/1035098
+,Petco: Free Shipping on $25+ (exclusions apply) - Carefresh on Sale,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/dFaaZpKYhC4/1035099
+,Craftsman 255 pc. Tool Set With Storage Chest $167 AC @ Sears.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/8GxVBmL2gww/1035100
+,"ZonePerfect All Natural Nutrition Bar, Chocolate Mint, (Pack of 2) $13.69",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/HND3R-q9ry8/1035102
+,Sears Spectrum Plus Oil 5 qt. $7,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/42PBCf18Sxs/1035104
+,Halo Reach AND $20.00 Amazon Video Game Store Credit - $54.99 - Amazon,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/WfMpNN1r3XE/1035105
+,Men's Shorts 90% Off plus additional 15% off plus shipping at Kohl's,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/YC9hb4jXuFM/1035106
+,Big 5 (B&M) ammo specials this week,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/r50DnveseUA/1035107
+,60% off Durex Condoms Drugstore.com ,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/2HSA_hd4O4c/1035108
+,Epson Workforce 610 for 44.99 at Officemax B&M only AC ends 10/23,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/qd6yazZP1Uc/1035109
+,"George Foreman 106"" 360-Grill $49.00 was $110 with free ship to store at Walmart",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/3LcOjDfhDJQ/1035110
+,Wall Street Journal - Rewardsgold,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/Glx5minGf44/1035111
+,PowerGenix Fast Charger + 4AA NiZN 1.6V Rechargeable Batteries $10 Shipped @ Penny Wise,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/n-QDKSHFLms/1035115
+,Totes brand umbrellas now at Michael's (competitor coupons sweeten the deal!),http://feedproxy.google.com/~r/FatwalletHotDeals/~3/Y5Q0danA3S4/1035116
+,NAMM 2010 Battle of the Bands Voting Sweepstakes,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/1mfydws2bN4/showthread.php
+,"IM4Transit Sweepstakes - 42"" HDTV (Facebook) 2/1/11",http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/521e_p2lv7w/showthread.php
+,Good Housekeeping's The Sherwin-Williams Company Bonus Sweepstakes (13+) - 11/5/10,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/E2v8YbEfZ3I/showthread.php
+,Free FlashlIght - Radioshack,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/SmX-72uOKUs/showthread.php
+,Bayer Contour or Breeze2 Blood Glucose Monitoring System - FREE,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/-Htjjh8LqLc/showthread.php
+,Free $20 Target Gift Card - Today only [Students only],http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/ntQZnXLVv1Y/showthread.php
+,SunsTea organic green teas and display teas: 40% OFF + 30% off coupons + Free shipping,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/2HZAoGbcOkA/showthread.php
+,Bioshock 2 PS3 $20.94 Amazon,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/xdyTnEhrEdY/showthread.php
+,Sigma DP1s 14MP FOVEON CMOS Sensor Digital Camera - $299.00 shipped,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/uP-0VTB5F2g/showthread.php
+,Directv New Customers save $280 with Costco offer and Directv refer a friend!,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/TiMfUWwDfBs/showthread.php
+,iHome iH70 15 Watt Computer Speakers with iPod Syncing/Charging Dock - $27.50 shipped,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/J2kBMNKjc8A/showthread.php
+,60% Off Durex Condoms at Drugstore.com | Plus 20% off your first order | Plus Free Shipping over $25,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/H3jLmcE9Yzk/showthread.php
+,Able Planet True Fidelity Sound Isolation Earphones with Linx Audio for 29 Shipped,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/kJ5vi9o2HeY/showthread.php
+,christmas tree shop - b&m - green mountain donut house collection - 48 kcup $19.99 + tax - ymmv,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/2ZlHOCsqJd0/showthread.php
+,Graco Nautilus 3-in-1 Car Seat $124.99 @ Target B&M,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/t7MGCyUepXg/showthread.php
+,Sony XDR-S10HDiP HD Radio and iPod/iPhone Dock (Refurb) for $99.00 Shipped,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/-iX1CnRRjUE/showthread.php
+,30% Off Gap Inc. Give and Get Nov. 11-14,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/_QcvLvHXCtU/showthread.php
+,Foodsaver 2240 $75.42 FS Amazon,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/f2RHBLhGVJw/showthread.php
+,90% Off Men's Shirts + Extra 15% Off Coupon( Starting at $3 AC ) @ Kohls.com,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/I_a7mUPOS7E/showthread.php
+,FREE FLASHLIGHT  at RADIOSHACK with Coupon no purchase necessary!!!,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Da4apGFpV0A/showthread.php
+,iomega 1tb external hard drive $36 best buy b&m ymmv (94 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/Diaxd0FOV9A/showthread.php
+,Macy's 20% off on nearly all orders online (18 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/az-buOgQLoA/showthread.php
+,Vitamix Creations Blender - QVC - Today only - $376 plus Free Shipping (36 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/91sCn8blNls/showthread.php
+,"Lenovo ThinkPad Edge 14 Laptop: Core i3-370M (2.40GHz), 14"" 1366x768 LED Screen, 500GB 7200RPM HDD, 4GB DDR3, WiFi N, 6-Cell, Win 7 Prem $476 w/ American Express",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/HjMERnkMpXU/40473
+,Buffy the Vampire Slayer: The Chosen Collection (Seasons 1-7) DVD Set $71 ,http://feedproxy.google.com/~r/SlickdealsnetFP/~3/yGwc7jMzMwE/40475
+,"ZonePerfect All Natural Chocolate Mint Nutrition Bar: 1.76-oz, 2-pack of 12-count Boxes (24 bars total) $14 ",http://feedproxy.google.com/~r/SlickdealsnetFP/~3/8JjHoc_UtsA/40477
+,"Lenovo ThinkPad T410 i5-520M 14.1"" laptop w/3G,320G, Webcam, 6Cell, Win 7 $762 HOT!",http://www.dealalive.com/detail_1287355622317283.html
+,Philips SRU5106/27 6 Device Universal Remote Control $8.99,http://www.dealalive.com/detail_1287356761919759.html
+,TomTom XL 325 ($78.36) @ Amazon,http://www.fatwallet.com/best-deals/tomtom-xl-325/
+,"AMD Phenom II X6 Six-core CPU and OCZ Gold Memory 4GB, 1333 Combo  ($228.78) @ Newegg",http://www.fatwallet.com/best-deals/amd-phenom-ii-x6-six-core-cpu-and-ocz-gold-memory-4gb-1333-combo/
+,73-inch Mitsubishi 3D DLP TV ($1249.99) @ Dell Home Systems,http://www.fatwallet.com/best-deals/73-inch-mitsubishi-3d-dlp-tv/
+,Autel MaxiScan OBD-II Engine Code Tool ($21.50) @ Amazon,http://www.fatwallet.com/best-deals/autel-maxiscan-obd-ii-engine-code-tool/
+,G.SKILL 8GB Laptop Memory Kit ($134.99) @ Newegg,http://www.fatwallet.com/best-deals/g-skill-8gb-laptop-memory-kit/
+,Refurbished Sony BDP-S360 Blu-ray Player ($59.99 was $107.99) @ Sony Style,http://www.fatwallet.com/best-deals/refurbished-sony-bdp-s360-blu-ray-player-1/
+,Free GPS with iPod Touch Purchase (Starting at $179.99) @ Best Buy,http://www.fatwallet.com/best-deals/free-gps-with-ipod-touch-purchase/
+,Another Auto Insurance Thread...,http://feedproxy.google.com/~r/FatwalletFinance/~3/3nuG_Fdmt9E/1035078
+,"Verbatim Acclaim 320GB portable HD Office Depot BM $39.99 AC, 7 year warranty",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/Hl1UW3E74Gw/1035075
+,AMD Phenom II X6 1055T and OCZ Gold 4GB DDR3 1333 for $228.78 AR,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/HYsAPgmQgPM/1035076
+,"SAMSUNG UN40C6300 40"" 1080p 120Hz LED HDTV, 799.99$ at Frys",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/dpRaxZlpqc8/1035081
+, Harman Kardon BDP-1 Blu-ray Disc Player@dell $130/FS ONE DAY DEAL,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/81UnM_TMcDA/1035082
+,Thomas Kinkade Night Before Christmas or Sleigh Ride Musical Clock $6.61 shipped at familychristian.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/EPXV5Vo6pio/1035083
+,HP Officejet H470wf Mobile Printer- $125 SHIPPED AC/AR @ Staples.com,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/K-sXA2QRbu4/1035086
+,"Samsung F3 1TB $55.24, F3 500GB $40.79 shipped",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/o_gcq--uZTE/1035087
+,"MS Office Home & Business 2010,  $204.99 @Staples (10/20 Only)",http://feedproxy.google.com/~r/FatwalletHotDeals/~3/zbj3TazpU4I/1035088
+,Midnight Madness (10/17-10/18) at Sears.com + 2% Cash Back,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/vNZYKViNiMA/1034681
+,Ice Age Triple Pack (Ice Age / Ice Age: The Meltdown / Ice Age: Dawn of the Dinosaurs) [Blu-ray] $36.99 - Amazon,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/zh4lOJ2Qz9U/1035090
+,Walgreens 10/31 - 11/6 Deals,http://slickdeals.net/forums/showthread.php?t=2303519&goto=newpost
+,JoAnn's Coupons 40% and 50% (Might Not Work),http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/d9ZV9qYHDOs/showthread.php
+,Free tanning samples from Booth Juice,http://feedproxy.google.com/~r/SlickdealsnetForums-4/~3/XqJFI3dORzs/showthread.php
+,"KL145AA - HP Compaq 6720t Celeron M 1.06GHz 1GB/1GB 15"" Mobile Thin Client $219.99",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/u8JoIbPDLaA/showthread.php
+,Lenovo ThinkPad T410 (2516AEU) I5-520M 2.4G 2GB 320GB DVDRW 14.1-WXGA BT W7P at Amazon $764,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/46p9TA0YqI4/showthread.php
+,Sears Spectrum motor oil $6.99 5qt jug,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/XlfmLbkpO_E/showthread.php
+,Gamestop Buy 2 Get 1 used games and accesories *today only* 10/17,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/o04TBnVeTOo/showthread.php
+,Hanes Tee's Buy 2 Get 1 Free @ Hanes.com + Free Ship > $50,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/-N__Mp_Po1Q/showthread.php
+,"ROKEACH Clear Chicken Soup Meat, 10.5-Ounce Cans (Pack of 24) 64% off -$17.86 + FS",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/g-mve0vuyKg/showthread.php
+,pizza hut $5 off orders of $15 or more YMMV,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/Ydorc8wdD9w/showthread.php
+,iShred: Guitar + Effects for iPhone; was 4.99 now .99; one of the best guitar apps,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/8WmeNE0y3bc/showthread.php
+,Dell Optiplex GX745 Intel Dual Core 3Ghz 2GB 80GB DVD (refurb) - $139 + $19 Ship,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/_U1mvc1no50/showthread.php
+,DeLonghi EC155 Espresso Maker $75.50,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/950XgfnlzVw/showthread.php
+,"Frosted Flakes Cereal, 61.9-Ounce Box $8.62 + FS",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/DZiknKuAU4o/showthread.php
+,Prescription Ray Ban New Wafarers for as low as $116. Lowest $78 for non-prescription FREE SHIPPING,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/j9e0uiCd9Zo/showthread.php
+,"A-DATA S599 2.5"" 64GB SATA II Internal Solid State Drive (SSD) $112 + FS @ Newegg",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/bTof-6TOA7A/showthread.php
+,Sunforce 50044 60-Watt Solar Charging Kit $250 Amazon Gold Box Lightning Deal FSSS,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/idTvz8jU0qk/showthread.php
+,Buffy the Vampire Slayer - The Chosen Collection (Seasons 1-7) $70.99,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/D420gue5zyE/showthread.php
+,Back again! Edible arrangements -This week only- delicious gourmet dipped fruit only $10 (reg. $25)a dozen In store pick up (37 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/8C1W7yuAk4Q/showthread.php
+,Veggie Tales 10 DVD's Collection with Tin and Plush Toys - $29.99 A/C + 99c shipping (11 replies),http://feedproxy.google.com/~r/SlickdealsnetHT/~3/zVAyJPv_fxo/showthread.php
+,Microsoft PS2/USB Optical Mouse $2.79 ,http://feedproxy.google.com/~r/SlickdealsnetFP/~3/xjZdkw96YPw/40471
+,Halo Reach (Xbox 360) + Free $20 Best Buy GC for $60,http://www.dealalive.com/detail_1287347101694008.html
+,"Gatehouse Entrance Handle sets, Door Locks/Knobs 50% off at Lowes",http://www.dealalive.com/detail_1287347341524530.html
+,"Mitsubishi WD-73638 73"" 1080p 3D DLP HDTV $1250 at Dell",http://bensbargains.net/deal/161357/?referrer=rss
+,"NEXT Power X Men's 26"" Mountain Bike $88 at Walmart",http://bensbargains.net/deal/161349/?referrer=rss
+,Sony SS-B3000 Bookshelf Speaker Pair $55 at Sony,http://bensbargains.net/deal/161360/?referrer=rss
+,LG LHB975 Network Blu-ray 5.1 Home Theater System $519 at BuyDig.com,http://bensbargains.net/deal/161353/?referrer=rss
+,Realspace Magellan Corner Workstation $85 at Office Depot,http://bensbargains.net/deal/161351/?referrer=rss
+,Black & Decker CK1500 Stainless Steel Cordless Kettle $25 at Newegg,http://bensbargains.net/deal/161213/?referrer=rss
+,Craftsman  255-Piece Mechanics Tool Set w/ Storage Chest $185 Sears,http://bensbargains.net/deal/161342/?referrer=rss
+,Sony Cyber-Shot DSC-H55 14.1MP Digital Camera $159 at Sony,http://bensbargains.net/deal/161340/?referrer=rss
+,"HP Pavilion dv6-3121nr 15.6"" LED Core i3 Laptop $600 at Office Depot",http://bensbargains.net/deal/161297/?referrer=rss
+,Seagate BlackArmor 440  8TB NAS + $100 GC $950 at Newegg,http://bensbargains.net/deal/161354/?referrer=rss
+,"Acer Aspire AS5734Z-4725 2.30GHz 15.6"" Notebook $380 at Office Max",http://bensbargains.net/deal/161355/?referrer=rss
+,Sony BDVE370 3D Blu-ray Disc Home Theater System $250 at Dell,http://bensbargains.net/deal/161356/?referrer=rss
+,OmniMount Stellar G-303G 3 Shelf Audio Stand $90 at Buy.com,http://bensbargains.net/deal/161352/?referrer=rss
+,Craftsman 25cc 4-Cycle Gas Handheld Blower $85 at Sears,http://bensbargains.net/deal/161343/?referrer=rss
+,New Overstock Coupon Codes up to $20 Off at Overstock,http://www.techbargains.com/news_displayItem.cfm/227718
+,"Microsoft Xbox 360 4GB Gaming Console w/ Extra Controller, 1yr Xbox Live Gold &amp; 4000pts $249.99 at Microsoft",http://www.techbargains.com/news_displayItem.cfm/227701
+,"Kodak Mini Video Camcorder (VGA, Water Resistant) $69.99 Free Shipping at Best Buy",http://www.techbargains.com/news_displayItem.cfm/227707
+,HP tm2t Intel Core i3 ULV 12in Touchscreen Laptop (4GB/500GB/External Blu-Ray) $759 at HP,http://www.techbargains.com/news_displayItem.cfm/227708
+,HP dv7tse Intel Core i5-460M 2.53GHz 17.3in Laptop (6GB/640GB/Radeon HD5470) $749 at HP,http://www.techbargains.com/news_displayItem.cfm/227711
+,Premier Down-like Personal Choice Density Pillows (Set of 2) $19.99 at Overstock,http://www.techbargains.com/news_displayItem.cfm/227726
+,Kodak EasyShare M550 12MP 5X Digital Camera (Dark Gray) $109.99 Free Shipping at Best Buy,http://www.techbargains.com/news_displayItem.cfm/227710
+,Kenneth Cole New York KC1567 Black Dial Stainless Steel Leather Strap Mens Watch $52 at ChronoShark,http://www.techbargains.com/news_displayItem.cfm/227717
+,EXPIRING Gamestop Coupon Code Buy 2 Get 1 Free Used Game or Accessories Sale  at Gamestop,http://www.techbargains.com/news_displayItem.cfm/227712
+,OfficeMax Fuego Multifunction Super Task Chair $99.99 Free Shipping at OfficeMax,http://www.techbargains.com/news_displayItem.cfm/227695
+,"EXPIRING Samsung HZ50W 14MP 26X Optical Zoom Digital Camera (Optical IS, 720p Video, RAW) $279.99 at TigerDirect",http://www.techbargains.com/news_displayItem.cfm/227713
+,TODAY ONLY Black &amp; Decker Brushed Stainless Steel Wireless Kettle $24.99 Free Ship at Newegg,http://www.techbargains.com/news_displayItem.cfm/227720
+,EXPIRING Toshiba Satellite A665-S6057 Intel Core i5-450M 2.4GHz 16in Laptop (4GB/500GB/Geforce GT330M) $699.99 at TigerDirect,http://www.techbargains.com/news_displayItem.cfm/227714
+,iomega Prestige 1TB Portable External Hard Drive $99.99 Free Shipping at Newegg,http://www.techbargains.com/news_displayItem.cfm/227722
+,Best Buy Free GPS w/ Purchase of Apple iPod Touch (Starts at $179.99) at Best Buy,http://www.techbargains.com/news_displayItem.cfm/227721
+,MSI S6000-017US Intel Core i5-450M 2.4GHz 15.6in Laptop (4GB/500GB/Lightweight) $579.99 at Office Depot,http://www.techbargains.com/news_displayItem.cfm/227715
+,Altec Lansing Behind-The Neck Sterep Headset w/ Noise Cancelling Mic $8.49 Free Shipping at eBay,http://www.techbargains.com/news_displayItem.cfm/227724
+,Sony Handycam HDR-CX150 16GB Flash Memory High Definition Camcorder $414.95 Free Shipping at Abe's of Maine,http://www.techbargains.com/news_displayItem.cfm/227723
+,"Toshiba 55G300U 55 inch LCD HDTV (120Hz, 1080p) $1188.99 Free Shipping at Buydig.com",http://www.techbargains.com/news_displayItem.cfm/227727
+,Diamondback Response Trail Mountain Bike $319.93 at REI,http://www.techbargains.com/news_displayItem.cfm/227725
+,HP LaserJet P1102W Monochrome Laser Printer w/ Wireless Networking $99.99 at Staples,http://www.techbargains.com/news_displayItem.cfm/227728
+,Thomas Kinkade Musical Holiday Clocks for $6 + $1 s&h,http://dealnews.com/Thomas-Kinkade-Musical-Holiday-Clocks-for-6-1-s-h/396554.html?iref=rss_dealnews_editorschoice
+,Silicone Skin Case for iPhone 3G / 3GS for 49 cents + free shipping,http://dealnews.com/Silicone-Skin-Case-for-i-Phone-3-G-3-GS-for-49-cents-free-shipping/396559.html?iref=rss_dealnews_editorschoice
+,Universal Car Audio Cassette Adapter for 69 cents + free shipping,http://dealnews.com/Universal-Car-Audio-Cassette-Adapter-for-69-cents-free-shipping/396560.html?iref=rss_dealnews_hot
+,90% off men's shirts at Kohl's + extra 15% off: Deals from $3 + $6 s&h,http://dealnews.com/90-off-mens-shirts-at-Kohls-extra-15-off-Deals-from-3-6-s-h/396561.html?iref=rss_dealnews_hot
+,"Samsung Touch of Color UN40C6300 40-Inch 1080p 120 Hz LED LCD HDTV with  4,000,000:1 Dynamic Contrast Ratio, 4 HDMI - $ 879.99 at (Amazon.com)",http://www.123bargains.com/deals-info/18807/samsung-touch-of-color-un40c6300-40inch-1080p-120-hz-led-lcd-hdtv-with--40000001-dynamic-contrast-ratio-4-hdmi.aspx
+,"Twin Pack Folding Sawhorses, BOGO Free ($29.98) @ Lowe's",http://www.fatwallet.com/best-deals/twin-pack-folding-sawhorses-bogo-free/
+,Altec Lansing Headset with Noise-Cancelling Microphone ($8.49) @ eBay,http://www.fatwallet.com/best-deals/altec-lansing-headset-with-noise-cancelling-microphone/
+,A-Data 4GB SDHC Class 6 Card  ($6.49 was $9.99) @ Mwave,http://www.fatwallet.com/best-deals/a-data-4gb-sdhc-class-6-card/
+,".75/1 Land O Lakes Half and Half Creamer (Quart size) dbls to $1.50 if store dbls, two prints",http://feedproxy.google.com/~r/FatwalletGroceryCouponsAndDeals/~3/cN_MdGF0C-A/1035072
+,Getting Rid of my Timeshare,http://feedproxy.google.com/~r/FatwalletFinance/~3/G6Gb2dCrO7Y/1035070
+,Investor Mortgage 100% to 90% LTV:  Anyone offering?,http://feedproxy.google.com/~r/FatwalletFinance/~3/JLur-pFJNhw/1035071
+,PETCO.COM COUPON CODES,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/alVfeDP3YkA/1023254
+,Logitech Wireless Wave Combo $49.99 BM @ OD,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/jJ-u4M5yy8A/1035067
+,Office Depot Back to School Clearance..... YMMV,http://feedproxy.google.com/~r/FatwalletHotDeals/~3/7x3YGQLHxx0/1035069
+,"Conde Nast""Gallo Wines Napa Valley Experience""21+ 11/30/10",http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/nDilCJ2JtM8/showthread.php
+,Fashion Bug Fan Frenzy Sweepstakes 18+ 10/31/10 *FB Users,http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/sdg4Kmsua_Y/showthread.php
+,"Harper's Bazaar & WE tv ""Destination Fabulous"" Sweepstakes 18+ 10/25/10",http://feedproxy.google.com/~r/SlickdealsnetForums-25/~3/c77KsmPOL8c/showthread.php
+,Best Buy 12% Off (Rewards Zone Members Only) Expires Today 10/17,http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/HuPj2nmJloU/showthread.php
+,Best Buy Kodak Coupons,http://feedproxy.google.com/~r/SlickdealsnetForums-10/~3/RLkK8M67W-o/showthread.php
+,"HP 15.6"" Laptop $299.98 @ Staples (with trade in)",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/dvymyh1D_Pc/showthread.php
+,"Memorex 10"" Digital Photo Frame For $54.99 after Shipping",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/RO5IuO_shm8/showthread.php
+,"Brother HL-2140 Compact, Personal Laser Printer $55+shipping @frys",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/vaFLdkeLuQ0/showthread.php
+,Nikon Coolpix S8100 Better Than Others $299.99,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/SRTJlhrTE1c/showthread.php
+,"Pioneer BS41 bookshelf speakers for $99 + shipping, JR",http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/b38aS31UE4Q/showthread.php
+,iOptron SmartStar-E-R80 Telescope $185,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/BiOah5Xfino/showthread.php
+,Sprint Samsung Epic 4g - $99 new 2yr contract through Amazon,http://feedproxy.google.com/~r/SlickdealsnetForums-9/~3/1-v9-Bj06UI/showthread.php
