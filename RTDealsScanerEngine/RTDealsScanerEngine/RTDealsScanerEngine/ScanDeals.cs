@@ -70,6 +70,9 @@ namespace RTDealsScanerEngine
                      {
                    
                              int id = Convert.ToInt16(dr["SourceID"]);
+                             if (id<=12)
+                                 continue;
+
                              string Additional = dr["Additional"].ToString();
                              string[] AddiURL = Additional.Split(',');
                              SubSourceName[k]=id.ToString();
