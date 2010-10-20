@@ -13,10 +13,17 @@ namespace DeliveryEngine
         public string URL { get; set; }
         public bool Ishot { get; set; }
         public bool IsFinance { get; set; }
-        public bool IsFree { get; set; }
+       // public bool IsFree { get; set; }
         public bool IsTravel { get; set; }
         public bool IsDrug { get; set; }
         public bool IsElectronic { get; set; }
+        public bool IsAppliances { get; set; }
+        public bool IsBeauty { get; set; }
+        public bool IsOfficeSupplies { get; set; }
+        public bool IsJewelry { get; set; }
+        public bool IsAppeal { get; set; }
+        public bool IsRestaurant { get; set; }
+        public bool IsOthers { get; set; }
         public string PubDate { get; set; }
         public DateTime InDate { get; set; }
 
