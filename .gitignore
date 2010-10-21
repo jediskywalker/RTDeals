@@ -7,3 +7,10 @@ WebSite.csproj.FileListAbsolute.txt
 RTDealsWebApplication.csproj.user
 ~$*.*
 ~*.tmp
+*.csproj.user
+*.exe
+*.pdb
+*.FileListAbsolute.txt
+*.suo
+*.manifest
+*.cache
