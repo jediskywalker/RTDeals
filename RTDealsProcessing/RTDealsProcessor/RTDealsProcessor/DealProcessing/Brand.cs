@@ -5,10 +5,8 @@ namespace DealProcessing
 {
     public class Brand
     {
-        public int CategoryID { get; set; }
+        public int BrandID { get; set; }
         public string Name { get; set; }
-        public int Priority { get; set; }
-        public bool IsSpecial { get; set; }
 
         public List<Product> Products { get; set; }
 
@@ -24,7 +22,7 @@ namespace DealProcessing
             {
                 prods += prod.ToString();
             }
-            return string.Format("<Category id:{0} Name:{1} Pri:{2} Spcl:{3} subs:{4}>; ", CategoryID, Name, Priority, IsSpecial, prods);
+            return string.Format("<Category id:{0} Name:{1} subs:{2}>; ", BrandID, Name, prods);
         }
 
     }
