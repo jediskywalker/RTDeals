@@ -54,8 +54,10 @@
     <Compile Include="DealProcessing\DealProcessor.cs" />
     <Compile Include="DealProcessing\Pattern.cs" />
     <Compile Include="DealProcessing\PatternMatch.cs" />
+    <Compile Include="DealProcessing\PatternToIgnore.cs" />
     <Compile Include="DealProcessing\Product.cs" />
     <Compile Include="DealProcessing\ProductModel.cs" />
+    <Compile Include="DealProcessing\Store.cs" />
     <Compile Include="DealProcessing\SubCategory.cs" />
     <Compile Include="Libraries\CacheUtil.cs" />
     <Compile Include="Libraries\DBUtil.cs" />

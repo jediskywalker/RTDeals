@@ -9,6 +9,7 @@ namespace DealProcessing
         public int SubCategoryID { get; set; }
         public string Name { get; set; }
         public int CategoryID { get; set; }
+        public Category Category { get; set; }
 
 
         public override string ToString()

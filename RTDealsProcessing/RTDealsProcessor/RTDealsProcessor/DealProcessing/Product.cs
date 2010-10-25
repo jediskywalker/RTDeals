@@ -7,6 +7,7 @@ namespace DealProcessing
     {
         public int ProductID { get; set; }
         public string Name { get; set; }
+        public string BrandID { get; set; }
         public int SubCategoryID { get; set; }
 
         public List<ProductModel> Models { get; set; }

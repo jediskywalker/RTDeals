@@ -5,10 +5,32 @@ namespace DealProcessing
 {
     public class Pattern
     {
+        const string AND = "A";
+        const string OR = "O";
+
         public int PatternID { get; set; }
         public string Description { get; set; }
         public string Patterns { get; set; }
         public string MultiItemRelation { get; set; }
+
+        private string[] _splittedPatterns;
+        public string[] SplittedPatterns
+        {
+            get
+            {
+                if (_splittedPatterns != null) return _splittedPatterns;
+
+                if (string.IsNullOrEmpty(Patterns))
+                {
+                    _splittedPatterns = new string[] { };
+                    return _splittedPatterns;
+                }
+
+                char[] delimitors = new char[] { ',' };
+                _splittedPatterns = Patterns.Split(delimitors, StringSplitOptions.RemoveEmptyEntries);
+                return _splittedPatterns;
+            }
+        }
 
         public override string ToString()
         {

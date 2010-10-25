@@ -6,6 +6,7 @@ namespace DealProcessing
     {
         public int ModelID { get; set; }
         public string Name { get; set; }
+        public int ProductID { get; set; }
 
         public override string ToString()
         {

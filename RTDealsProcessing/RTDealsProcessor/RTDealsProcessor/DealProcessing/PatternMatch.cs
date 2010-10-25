@@ -7,9 +7,9 @@ namespace DealProcessing
     {
         public int MatchID { get; set; }
         public string Description { get; set; }
-        public string MatchPatternID { get; set; }
+        public int MatchPatternID { get; set; }
         public Pattern MatchPattern { get; set; }
-        public string ExcludePatternID { get; set; }
+        public int ExcludePatternID { get; set; }
         public Pattern ExcludePattern { get; set; }
         public int Accuracy { get; set; }
         public int? CategoryID { get; set; }
