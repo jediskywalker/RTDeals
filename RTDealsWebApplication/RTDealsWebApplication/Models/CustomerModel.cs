@@ -127,6 +127,11 @@ namespace RTDealsWebApplication.Models
         [DisplayName("PauseDays")]
         public Int16 PauseDays { get; set; }
 
+        [DisplayName("IPAddress")]
+        [StringLength(20)]
+        public string IPAddress { get; set; }
+
+
         #endregion table columns
 
     }

@@ -236,6 +236,7 @@
     <Content Include="Views\KeyWords\GetCateKeywords.aspx" />
     <Content Include="Views\KeyWords\Index.aspx" />
     <Content Include="Views\Login\Index.aspx" />
+    <Content Include="Views\Login\Register.aspx" />
     <Content Include="Views\Shared\LoginUserControl.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

@@ -1,0 +1,2 @@
+1.Cell Phone and Carriers Dropdown on sign up page     VS    After log in in Alert Set Up Page
+2.When Sign Up Set Status to "I", Provide a page which user click link in the email to get their account active 
