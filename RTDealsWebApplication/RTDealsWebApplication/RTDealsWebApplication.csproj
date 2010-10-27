@@ -136,8 +136,6 @@
     <Content Include="bin\MyPaper.pdb" />
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\MySQL.VisualStudio.dll" />
-    <Content Include="bin\RTDealsWebApplication.dll" />
-    <Content Include="bin\RTDealsWebApplication.pdb" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="images\about.jpg" />

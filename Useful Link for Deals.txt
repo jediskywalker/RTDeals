@@ -1,0 +1,14 @@
+http://github.com/facebook/csharp-sdk
+http://www.howtoforge.com/rss_facebook_app_php
+http://www.informit.com/store/product.aspx?isbn=0321680774
+www.shopping.com
+http://www.deal007.com/
+http://www.dealslava.com/index.html
+
+pricespider.com
+
+
+
+http://rssfeeds.s3.amazonaws.com/goldbox
+http://www.dealam.com/rss.xml
+http://www.headlinedeals.com
