@@ -19,7 +19,7 @@ namespace RTDealsScanerEngine.RTDealsDataAccess
             //create connection string
             try
             {
-                string connstr = "server=192.168.1.107;user id=jediskywalker;password=19810408;database=rtdeals";  
+                string connstr = "server=192.168.1.107;user id=jediskywalker;password=12345678;database=rtdeals";  
                 //string connstr = ConfigurationManager.AppSettings["DialerDBConStr"];
                 conn = new MySqlConnection(connstr);
             }

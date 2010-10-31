@@ -12,6 +12,13 @@
 12.Check invalid url of deal (Hao)
 13.Rewrite Some function of scaner to inprove performence
 14.Check the cash back rule of retail website like Amazon (Hao, Yinli)
+15.Category Details (Li,Hao,Yin Li)
+16.Local Deal rule
+
+
+
+
+
 
 Provide I feel lucky similar to google on first page (Hao, Eric)
 Provide API for other website (Yin Li)

@@ -15,84 +15,20 @@
             <legend>Customer Info</legend>
    
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.Username) %>
+               <%=Html.Label("Email")%><%=Html.TextBox("txtEmail")%>
             </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.Username) %>
-                <%: Html.ValidationMessageFor(model => model.Username) %>
+             <div class="editor-label">
+               <%=Html.Label("Confirm Email")%><%=Html.TextBox("txtConfirmEmail")%>
             </div>
+             <div class="editor-label">
+               <%=Html.Label("Password")%><%=Html.TextBox("txtPassword")%>
+            </div>
+            <div class="editor-label">
+               <%=Html.Label("Confirm Password")%><%=Html.TextBox("txtConfirmPassword")%>
+            </div>
+          
             
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.LastName) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.LastName) %>
-                <%: Html.ValidationMessageFor(model => model.LastName) %>
-            </div>
-            
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.FirstName) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.FirstName) %>
-                <%: Html.ValidationMessageFor(model => model.FirstName) %>
-            </div>
-            
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.Password) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.Password) %>
-                <%: Html.ValidationMessageFor(model => model.Password) %>
-            </div>
-            
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.Address1) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.Address1) %>
-                <%: Html.ValidationMessageFor(model => model.Address1) %>
-            </div>
-            
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.Address2) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.Address2) %>
-                <%: Html.ValidationMessageFor(model => model.Address2) %>
-            </div>
-            
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.Phone) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.Phone) %>
-                <%: Html.ValidationMessageFor(model => model.Phone) %>
-            </div>
-            
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.State) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.State) %>
-                <%: Html.ValidationMessageFor(model => model.State)%>
-            </div>
-            
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.ZipCode)%>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.ZipCode)%>
-                <%: Html.ValidationMessageFor(model => model.ZipCode)%>
-            </div>
-  
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.Email)%>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.Email)%>
-                <%: Html.ValidationMessageFor(model => model.Email)%>
-            </div>
+          
   
             <p>
                 <input type="submit" value="Create" />
