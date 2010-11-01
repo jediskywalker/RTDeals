@@ -53,6 +53,10 @@
     <Reference Include="MySQL.VisualStudio">
       <HintPath>C:\Users\jedi\Desktop\MySQL.VisualStudio.dll</HintPath>
     </Reference>
+    <Reference Include="Recaptcha, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Recaptcha.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Design" />
