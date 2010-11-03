@@ -52,11 +52,14 @@
     <Compile Include="DealProcessing\Category.cs" />
     <Compile Include="DealProcessing\DealProcessingDB.cs" />
     <Compile Include="DealProcessing\DealProcessor.cs" />
+    <Compile Include="DealProcessing\DealSource.cs" />
     <Compile Include="DealProcessing\Pattern.cs" />
     <Compile Include="DealProcessing\PatternMatch.cs" />
     <Compile Include="DealProcessing\PatternToIgnore.cs" />
     <Compile Include="DealProcessing\Product.cs" />
     <Compile Include="DealProcessing\ProductModel.cs" />
+    <Compile Include="DealProcessing\Deal.cs" />
+    <Compile Include="DealProcessing\RegexMatch.cs" />
     <Compile Include="DealProcessing\Store.cs" />
     <Compile Include="DealProcessing\SubCategory.cs" />
     <Compile Include="Libraries\CacheUtil.cs" />

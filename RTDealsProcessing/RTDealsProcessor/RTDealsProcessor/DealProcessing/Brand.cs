@@ -7,18 +7,20 @@ namespace DealProcessing
     {
         public int BrandID { get; set; }
         public string Name { get; set; }
+        public string Aliases { get; set; }
+        public int Accuracy { get; set; }
 
-        public List<Product> Products { get; set; }
+        public List<Product> MyProducts { get; set; }
 
         public Brand()
         {
-            Products = new List<Product>();
+            MyProducts = new List<Product>();
         }
 
         public override string ToString()
         {
             string prods = "";
-            foreach (Product prod in Products)
+            foreach (Product prod in MyProducts)
             {
                 prods += prod.ToString();
             }

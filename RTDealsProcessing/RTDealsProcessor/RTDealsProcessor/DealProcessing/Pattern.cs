@@ -5,8 +5,8 @@ namespace DealProcessing
 {
     public class Pattern
     {
-        const string AND = "A";
-        const string OR = "O";
+        static public string AND = "A";
+        static public string OR = "O";
 
         public int PatternID { get; set; }
         public string Description { get; set; }

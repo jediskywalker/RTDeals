@@ -10,17 +10,17 @@ namespace DealProcessing
         public int Priority { get; set; }
         public bool IsSpecial { get; set; }
 
-        public List<SubCategory> SubCategories { get; set; }
+        public List<SubCategory> MySubCategories { get; set; }
 
         public Category()
         {
-            SubCategories = new List<SubCategory>();
+            MySubCategories = new List<SubCategory>();
         }
 
         public override string ToString()
         {
             string subs = "";
-            foreach (SubCategory sub in SubCategories)
+            foreach (SubCategory sub in MySubCategories)
             {
                 subs += sub.ToString();
             }

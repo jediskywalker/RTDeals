@@ -18,6 +18,11 @@ namespace RTDealsProcessor
             List<Brand> brands = DealProcessingDB.GetAllBrands();
 
             int cnt = brands.Count;
+
+            DealProcessingDB.LoadAllLookUpLists();
+
+            DealProcessor.ProcessRawDeals();
+
         }
     }
 }
