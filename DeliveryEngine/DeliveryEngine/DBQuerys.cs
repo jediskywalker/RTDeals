@@ -10,8 +10,7 @@ namespace DeliveryEngine
     class DBQuerys
     {
 
-        //public static string connStr = "server=24.107.53.155;database=rtdeals;uid=jediskywalker;password=19810408;";
-        public static string connStr = "server=192.168.1.107;database=rtdeals;uid=jediskywalker;password=19810408;";
+        public static string connStr = "server=192.168.1.107;database=rtdeals;uid=jediskywalker;password=12345678;";
         
         public static Deals GetOneDeal(int dealid)
         {

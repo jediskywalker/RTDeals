@@ -24,5 +24,4 @@ namespace DealProcessing
         }
 
     }
-
 }

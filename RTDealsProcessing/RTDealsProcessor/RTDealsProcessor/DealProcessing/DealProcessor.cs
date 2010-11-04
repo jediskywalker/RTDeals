@@ -8,7 +8,6 @@ using Libraries;
 
 namespace DealProcessing
 {
-
     public class DealProcessor
     {
         // constant

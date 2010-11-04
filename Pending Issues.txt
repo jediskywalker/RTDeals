@@ -1,0 +1,73 @@
+1. Customer Can create, drag,drop Scrolling div by Category also allow customerize color/ background (Yin Li, Hao)
+2. Search page as Homepage (Hao)
+3. Customer Category Setup page (Hao) --70% Done
+4. Customer Delivery Setup Page (Yin Li)  Include HTML and Txt version, sms version
+5. Delivery Template  (Yin Li)  Include highlight and give a good color of Keywords 
+6. Correct URL (Hao)---Done
+7. Reduce Duplicate deal from same source(Hao)
+8. Hook up with Twitter and Facebook (Hao, Yin Li)
+9. Delivery Report/History (Yin Li)
+10.Update Category when insert deals (Hao)   Base on predefined category.
+11.Seperate useful infomation when insert deals (add deals deatails table for price, brand...)--- (Hao, Yin Li)
+12.Check invalid url of deal (Hao)
+13.Rewrite Some function of scaner to inprove performence
+14.Check the cash back rule of retail website like Amazon (Hao, Yinli)
+15.Category Details (Li,Hao,Yin Li)
+16.Local Deal rule
+
+
+
+
+
+
+Provide I feel lucky similar to google on first page (Hao, Eric)
+Provide API for other website (Yin Li)
+iphone and Andriod platform with lbs (Third Party, Hao, Yin Li)
+Provide lbs service like arrow people to post deals or sale/exchange request, others can search base on lbs(Later)
+Provide more service (News, Blog Update...)--- (Later)
+Consider Provide some useful tools in customer back office(Later)
+
+
+Add more data into SourceRssSeed table   //Done
+Can't alter table value
+click deal source checkbox  show additional RSS checkboxes   //Done
+when send email only choose from additional   
+
+update RssAddress table   add default value to additional RssAddress   // Done
+
+
+
+
+
+Build a pop up big page to show all keywords with checkbox (update directly but click) which defined under this category when click category checkbox  provide select all
+if no keywords selected under this category, uncheck the category, if unckeck category by customer popup alert, are you sure uncheck all keywords
+
+
+give right to customer input keywords (check duplicate),  customer keywords should add into category(  may need a table call customercategorykeywords, which has category id, customerid , keywords)
+when popup page, need load both system defined and customer category defined which belong to this customer
+
+
+
+
+Check RSS Deals cross duplicate.  Write a function to estimate how much similar 
+
+add paypal/someway to accept donation
+
+Building Customer Set Up page
+
+
+
+Add AA.com  RSS Feed As Source
+For processors need check type number  950  620 
+
+
+Check the pubdate problem http://feedproxy.google.com/~r/FatwalletHotDeals/~3/zEjBgTzNe00/1014158
+
+
+
+
+
+
+
+
+

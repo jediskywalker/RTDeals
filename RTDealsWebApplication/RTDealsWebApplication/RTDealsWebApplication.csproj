@@ -14,11 +14,14 @@
     <AssemblyName>RTDealsWebApplication</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <SccProjectName>"%24/RTDealsWebApplication/RTDealsWebApplication/RTDealsWebApplication", WFAAAAAA</SccProjectName>
-    <SccLocalPath>.</SccLocalPath>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
     <SccAuxPath>
     </SccAuxPath>
-    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <SccProvider>
+    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,6 +52,10 @@
     </Reference>
     <Reference Include="MySQL.VisualStudio">
       <HintPath>C:\Users\jedi\Desktop\MySQL.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Recaptcha.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -118,6 +125,7 @@
     <Compile Include="Models\HomePageSearchModel.cs" />
     <Compile Include="Models\RegexPatternModel.cs" />
     <Compile Include="Models\SourceRssSeedModel.cs" />
+    <Compile Include="Models\UserLocationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RSS\Channel.cs" />
     <Compile Include="RSS\ChannelCollection.cs" />
@@ -136,8 +144,6 @@
     <Content Include="bin\MyPaper.pdb" />
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\MySQL.VisualStudio.dll" />
-    <Content Include="bin\RTDealsWebApplication.dll" />
-    <Content Include="bin\RTDealsWebApplication.pdb" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="images\about.jpg" />
@@ -234,7 +240,9 @@
     <Content Include="Views\KeyWords\Edit.aspx" />
     <Content Include="Views\KeyWords\GetCateKeywords.aspx" />
     <Content Include="Views\KeyWords\Index.aspx" />
+    <Content Include="Views\Login\EmailVerification.aspx" />
     <Content Include="Views\Login\Index.aspx" />
+    <Content Include="Views\Login\Register.aspx" />
     <Content Include="Views\Shared\LoginUserControl.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

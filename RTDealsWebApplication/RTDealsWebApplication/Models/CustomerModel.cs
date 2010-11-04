@@ -99,6 +99,39 @@ namespace RTDealsWebApplication.Models
         [StringLength(20)]
         public string CCExpiredOn { get; set; }
 
+        [DisplayName("CCInfo")]
+        [StringLength(20)]
+        public string CCInfo { get; set; }
+
+        [DisplayName("CCToken")]
+        [StringLength(20)]
+        public string CCToken { get; set; }
+
+        [DisplayName("Email")]
+        [StringLength(20)]
+        public string Email { get; set; }
+
+        [DisplayName("SMSAddress")]
+        [StringLength(20)]
+        public string SMSAddress { get; set; }
+
+        [DisplayName("IsNew")]
+        public bool IsNew { get; set; }
+
+        [DisplayName("IsPause")]
+        public bool IsPause { get; set; }
+
+        [DisplayName("PauseTime")]
+        public DateTime PauseTime { get; set; }
+
+        [DisplayName("PauseDays")]
+        public Int16 PauseDays { get; set; }
+
+        [DisplayName("IPAddress")]
+        [StringLength(20)]
+        public string IPAddress { get; set; }
+
+
         #endregion table columns
 
     }

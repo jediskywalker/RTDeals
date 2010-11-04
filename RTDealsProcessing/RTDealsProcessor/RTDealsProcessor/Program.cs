@@ -22,7 +22,6 @@ namespace RTDealsProcessor
             DealProcessingDB.LoadAllLookUpLists();
 
             DealProcessor.ProcessRawDeals();
-
         }
     }
 }

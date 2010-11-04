@@ -20,6 +20,6 @@
          <%} %>
  
 </table>
-		<mp:MyPaper LinkNumberCssClass="Link_Pager" CurrentNumberBgColor="white" LinkNumberWidth="18" id="MyPaper1" runat="server" LinkIsText="False" FirstLink="images/pagelist/First.gif"
-				LastLink="images/pagelist/Last.gif" NextLink="images/pagelist/Next.gif" PreviousLink="images/pagelist/Previous.gif"></mp:MyPaper>
+		<%--<mp:MyPaper LinkNumberCssClass="Link_Pager" CurrentNumberBgColor="white" LinkNumberWidth="18" id="MyPaper1" runat="server" LinkIsText="False" FirstLink="images/pagelist/First.gif"
+				LastLink="images/pagelist/Last.gif" NextLink="images/pagelist/Next.gif" PreviousLink="images/pagelist/Previous.gif"></mp:MyPaper>--%>
 </asp:Content>
