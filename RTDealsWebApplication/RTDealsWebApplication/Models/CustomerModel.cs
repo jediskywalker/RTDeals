@@ -127,9 +127,33 @@ namespace RTDealsWebApplication.Models
         [DisplayName("PauseDays")]
         public Int16 PauseDays { get; set; }
 
-        [DisplayName("IPAddress")]
+        [DisplayName("LastIPAddress")]
         [StringLength(20)]
-        public string IPAddress { get; set; }
+        public string LastIPAddress { get; set; }
+
+        [DisplayName("LastLongitude")]
+        [StringLength(20)]
+        public string LastLongitude { get; set; }
+
+        [DisplayName("LastLatitude")]
+        [StringLength(20)]
+        public string LastLatitude { get; set; }
+
+        [DisplayName("LastCity")]
+        [StringLength(20)]
+        public string LastCity { get; set; }
+
+        [DisplayName("LastZipCode")]
+        [StringLength(20)]
+        public string LastZipCode { get; set; }
+
+        [DisplayName("LastCountryName")]
+        [StringLength(20)]
+        public string LastCountryName { get; set; }
+
+        [DisplayName("LastTimeZone")]
+        [StringLength(20)]
+        public string LastTimeZone { get; set; }
 
 
         #endregion table columns

@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<script runat="server">
+<%--<script runat="server">
     void btnSubmit_Click(object sender, EventArgs args)
     {
         if (Page.IsValid) {
@@ -16,7 +16,7 @@
             lblResult.ForeColor = System.Drawing.Color.Red;
         }
     }
-</script>
+</script>--%>
     <h2>Register</h2>
 
     <% using (Html.BeginForm()) {%>
@@ -37,19 +37,33 @@
             <div class="editor-label">
                <%=Html.Label("Confirm Password")%><%=Html.TextBox("txtConfirmPassword")%>
             </div>
-            <form  runat="server"> 
-             <asp:Label Visible="true" ID="lblResult" runat="server" Text="123" />
-             <recaptcha:RecaptchaControl ID="recaptcha" runat="server" Theme="blue" PublicKey="6Ld6WL4SAAAAAHvD-48HpJYeu-sK_vwjMYOmn29-"     PrivateKey="6Ld6WL4SAAAAANVP9bYst-NzoN87Eb-UxKUUY_bE"     />
+           <%-- <form  runat="server"> --%>
+          <%--   <asp:Label Visible="true" ID="lblResult" runat="server" Text="123" />--%>
+<%--             <recaptcha:RecaptchaControl ID="recaptcha" runat="server" Theme="blue" PublicKey="6Ld6WL4SAAAAAHvD-48HpJYeu-sK_vwjMYOmn29-"     PrivateKey="6Ld6WL4SAAAAANVP9bYst-NzoN87Eb-UxKUUY_bE"     />--%>
           
   
             <p>
-                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
-               <%-- <input type="submit" value="Create"  onclick="btnSubmit_Click" />--%>
+               <%-- <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />--%>
+                <input type="submit" value="Create" name="Button" onclick="return Validation()"/>
             </p>
-            </form> 
+           <%-- </form> --%>
         </fieldset>
 
     <% } %>
+
+
+    <script language="javascript" type="text/javascript">
+        function Validation() {
+            if ((document.getElementById("txtEmail").value != document.getElementById("txtConfirmEmail").value))
+                return false;
+            if ((document.getElementById("txtPassword").value != document.getElementById("txtConfirmPassword").value))
+                return false;
+          
+        }
+
+
+    
+    </script>
 
     <div>
         <%: Html.ActionLink("Back to List", "Index") %>

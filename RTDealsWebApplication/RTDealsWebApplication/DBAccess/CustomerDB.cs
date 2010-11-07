@@ -14,6 +14,11 @@ using System.Reflection;
 using Utilities;
 using MySql.Data.MySqlClient;
 using RTDealsWebApplication.Models;
+using System.Threading;
+using System.Text.RegularExpressions;
+using System.IO;
+using System.Net;
+using RTDealsWebApplication.DBAccess;
 
 
 namespace RTDealsWebApplication.DBAccess
@@ -54,6 +59,23 @@ namespace RTDealsWebApplication.DBAccess
                 Logging.Log(LoggingLevel.ERROR, "SelectUserByUsername", "Multiple record returned for username=" + Username, null);
             return null;
             
+        }
+        public static void CreateCustomer(CustomerModel Customer)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = "Insert into Customer(Email,Password,LastIPAddress,LastLongitude,LastLatitude,LastCity,LastZipCode,LastCountryName,LastTimeZone,status,SignUpdate,IsNew)" +
+                    "values('" + Customer.Email + "','" + Customer.Password + "','" + Customer.LastIPAddress + "','" + Customer.LastLongitude + "','" + Customer.LastLatitude + "','" + Customer.LastCity + "','" + Customer.LastZipCode + "','" + Customer.LastCountryName + "','" + Customer.LastTimeZone + "','" + 'I' + "' , " + "NOW()" + " , '" + 1 + "')";
+                cmd.CommandType = CommandType.Text;
+                DB.ExecuteNonQuery(cmd);
+            }
+            catch (Exception e)
+            {
+                string s = e.Message;
+
+            }
+
         }
 
     }
