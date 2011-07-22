@@ -14,6 +14,7 @@ using RTDealsWebApplication.Common;
 using System.Threading;
 using System.Xml;
 using System.Xml.Linq;
+using Utilities;
 
 namespace WebSite.Controllers
 {
@@ -48,20 +49,42 @@ namespace WebSite.Controllers
 
             return View();
         }
-        public ActionResult Register()
+        public ActionResult Register(string txtEmail, string txtConfirmEmail, string txtPassword, string txtConfirmPassword,string Button)
         {
-            string strHostName = Dns.GetHostName(); //Get Host Name
-            IPHostEntry ipEntry = Dns.GetHostByName(strHostName); //Got IP Address
-            string strAddr = ipEntry.AddressList[0].ToString();
-            string url = "http://www.geobytes.com/IpLocator.htm?GetLocation&IpAddress=24.107.53.155";
-            UserGeoLocator ul = new UserGeoLocator();
-            ul.GetUserLocation("24.103.54.177");
+            if (Button == "Create")
+            {
+
+                string strHostName = Dns.GetHostName(); //Get Host Name
+                IPHostEntry ipEntry = Dns.GetHostEntry(strHostName); //Got IP Address
+                string strAddr = ipEntry.AddressList[2].ToString();
+                //string url = "http://www.geobytes.com/IpLocator.htm?GetLocation&IpAddress=24.107.53.155";
+                UserGeoLocator ul = new UserGeoLocator();
+                UserLocationModel ulm = ul.GetUserLocation(strAddr);
+                CustomerModel Customer = new CustomerModel();
+                Customer.Email = txtEmail;
+                Customer.Password = txtPassword;
+                Customer.LastIPAddress = strAddr;
+                //Customer.IsNew = false;
+                Customer.Status = "I";
+                Customer.LastCity = ulm.City;
+                Customer.LastCountryName = ulm.CountryName;
+                Customer.LastLatitude = ulm.Latitude;
+                Customer.LastLongitude = ulm.Longitude;
+                Customer.LastTimeZone = ulm.Timezone;
+                Customer.LastZipCode = ulm.ZipPostalCode;
+                //Customer.SignUpdate = DateTime.Now;
+                CustomerDB.CreateCustomer(Customer);
+
+                string EmailActivationURL = string.Format("http://localhost:64623/Login/EmailAccountactivation?Customer={0}&Email={1}", Utilities.StrUtil.Encrypt(Customer.CustomerID.ToString()),Utilities.StrUtil.Encrypt(Customer.Email));
+                Utilities.Email.SendAccountActivationEmail(Customer.Email, "AccountActivation@RTDeals.com", "Account Activation", EmailActivationURL);
+
+            }
             return View();
         }
 
-        
 
-        public ActionResult EmailVerification()
+
+        public ActionResult EmailAccountactivation()
         {
 
             return View();
@@ -75,7 +98,7 @@ namespace WebSite.Controllers
         public class UserGeoLocator
         {
             private const string ApiUrl = "http://ipinfodb.com/ip_query.php?ip={0}";
-            public void GetUserLocation(string ipAddress)
+            public UserLocationModel GetUserLocation(string ipAddress)
             {
                 if (string.IsNullOrEmpty(ipAddress))
                 {
@@ -109,6 +132,7 @@ namespace WebSite.Controllers
                     ulm.Gmtoffset = (string)respElement.Element("Gmtoffset");
                     ulm.Dstoffset = (string)respElement.Element("Dstoffset");
 
+                    return ulm;
                 }
                 catch (Exception ex)
                 {

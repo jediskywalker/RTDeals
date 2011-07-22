@@ -134,6 +134,7 @@
     <Compile Include="RSS\ItemCollection.cs" />
     <Compile Include="Utlities\CacheUtil.cs" />
     <Compile Include="Utlities\Constants.cs" />
+    <Compile Include="Utlities\Email.cs" />
     <Compile Include="Utlities\FileUtility.cs" />
     <Compile Include="Utlities\Logging.cs" />
     <Compile Include="Utlities\StrUtil.cs" />
@@ -240,7 +241,7 @@
     <Content Include="Views\KeyWords\Edit.aspx" />
     <Content Include="Views\KeyWords\GetCateKeywords.aspx" />
     <Content Include="Views\KeyWords\Index.aspx" />
-    <Content Include="Views\Login\EmailVerification.aspx" />
+    <Content Include="Views\Login\EmailAccountactivation.aspx" />
     <Content Include="Views\Login\Index.aspx" />
     <Content Include="Views\Login\Register.aspx" />
     <Content Include="Views\Shared\LoginUserControl.ascx" />

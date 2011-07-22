@@ -26,7 +26,7 @@ namespace RTDealsScanerEngine
                 DataSet ds = new DataSet();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 conn.Open();
-                string[] mysqltext = { "select * from sourcerssseed order by SourceID", "select * from rssdeals where DATE_ADD(inTime,INTERVAL 3 DAY)>NOW()", "select * from sourceurlpattern","select * from categorykeywords" };
+                string[] mysqltext = { "select * from sourcerssseed order by SourceID", "select * from rssdeals where DATE_ADD(inTime,INTERVAL 7 DAY)>NOW()", "select * from sourceurlpattern","select * from categorykeywords" };
                 string[] tables = { "sourcerssseed", "rssdeals", "sourceurlpattern","categorykeywords" };
                 for (int i = 0; i < mysqltext.Length; i++)
                 {
@@ -70,9 +70,7 @@ namespace RTDealsScanerEngine
                      {
                    
                              int id = Convert.ToInt16(dr["SourceID"]);
-                             if (id<=12)
-                                 continue;
-
+ 
                              string Additional = dr["Additional"].ToString();
                              string[] AddiURL = Additional.Split(',');
                              SubSourceName[k]=id.ToString();
