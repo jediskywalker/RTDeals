@@ -57,11 +57,13 @@
     <Compile Include="DealProcessing\PatternMatch.cs" />
     <Compile Include="DealProcessing\PatternToIgnore.cs" />
     <Compile Include="DealProcessing\Product.cs" />
+    <Compile Include="DealProcessing\ProductSubCategory.cs" />
     <Compile Include="DealProcessing\ProductModel.cs" />
     <Compile Include="DealProcessing\Deal.cs" />
     <Compile Include="DealProcessing\RegexMatch.cs" />
     <Compile Include="DealProcessing\Store.cs" />
     <Compile Include="DealProcessing\SubCategory.cs" />
+    <Compile Include="DealProcessing\Synonym.cs" />
     <Compile Include="Libraries\CacheUtil.cs" />
     <Compile Include="Libraries\DBUtil.cs" />
     <Compile Include="Libraries\LogUtil.cs" />

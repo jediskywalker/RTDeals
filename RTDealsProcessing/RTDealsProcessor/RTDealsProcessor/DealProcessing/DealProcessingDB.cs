@@ -134,7 +134,28 @@ namespace DealProcessing
             return list;
         }
 
+        static public List<ProductSubCategory> GetAllProductSubCategories()
+        {
+            List<ProductSubCategory> list = new List<ProductSubCategory>();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "select * from product_category order by ProductID";
 
+            list = DBUtil.GetListFromDataReader<ProductSubCategory>(cmd);
+
+            return list;
+        }
+
+        static public List<Synonym> GetAllSynonyms()
+        {
+            List<Synonym> list = new List<Synonym>();
+
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "select * from synonym";
+
+            list = DBUtil.GetListFromDataReader<Synonym>(cmd);
+
+            return list;
+        }
 
 
         /// <summary>
@@ -341,6 +362,7 @@ namespace DealProcessing
             }
 
             List<Product> _productList = GetAllProducts();
+            List<ProductSubCategory> _productSubcategoryList = GetAllProductSubCategories();
             lock (DealProcessor.AllProducts)
             {
                 DealProcessor.AllProducts.Clear();
@@ -358,14 +380,23 @@ namespace DealProcessing
                         else
                             LogUtil.Log(LogLevel.ERROR, "LoadAllLookUpLists", "product missing brand for id:" + prod.BrandID, null);
                     }
-                    if (prod.SubCategoryID > 0)
+
+                    // product subcategories
+                    bool foundProduct = false;
+                    foreach (ProductSubCategory psub in _productSubcategoryList)
                     {
-                        SubCategory sub = DealProcessor.GetSubCategoryByID(prod.SubCategoryID);
-                        if (sub != null)
-                            prod.MySubcategory = sub;
-                        else
-                            LogUtil.Log(LogLevel.ERROR, "LoadAllLookUpLists", "product missing subcategory for id:" + prod.SubCategoryID, null);
+                        if (psub.ProductID != prod.ProductID)
+                        {
+                            if (foundProduct) break;
+                            else continue;
+                        }
+
+                        foundProduct = true;
+                        SubCategory mysub = DealProcessor.GetSubCategoryByID(psub.SubCategoryID);
+                        if (mysub != null)
+                            prod.MySubcategories.Add(psub);
                     }
+
                 }
             }
 
@@ -383,6 +414,21 @@ namespace DealProcessing
                     }
                     else
                         LogUtil.Log(LogLevel.ERROR, "LoadAllLookUpLists", "model missing product for id:" + mdl.ProductID, null);
+                }
+            }
+
+
+
+            // -----------------------------------------------------------
+            // load Synonym
+            List<Synonym> _synonymList = GetAllSynonyms();
+
+            lock (DealProcessor.AllSynonyms)
+            {
+                DealProcessor.AllSynonyms.Clear();
+                foreach (Synonym s in _synonymList)
+                {
+                    DealProcessor.AllSynonyms.Add(s.Word, s);
                 }
             }
         }

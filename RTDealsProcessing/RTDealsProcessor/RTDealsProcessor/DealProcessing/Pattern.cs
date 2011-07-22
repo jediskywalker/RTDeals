@@ -26,7 +26,7 @@ namespace DealProcessing
                     return _splittedPatterns;
                 }
 
-                char[] delimitors = new char[] { ',' };
+                char[] delimitors = new char[] { ',',' ' };
                 _splittedPatterns = Patterns.Split(delimitors, StringSplitOptions.RemoveEmptyEntries);
                 return _splittedPatterns;
             }

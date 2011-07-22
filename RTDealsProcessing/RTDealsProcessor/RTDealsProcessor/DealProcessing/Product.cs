@@ -8,29 +8,30 @@ namespace DealProcessing
         public int ProductID { get; set; }
         public string Name { get; set; }
         public int BrandID { get; set; }
-        public int SubCategoryID { get; set; }
         public int Accuracy { get; set; }
         public string Aliases { get; set; }
 
         public Brand MyBrand { get; set; }
-        public SubCategory MySubcategory { get; set; }
+        
         public List<ProductModel> MyModels { get; set; }
+
+        public List<ProductSubCategory> MySubcategories { get; set; }
 
         public Product()
         {
             MyModels = new List<ProductModel>();
             MyBrand = null;
-            MySubcategory = null;
+            MySubcategories = new List<ProductSubCategory>();
         }
 
         public override string ToString()
         {
-            string mods = "";
-            foreach (ProductModel mod in MyModels)
+            string mdls = "";
+            foreach (ProductModel mdl in MyModels)
             {
-                mods += mod.ToString();
+                mdls += mdl.ToString();
             }
-            return string.Format("<Category id:{0} Name:{1} Pri:{2} Spcl:{3} als:{4} subs:{5}>; ", ProductID, Name, SubCategoryID, Aliases, mods);
+            return string.Format("<Category id:{0} Name:{1} ali:{2} mdls:{5}>; ", ProductID, Name, Aliases, mdls);
         }
 
     }

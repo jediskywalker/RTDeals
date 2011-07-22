@@ -1,0 +1,91 @@
+RTDeals:
+
+Books & Magazines: Books, Audiobooks, Textbooks, Magazines
+Movies, Music & Games: MOvies & TV, Music, Games, Musical Instruments
+Computers & Office:Laptops & Netbooks, Desktops & Servers, Component & Accessories, Software, Printers & Ink, Office Supplies
+Electronics: TV & Video, Home Audio & Theater, Camera & Video, Cell Phones & Accessories, Video Games, MP3 Players & Accessories, Car Electronics & GPS, Home Appliances, Musical Instruments 
+Home & Garden: Tools, Home Improvement, Kitchen & Dining, Furniture & Décor ,Bedding & Bath , Home Appliances, Vacuums, Cleaning & Storage, Patio, Lawn & Garden, Sewing, Craft & Hobby, Pet Supplies 
+Grocery & Food: Grocery, Restaurant
+Health & Beauty: Health & Personal Care, Beauty & Cosmetics
+Toys & Kids: Toys & Games, Baby, Clothing (Kids & Baby), Video Games for Kids 
+Clothing & Shoes: Clothing, SHoes, Accessories
+Jewelry & Watches: Jewelry, Watches
+Sports & Outdoors: Exercise & Fitness,Outdoor Recreation,Team Sports ,Bikes & Scooters ,Golf ,Boating & Water Sports
+Travel: Aireline, Car Rental, Hotel, Cruise, Vacation Packages
+Automotive & Industrial: Cars & Trucks, MOtorcycles, RV & Trailers, Boats
+Gift Cards & Coupons: Giftcards, Coupons
+
+
+
+Amazon:
+
+Automotive
+Baby
+Beauty
+Books
+Cell Phones & Service
+Clothing & Accessories
+Electronics
+Grocery & Gourmet Food
+Health & Personal Care
+Home, Garden & Pets
+Industrial & Scientific
+Jewelry
+Kindle Store
+Magazine Subscriptions
+Movies & TV
+MP3 Downloads
+Music
+Musical Instruments
+Office Products & Supplies
+Shoes
+Software
+Sports & Outdoors
+Tools & Home Improvement
+Toys & Games
+VHS
+Video Games
+Video On Demand
+Watches
+
+
+ebay:
+
+		Antiques
+		Art
+		Baby
+		Books
+		Business &  Industrial
+		Cameras & Photo
+		Cars, Boats, Vehicles & Parts
+		Cell Phones & PDAs
+		Clothing, Shoes & Accessories
+		Coins & Paper Money
+		Collectibles
+		Computers & Networking
+		Crafts
+		Dolls & Bears
+		DVDs & Movies
+		Electronics
+		Entertainment Memorabilia
+		Gift Cards & Coupons
+		Health & Beauty
+		Home & Garden
+		Jewelry & Watches<
+		Music
+		Musical Instruments
+		Pet Supplies
+		Pottery & Glass
+		Real Estate
+		Specialty Services
+		Sporting Goods
+		Sports Mem, Cards & Fan Shop
+		Stamps
+		Tickets
+		Toys & Hobbies
+		Travel
+		Video Games
+		Everything Else
+		
+		
+

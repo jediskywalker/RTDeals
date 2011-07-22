@@ -27,6 +27,7 @@ namespace DealProcessing
         static public Hashtable AllSubCategories = new Hashtable();
         static public List<Store> AllStores = new List<Store>();
         static public List<DealSource> AllDealSources = new List<DealSource>();
+        static public Hashtable AllSynonyms = new Hashtable();
    
         #endregion lockup list
 
@@ -156,6 +157,16 @@ namespace DealProcessing
             return null;
         }
 
+        static public Synonym GetSynonymByWord(string word)
+        {
+            lock (AllSynonyms)
+            {
+                if (AllSynonyms.Contains(word))
+                    return (Synonym)AllSynonyms[word];
+            }
+            return null;
+        }
+
         #endregion lookup list search
 
 
@@ -211,8 +222,11 @@ namespace DealProcessing
             else if (productMatched != null)
             {
                 Product prod = GetProductByID(productMatched.ProductID);
-                if (prod.MySubcategory != null)
-                    deal.MySubCategories.Add(prod.MySubcategory);
+                foreach (ProductSubCategory psub in prod.MySubcategories)
+                {
+                    SubCategory mysub = GetSubCategoryByID(psub.SubCategoryID);
+                    deal.MySubCategories.Add(mysub);
+                }
             }
             else if (subcategoriesFromSource != null && subcategoriesFromSource.Count > 0)
             {
