@@ -10,7 +10,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Logger.LogDebug("funcabc", "test");
+            Logger.LogDebug("funcabc", "test git id");
         }
     }
 }
