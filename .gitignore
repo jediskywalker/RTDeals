@@ -14,3 +14,9 @@ RTDealsWebApplication.csproj.user
 *.suo
 *.manifest
 *.cache
+DealSln/DeliveryEngine/bin/Debug
+DealSln/Processor/bin/Debug
+DealSln/Scanner/bin/Debug
+DealSln/Test/bin/Debug
+DealSln/Util/obj/Debug
+DealSln/Util/bin/Debug
